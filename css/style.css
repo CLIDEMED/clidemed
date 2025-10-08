@@ -1,0 +1,265 @@
+/* --- ESTILOS GENERALES --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #212529;
+    line-height: 1.6;
+}
+
+/* --- ENCABEZADO (HEADER) --- */
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 4px solid #007bff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* --- BARRA DE NAVEGACIÓN (NAV) --- */
+nav {
+    background-color: #495057;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    border-radius: 8px;
+}
+
+nav ul li a:hover {
+    background-color: #007bff;
+}
+
+/* --- CONTENIDO PRINCIPAL (MAIN) --- */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* --- PIE DE PÁGINA (FOOTER) --- */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #343a40;
+    color: white;
+    margin-top: 40px;
+}
+
+/* --- ESTILOS PARA TARJETAS DE MÓDULOS (CÁPSULAS) --- */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+a.module-card {
+    text-decoration: none;
+    color: inherit;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+a.module-card:hover:not(.disabled) {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.module-cover-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.module-info {
+    padding: 20px;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.module-info h3 {
+    font-size: 1.8em;
+    color: #0056b3;
+    margin-top: 0;
+}
+
+.module-info p {
+    flex-grow: 1;
+}
+
+.module-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white !important;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    align-self: flex-start;
+    transition: background-color 0.3s;
+}
+
+.module-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* --- DISEÑO PROFESIONAL PARA LISTA DE MATERIAS (V3) --- */
+.subject-card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+a.subject-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #e9ecef;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.3s ease;
+}
+
+a.subject-card:hover:not(.disabled) {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: #007bff;
+}
+
+.subject-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    border-radius: 50%; /* Circulo perfecto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subject-icon svg {
+    width: 32px;
+    height: 32px;
+    stroke-width: 2; /* Grosor de la línea del icono */
+    fill: none; /* Sin relleno */
+}
+
+.subject-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.5em;
+    color: #343a40;
+}
+
+.subject-info p {
+    margin: 0;
+    color: #6c757d;
+}
+
+/* --- Colores de Emblema (Icono y Fondo) --- */
+
+/* Hematología */
+.subject-card.hematologia .subject-icon { background-color: #ffebee; }
+.subject-card.hematologia .subject-icon svg { stroke: #d90429; }
+
+/* Química */
+.subject-card.quimica .subject-icon { background-color: #e3f2fd; }
+.subject-card.quimica .subject-icon svg { stroke: #0077b6; }
+
+/* Anatomía */
+.subject-card.anatomia .subject-icon { background-color: #e8f5e9; }
+.subject-card.anatomia .subject-icon svg { stroke: #588157; }
+
+/* Biología */
+.subject-card.biologia .subject-icon { background-color: #fff3e0; }
+.subject-card.biologia .subject-icon svg { stroke: #f77f00; }
+
+/* Microbiología */
+.subject-card.microbiologia .subject-icon { background-color: #f3e5f5; }
+.subject-card.microbiologia .subject-icon svg { stroke: #8338ec; }
+
+/* Inmunología */
+.subject-card.inmunologia .subject-icon { background-color: #fff3e0; }
+.subject-card.inmunologia .subject-icon svg { stroke: #fb5607; }
+
+/* Genética */
+.subject-card.genetica .subject-icon { background-color: #e0f7fa; }
+.subject-card.genetica .subject-icon svg { stroke: #219ebc; }
+
+/* Especialidades */
+.subject-card.especialidades .subject-icon { background-color: #e9ecef; }
+.subject-card.especialidades .subject-icon svg { stroke: #343a40; }
+
+
+/* Estilo para tarjetas desactivadas */
+.subject-card.disabled, .module-card.disabled {
+    opacity: 0.7;
+    background-color: #f8f9fa;
+    pointer-events: none;
+    cursor: default;
+}
+
+.subject-card.disabled .subject-icon {
+    filter: grayscale(80%);
+}
+
+/* --- ESTILOS PARA NAVEGACIÓN ENTRE PÁGINAS (ANTERIOR/SIGUIENTE) --- */
+.page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+}
+
+.prev-button, .next-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: #0056b3;
+    color: white;
+}
