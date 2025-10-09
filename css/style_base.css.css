@@ -128,4 +128,3 @@ a.subject-card:hover:not(.disabled) {
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     border-color: var(--clidemd-green); /* Usa el verde de acento */
 }
-/* FIN DEL CÓDIGO BASE CORREGIDO (ASEGURADO QUE NO HAY CORCHETES EXTRA) */
