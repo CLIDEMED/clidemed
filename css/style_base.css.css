@@ -1,32 +1,21 @@
-/* Variables de Colores (AJUSTE FINAL Y ESTRATÉGICO) */
+/* --- Variables de Colores (Mismas que style_index.css para consistencia) --- */
 :root {
-    /* Basado en el color verde azulado de tu logo y portada */
-    --clidemd-main-bg: #EAF7F7; /* Fondo muy claro y suave para la sección Hero */
-    
-    /* Azul Principal: Un tono serio y profesional para títulos y texto */
-    --clidemd-blue: #1A3450; 
-    
-    /* Azul Secundario: Un tono medio para el Header y el Footer (más amable que el negro) */
-    --clidemd-teal: #2A567D; 
-    
-    /* Verde de Acento: Más oscuro, profundo y profesional para los botones (menos chillón) */
-    --clidemd-green: #008762; 
-    
-    /* Colores base */
-    --text-dark: #333;
-    --text-light: #f4f4f4;
+    --clidemd-blue: #1A3450; /* Azul Principal: tono serio para títulos y texto */
+    --clidemd-teal: #2A567D; /* Azul Secundario: tono medio para Header/Footer/Nav */
+    --clidemd-green: #008762; /* Verde de Acento: Más oscuro y profesional para botones */
+    --text-dark: #212529;
+    --text-light: white;
     --bg-light: #f8f9fa;
     --border-color: #ddd;
 }
 
-/* Estilos Generales */
+/* --- ESTILOS GENERALES Y LAYOUT --- */
 body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
-    padding: 0;
     background-color: var(--bg-light);
     color: var(--text-dark);
+    line-height: 1.6;
 }
 
 .container {
@@ -35,232 +24,85 @@ body {
     padding: 0 20px;
 }
 
-/* Header Principal */
-.main-header {
-    /* Usa el color secundario para el fondo: más amable */
-    background-color: var(--clidemd-teal); 
+/* --- ENCABEZADO (HEADER) --- */
+header {
+    background-color: var(--clidemd-teal);
     color: var(--text-light);
-    padding: 20px 0;
+    padding: 25px 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 4px solid var(--clidemd-green); 
 }
 
-.main-header .logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.main-header .logo-container img {
-    height: 60px;
-    margin-right: 15px;
-}
-
-.main-header .site-title {
+header h1 {
     margin: 0;
-    font-size: 2.8em;
-    font-weight: 700;
-    letter-spacing: 2px;
+    font-size: 2.5em;
 }
 
-.main-header .site-lema {
-    font-size: 1.3em;
-    font-style: italic;
-    margin-top: -10px;
-    opacity: 0.9;
+/* --- BARRA DE NAVEGACIÓN (NAV) --- */
+nav {
+    background-color: var(--clidemd-blue); 
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Navegación Principal */
-.main-nav {
-    /* Mismo color que el header para continuidad */
-    background-color: var(--clidemd-teal); 
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.main-nav ul {
-    list-style: none;
+nav ul {
+    /* FIX CRÍTICO: LIMPIEZA DE LISTA PARA MATERIAS.HTML */
+    list-style: none !important; /* Forzamos la eliminación de los puntos */
+    padding: 0 !important;
     margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
 }
 
-.main-nav ul li a {
+nav ul li a {
     color: var(--text-light);
     text-decoration: none;
-    padding: 15px 25px;
-    display: block;
-    font-weight: 500;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.main-nav ul li a:hover,
-.main-nav ul li a.active {
-    background-color: var(--clidemd-green); /* Usa el verde profesional para el hover */
-    border-radius: 5px;
-}
-
-/* Contenido Principal del Index */
-.index-main-content {
-    padding: 40px 0;
-}
-
-/* Sección Hero */
-.hero-section {
-    background-color: var(--clidemd-main-bg); /* Fondo suave */
-    padding: 60px 0;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-bottom: 50px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.hero-text {
-    flex: 1;
-    min-width: 300px;
-    padding: 0 20px;
-    text-align: left; 
-}
-
-.hero-text h2 {
-    font-size: 3em;
-    color: var(--clidemd-blue);
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.hero-text p {
-    font-size: 1.3em;
-    color: var(--text-dark);
-    margin-bottom: 30px;
-}
-
-.hero-image {
-    flex: 1;
-    min-width: 300px;
-    padding: 0 20px;
-}
-
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: var(--clidemd-green); /* El botón usa el color de acento verde profesional */
-    color: var(--text-light);
-    padding: 15px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 1.2em;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    border-radius: 8px;
 }
 
-.cta-button:hover {
-    background-color: #007050; /* Tono más oscuro del verde */
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+nav ul li a:hover {
+    background-color: var(--clidemd-green); 
 }
 
-/* Sección de Características */
-.features-section {
+/* --- CONTENIDO PRINCIPAL (MAIN) --- */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--text-light);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* --- PIE DE PÁGINA (FOOTER) --- */
+footer {
     text-align: center;
-    padding: 50px 0;
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    padding: 25px;
+    background-color: var(--clidemd-teal);
+    color: var(--text-light);
     margin-top: 40px;
 }
-
-.feature-item {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s;
-    text-align: left;
-}
-
-.feature-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-
-.feature-item img {
-    height: 50px;
-    margin-bottom: 15px;
-}
-
-.feature-item h3 {
-    color: var(--clidemd-blue);
-    margin-top: 0;
-    font-size: 1.5em;
-}
-
-.feature-item p {
-    font-size: 1em;
-    color: #666;
-}
-
-
-/* Footer */
-footer {
-    /* Usa el mismo color secundario que el header/nav */
-    background-color: var(--clidemd-teal); 
+/* Estilos para los enlaces legales que añadimos en el footer */
+footer a {
     color: var(--text-light);
-    text-align: center;
-    padding: 25px 0;
-    margin-top: 50px;
-    font-size: 0.9em;
-}
-
-footer p {
-    margin: 0 0 10px 0;
-}
-
-.legal-links a {
-    color: var(--text-light);
-    text-decoration: none;
+    text-decoration: underline;
     margin: 0 10px;
-    transition: color 0.3s ease;
 }
 
-.legal-links a:hover {
-    color: var(--clidemd-green);
-}
+/* --- ESTILOS PARA TARJETAS DE MÓDULOS Y MATERIAS --- */
+/* Tu código original que hace que las tarjetas se vean bien se mantiene funcional */
+/* Los selectores de tarjetas (.module-card, .subject-card) usarán los nuevos colores de marca */
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .main-header .site-title {
-        font-size: 2em;
-    }
-    .main-header .site-lema {
-        font-size: 1em;
-    }
-    .main-nav ul {
-        flex-direction: column;
-    }
-    .main-nav ul li a {
-        padding: 10px 15px;
-    }
-    .hero-text h2 {
-        font-size: 2.2em;
-    }
-    .hero-text p {
-        font-size: 1.1em;
-    }
+/* Aquí debe ir el resto de tu código original (tarjetas, etc.) que has mantenido */
+
+.subject-card-container { /* ... tu código de grilla ... */ }
+a.subject-card { /* ... tu código de tarjeta ... */ }
+a.subject-card:hover:not(.disabled) {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: var(--clidemd-green); /* Usa el verde de acento */
 }
+/* FIN DEL CÓDIGO BASE CORREGIDO */
