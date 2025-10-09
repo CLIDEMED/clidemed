@@ -1,0 +1,37 @@
+/* ESTILOS DE TARJETAS DE MÓDULOS Y CAPÍTULOS */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+/* ... (Todo el CSS que define la apariencia de las tarjetas .card, .module-card, etc., que ya tienes) ... */
+
+
+/* ESTILOS DE TARJETAS DE MATERIAS (SUBJECT CARDS) */
+.subject-card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+a.subject-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #e9ecef;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.3s ease;
+}
+
+a.subject-card:hover:not(.disabled) {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: var(--clidemd-green); 
+}
+/* ... (Todo el CSS de .subject-icon, .subject-info, etc., si lo tuvieras va aquí) ... */
