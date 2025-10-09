@@ -1,14 +1,78 @@
-/* ESTILOS DE TARJETAS DE MÓDULOS Y CAPÍTULOS */
+/* --- ESTILOS PARA TARJETAS DE MÓDULOS Y CÁPSULAS (Usado en capsulas.html) --- */
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 30px;
 }
-/* ... (Todo el CSS que define la apariencia de las tarjetas .card, .module-card, etc., que ya tienes) ... */
+
+.card.module-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    text-decoration: none;
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card.module-card:hover:not(.disabled) {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.module-cover-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.module-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.module-info h3 {
+    font-size: 1.4em;
+    color: var(--clidemd-blue);
+    margin-top: 0;
+}
+
+.module-info p {
+    font-size: 0.95em;
+    flex-grow: 1;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.module-button {
+    display: block;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: var(--clidemd-green);
+    color: var(--text-light);
+    transition: background-color 0.3s;
+}
+
+.module-card.disabled {
+    opacity: 0.7;
+    pointer-events: none; /* Deshabilita el clic */
+}
+.module-card.disabled .module-button {
+    background-color: #ced4da;
+    color: #6c757d;
+}
 
 
-/* ESTILOS DE TARJETAS DE MATERIAS (SUBJECT CARDS) */
+/* --- ESTILOS DE TARJETAS DE MATERIAS (SUBJECT CARDS - Usado en materias.html) --- */
 .subject-card-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -16,17 +80,18 @@
     margin-top: 30px;
 }
 
-a.subject-card {
+a.subject-card, .subject-card.disabled {
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: 20px;
     background-color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.06);
     text-decoration: none;
-    color: inherit;
+    color: var(--text-dark);
     border: 1px solid #e9ecef;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.3s ease;
+    cursor: pointer;
 }
 
 a.subject-card:hover:not(.disabled) {
@@ -34,4 +99,49 @@ a.subject-card:hover:not(.disabled) {
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     border-color: var(--clidemd-green); 
 }
-/* ... (Todo el CSS de .subject-icon, .subject-info, etc., si lo tuvieras va aquí) ... */
+
+.subject-card.disabled {
+    border-left: 5px solid #ccc; /* Línea gris para el "Próximamente" */
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+.subject-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    line-height: 1; /* Para centrar SVGs */
+}
+.subject-icon svg {
+    fill: var(--clidemd-blue); 
+    width: 100%;
+    height: 100%;
+}
+
+/* Colores de acento para las Materias */
+.subject-card.hematologia { border-left: 5px solid var(--clidemd-red-accent); }
+.subject-card.quimica { border-left: 5px solid var(--clidemd-blue); }
+.subject-card.anatomia { border-left: 5px solid #6c757d; }
+.subject-card.biologia { border-left: 5px solid #28a745; }
+.subject-card.microbiologia { border-left: 5px solid #6f42c1; }
+.subject-card.inmunologia { border-left: 5px solid #ffc107; }
+
+.subject-card.disabled .subject-info h3, 
+.subject-card.disabled .subject-info p,
+.subject-card.disabled .subject-icon svg {
+    color: #6c757d !important;
+    fill: #6c757d !important;
+}
+
+.subject-info h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.6em;
+    color: var(--clidemd-blue);
+}
+
+.subject-info p {
+    margin: 0;
+    font-size: 1.05em;
+    color: #555;
+}
