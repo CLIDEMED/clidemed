@@ -1,0 +1,294 @@
+/* Variables de Colores (inspiradas en tus imágenes) */
+:root {
+    --clidemd-blue: #2E4A7F; /* Azul oscuro para texto principal y elementos */
+    --clidemd-green: #4CAF50; /* Verde vibrante para acentos y CTAs */
+    --clidemd-light-green: #90EE90; /* Verde claro de fondo en algunas imágenes */
+    --clidemd-teal: #66CCCC; /* Verde azulado de fondo general */
+    --clidemd-red-accent: #FF6347; /* Rojo para el corazón o acentos importantes */
+    --text-dark: #333;
+    --text-light: #f4f4f4;
+    --bg-light: #f8f9fa;
+    --border-color: #ddd;
+}
+
+/* Estilos Generales */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Principal */
+.main-header {
+    background-color: var(--clidemd-blue);
+    color: var(--text-light);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.main-header .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.main-header .logo-container img {
+    height: 60px; /* Ajusta el tamaño de tu logo */
+    margin-right: 15px;
+}
+
+.main-header .site-title {
+    margin: 0;
+    font-size: 2.8em;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.main-header .site-lema {
+    font-size: 1.3em;
+    font-style: italic;
+    margin-top: -10px;
+    opacity: 0.9;
+}
+
+/* Navegación Principal */
+.main-nav {
+    background-color: var(--clidemd-teal);
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 15px 25px;
+    display: block;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    background-color: var(--clidemd-green);
+    border-radius: 5px;
+}
+
+/* Contenido Principal del Index */
+.index-main-content {
+    padding: 40px 0;
+}
+
+/* Sección Hero */
+.hero-section {
+    background-color: #e0f7fa; /* Un tono más claro que --clidemd-teal */
+    padding: 60px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    gap: 30px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px; /* Asegura que no sea demasiado estrecho */
+    padding: 0 20px;
+}
+
+.hero-text h2 {
+    font-size: 3em;
+    color: var(--clidemd-blue);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.3em;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 300px;
+    padding: 0 20px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--clidemd-green);
+    color: var(--text-light);
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #388e3c; /* Tono más oscuro de verde */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Sección de Características */
+.features-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.features-section h3 {
+    font-size: 2.5em;
+    color: var(--clidemd-blue);
+    margin-bottom: 40px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.feature-item img {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.feature-item h4 {
+    font-size: 1.5em;
+    color: var(--clidemd-blue);
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--clidemd-blue);
+    color: var(--text-light);
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0 0 10px 0;
+}
+
+.legal-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: var(--clidemd-green);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header .site-title {
+        font-size: 2em;
+    }
+    .main-header .site-lema {
+        font-size: 1em;
+    }
+    .main-nav ul {
+        flex-direction: column;
+    }
+    .main-nav ul li a {
+        padding: 10px 15px;
+    }
+    .hero-text h2 {
+        font-size: 2.2em;
+    }
+    .hero-text p {
+        font-size: 1em;
+    }
+    .features-section h3 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header .logo-container img {
+        height: 40px;
+    }
+    .main-header .site-title {
+        font-size: 1.8em;
+    }
+    .hero-section {
+        padding: 40px 0;
+    }
+    .hero-text h2 {
+        font-size: 1.8em;
+    }
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+    .feature-item {
+        padding: 20px;
+    }
+    .feature-item img {
+        height: 60px;
+    }
+    .feature-item h4 {
+        font-size: 1.2em;
+    }
+}

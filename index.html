@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLIDEMED - Plataforma de Estudio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>CLIDEMED - De la teoría a la práctica... porque aprender es salvar vidas.</title>
+<link rel="stylesheet" href="css/style_index.css">
 </head>
 <body>
-
-    <header>
-        <h1>🔬 CLIDEMED</h1>
-        <p>de lo teórico a lo práctico...</p>
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="images/clidemd_logo_small.png" alt="CLIDEMED Logo"> 
+            <h1 class="site-title">CLIDEMED</h1>
+        </div>
+        <p class="site-lema">De la teoría a la práctica... porque aprender es salvar vidas.</p>
     </header>
 
-  <nav>
+    <nav class="main-nav">
         <ul>
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html" class="active">Inicio</a></li>
             <li><a href="pages/materias.html">Materias</a></li>
             <li><a href="pages/capsulas.html">Cápsulas</a></li>
             <li><a href="pages/protocolos.html">Protocolos</a></li>
@@ -24,17 +26,54 @@
         </ul>
     </nav>
 
-    <main id="main-content">
-        <h2>Bienvenido a tu Biblioteca Virtual</h2>
-        <p>Selecciona un módulo del menú de navegación para comenzar a estudiar o consultar información.</p>
-        <p>Este es el espacio central donde se cargará todo el contenido de las diferentes secciones.</p>
+    <main class="index-main-content">
+        <section class="hero-section">
+            <div class="hero-text">
+                <h2>Estudia con ciencia y con humor: <br> Bienvenidos a CLIDEMED</h2>
+                <p>Tu plataforma para dominar las ciencias de la salud a través de cápsulas interactivas, simuladores y un laboratorio virtual.</p>
+                <a href="pages/materias.html" class="cta-button">Explorar Materias</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero_illustration.png" alt="Estudiante en laboratorio" class="animated-illustration"> 
+                </div>
+        </section>
+
+        <section class="features-section">
+            <h3>Estudio, ciencia y comunidad para el sector salud</h3>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <img src="images/icon_microscope.png" alt="Microscopio">
+                    <h4>Material Interactivo</h4>
+                    <p>Cápsulas didácticas y simuladores que facilitan la comprensión.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="images/icon_dna.png" alt="ADN">
+                    <h4>Contenido Validado</h4>
+                    <p>Información basada en referencias científicas y actualizadas.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="images/icon_heartbeat.png" alt="Latido">
+                    <h4>Aplicación Clínica</h4>
+                    <p>De la teoría a la práctica, con énfasis en el diagnóstico real.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="images/icon_lab.png" alt="Laboratorio">
+                    <h4>Laboratorio Virtual</h4>
+                    <p>Experimenta y aprende sin límites, con casos clínicos virtuales.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-    <p>&copy; 2025 - Labros Canul Sarao - Plataforma CLIDEMED | <a href="pages/bibliografia.html" style="color: white;">Bibliografía y Aviso Legal</a></p>
-</footer>
+        <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
+        <div class="legal-links">
+            <a href="terminos_condiciones.html">Términos y Condiciones</a>
+            |
+            <a href="aviso_privacidad.html">Aviso de Privacidad</a>
+        </div>
+    </footer>
 
     <script src="js/main.js"></script>
-
 </body>
 </html>
