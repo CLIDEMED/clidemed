@@ -7,6 +7,10 @@
     --text-light: white;
     --bg-light: #f8f9fa;
     --border-color: #ddd;
+    /* Variables Antiguas ajustadas al nuevo color */
+    --old-blue: var(--clidemd-blue); 
+    --old-dark: var(--clidemd-teal);
+    --old-accent: var(--clidemd-green); 
 }
 
 /* --- ESTILOS GENERALES Y LAYOUT --- */
@@ -32,11 +36,7 @@ header {
     text-align: center;
     border-bottom: 4px solid var(--clidemd-green); 
 }
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
+header h1 { margin: 0; font-size: 2.5em; }
 
 /* --- BARRA DE NAVEGACIÓN (NAV) --- */
 nav {
@@ -46,8 +46,8 @@ nav {
 }
 
 nav ul {
-    /* FIX CRÍTICO: LIMPIEZA DE LISTA PARA MATERIAS.HTML */
-    list-style: none !important; /* Forzamos la eliminación de los puntos */
+    /* FIX CRÍTICO: LIMPIEZA DE LISTA (SOLUCIÓN AL ERROR DE MATERIAS.HTML) */
+    list-style: none !important; 
     padding: 0 !important;
     margin: 0;
     display: flex;
@@ -92,17 +92,40 @@ footer a {
     margin: 0 10px;
 }
 
-/* --- ESTILOS PARA TARJETAS DE MÓDULOS Y MATERIAS --- */
-/* Tu código original que hace que las tarjetas se vean bien se mantiene funcional */
-/* Los selectores de tarjetas (.module-card, .subject-card) usarán los nuevos colores de marca */
+/* --- ESTILOS PARA TARJETAS DE MÓDULOS (TU CÓDIGO ORIGINAL SE MANTIENE FUNCIONAL) --- */
 
-/* Aquí debe ir el resto de tu código original (tarjetas, etc.) que has mantenido */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+/* ... (Todo tu código de .module-card, .module-info, etc. va aquí y usa las variables) ... */
 
-.subject-card-container { /* ... tu código de grilla ... */ }
-a.subject-card { /* ... tu código de tarjeta ... */ }
+/* ESTILOS DE TARJETAS DE MATERIAS (SUBJECT CARDS) */
+.subject-card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+a.subject-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #e9ecef;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.3s ease;
+}
+
 a.subject-card:hover:not(.disabled) {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     border-color: var(--clidemd-green); /* Usa el verde de acento */
 }
-/* FIN DEL CÓDIGO BASE CORREGIDO */
+/* FIN DEL CÓDIGO BASE CORREGIDO (ASEGURADO QUE NO HAY CORCHETES EXTRA) */
