@@ -113,18 +113,31 @@ a.subject-card:hover:not(.disabled) {
     line-height: 1; /* Para centrar SVGs */
 }
 .subject-icon svg {
+    /* Color dinámico (Punto 3) - Se sobreescribe abajo */
     fill: var(--clidemd-blue); 
     width: 100%;
     height: 100%;
 }
 
-/* Colores de acento para las Materias */
+/* Colores de acento para las Materias (TÍTULOS E ICONOS CORREGIDOS) */
 .subject-card.hematologia { border-left: 5px solid var(--clidemd-red-accent); }
+.subject-card.hematologia .subject-info h3, .subject-card.hematologia .subject-icon svg { color: var(--clidemd-red-accent); fill: var(--clidemd-red-accent); }
+
 .subject-card.quimica { border-left: 5px solid var(--clidemd-blue); }
+.subject-card.quimica .subject-info h3, .subject-card.quimica .subject-icon svg { color: var(--clidemd-blue); fill: var(--clidemd-blue); }
+
 .subject-card.anatomia { border-left: 5px solid #6c757d; }
+.subject-card.anatomia .subject-info h3, .subject-card.anatomia .subject-icon svg { color: #6c757d; fill: #6c757d; }
+
 .subject-card.biologia { border-left: 5px solid #28a745; }
+.subject-card.biologia .subject-info h3, .subject-card.biologia .subject-icon svg { color: #28a745; fill: #28a745; }
+
 .subject-card.microbiologia { border-left: 5px solid #6f42c1; }
+.subject-card.microbiologia .subject-info h3, .subject-card.microbiologia .subject-icon svg { color: #6f42c1; fill: #6f42c1; }
+
 .subject-card.inmunologia { border-left: 5px solid #ffc107; }
+.subject-card.inmunologia .subject-info h3, .subject-card.inmunologia .subject-icon svg { color: #ffc107; fill: #ffc107; }
+
 
 .subject-card.disabled .subject-info h3, 
 .subject-card.disabled .subject-info p,
@@ -137,7 +150,7 @@ a.subject-card:hover:not(.disabled) {
     margin-top: 0;
     margin-bottom: 5px;
     font-size: 1.6em;
-    color: var(--clidemd-blue);
+    /* Color dinámico aplicado arriba */
 }
 
 .subject-info p {

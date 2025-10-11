@@ -11,6 +11,7 @@
     --old-blue: var(--clidemd-blue); 
     --old-dark: var(--clidemd-teal);
     --old-accent: var(--clidemd-green); 
+    --clidemd-red-accent: #FF6347; /* Añadida aquí para consistencia */
 }
 
 /* --- ESTILOS GENERALES Y LAYOUT --- */
