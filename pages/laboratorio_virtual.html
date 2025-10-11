@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laboratorio Virtual y Entrenamiento - CLIDEMED</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style_base.css"> 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Adaptación de la estética CLIDEMED al entorno Tailwind */
+        /* Adaptación de la estética CLIDEMED al entorno interno */
         :root {
             --clidemd-blue: #1A3450; 
             --clidemd-green: #008762; 
         }
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
-        /* Estilos de Pestañas CLIDEMED */
+        /* Las clases de Tailwind y estilos personalizados se mantienen aquí para la interactividad */
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); }
         .nav-link[data-selected="true"] {
             border-bottom-color: var(--clidemd-blue);
             color: var(--clidemd-blue);
@@ -27,7 +27,6 @@
             color: var(--clidemd-green);
             font-weight: 600;
         }
-        /* Estilo de la Carta Flashcard */
         .flashcard { min-height: 200px; transform-style: preserve-3d; transition: transform 0.6s; cursor: pointer; }
         .flashcard.flipped { transform: rotateY(180deg); }
         .flashcard-face {
@@ -38,28 +37,29 @@
         .flashcard-back { transform: rotateY(180deg); background-color: var(--clidemd-blue); }
         .flashcard-front { border: 2px solid #e5e7eb; }
         .chart-container { position: relative; width: 100%; max-width: 500px; margin: 0 auto; height: 400px; }
-
-        /* Estilo de la Tarea WOW (Pomodoro) */
         .pomodoro-container { border: 2px dashed #008762; padding: 20px; border-radius: 10px; }
     </style>
 </head>
 <body>
-    <div class="min-h-screen bg-gray-50">
-        <header class="bg-white shadow-md">
-            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                <h1 class="text-3xl font-bold text-gray-900" style="color: var(--clidemd-blue);">
-                    🧪 Laboratorio Virtual y Entrenamiento
-                </h1>
-                <p class="mt-1 text-lg text-gray-500">
-                    Simuladores, Exámenes Dinámicos y Técnicas de Estudio Avanzadas.
-                </p>
-            </div>
-        </header>
-
-        <main>
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 py-8">
+    <header>
+        <h1>🧪 Laboratorio Virtual</h1>
+        <p style="color: #ccc; font-size: 1.2em;">Simuladores y Técnicas de Estudio Avanzadas</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="materias.html">Materias</a></li>
+            <li><a href="capsulas.html">Cápsulas</a></li>
+            <li><a href="protocolos.html">Protocolos</a></li>
+            <li><a href="entrenamiento.html">Entrenamiento</a></li>
+            <li><a href="laboratorio_virtual.html" class="active">Laboratorio Virtual</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="container">
                 
-                <div class="border-b border-gray-200">
+                <div class="border-b border-gray-200" style="margin-top: 20px;">
                     <nav class="-mb-px flex space-x-8" aria-label="Tabs">
                         <a href="#estudio" class="nav-link text-gray-500 hover:text-gray-700 whitespace-nowrap py-4 px-1 font-medium text-base" data-tab="estudio" data-selected="true">
                             📖 Técnicas de Estudio (Pomodoro)
@@ -137,14 +137,14 @@
             </div>
         </main>
         
-        <footer class="bg-white border-t border-gray-200 mt-10">
-            <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
-                <p class="text-center text-sm text-gray-500">
-                    © 2025. <strong>labros canul sarao</strong>. Todos los derechos reservados.
-                </p>
+        <footer>
+            <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
+            <div class="legal-links">
+                <a href="terminos_condiciones.html">Términos y Condiciones</a>
+                |
+                <a href="aviso_privacidad.html">Aviso de Privacidad</a>
             </div>
         </footer>
-    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -185,7 +185,7 @@
             let currentQuestionIndex = 0;
             let score = 0;
             let categoryScores = { 
-                'Hematología': { correct: 0, total: 0, time: 0, count: 0 }, // Añadimos 'time' y 'count' para promedios
+                'Hematología': { correct: 0, total: 0, time: 0, count: 0 }, 
                 'Química Clínica': { correct: 0, total: 0, time: 0, count: 0 }, 
                 'Uro/Copro': { correct: 0, total: 0, time: 0, count: 0 }, 
                 'IMSS Protocolos': { correct: 0, total: 0, time: 0, count: 0 },
@@ -193,7 +193,6 @@
             };
             let myChart = null;
             let startTime = 0;
-            let totalQuizTime = 0;
             let timerInterval;
 
             const quizContainer = document.getElementById('quizContainer');
@@ -201,7 +200,6 @@
             const optionsContainer = document.getElementById('optionsContainer');
             const nextButton = document.getElementById('nextButton');
             const resultsContainer = document.getElementById('resultsContainer');
-            const finalScoreElement = document.getElementById('finalScore');
             const restartButton = document.getElementById('restartButton');
             const timerDisplay = document.getElementById('timerDisplay');
             const totalTimeDisplay = document.getElementById('totalTimeDisplay');
@@ -222,10 +220,11 @@
                 clearInterval(timerInterval);
                 timerInterval = setInterval(() => {
                     const elapsed = Math.floor((Date.now() - startTime) / 1000);
-                    totalQuizTime = elapsed + currentQuestionIndex * 0; // Suma solo el tiempo de la pregunta actual
                     
+                    const accumulatedTime = quizData.slice(0, currentQuestionIndex).reduce((sum, q) => sum + q.timeSpent || 0, 0);
+
                     timerDisplay.textContent = `Tiempo por Pregunta: ${formatTime(elapsed)}`;
-                    totalTimeDisplay.textContent = `Total: ${formatTime(totalQuizTime + quizData.slice(0, currentQuestionIndex).reduce((sum, q) => sum + q.timeSpent || 0, 0))}`;
+                    totalTimeDisplay.textContent = `Total: ${formatTime(accumulatedTime + elapsed)}`;
                 }, 1000);
             }
 
@@ -244,9 +243,8 @@
             }
             
             function generateDynamicExam(questionsPerCategory = 4) {
-                // ... (Mantener la lógica de generación y shuffle de preguntas) ...
                 quizData = [];
-                const categories = Object.keys(categoryScores).filter(k => k !== 'Micro/Inmuno'); // Excluir Micro/Inmuno si tiene menos preguntas
+                const categories = Object.keys(categoryScores);
                 
                 Object.keys(categoryScores).forEach(key => {
                     categoryScores[key] = { correct: 0, total: 0, time: 0, count: 0 };
@@ -261,7 +259,7 @@
                     selectedQuestions.forEach(q => {
                         const options = q.options.slice();
                         shuffleArray(options);
-                        const newQ = { ...q, options: options, timeSpent: 0 }; // Añadir timeSpent
+                        const newQ = { ...q, options: options, timeSpent: 0 }; 
                         quizData.push(newQ);
                     });
                 });
@@ -328,13 +326,13 @@
 
                 const ctx = document.getElementById('scoreChart').getContext('2d');
                 myChart = new Chart(ctx, {
-                    type: 'radar', // CAMBIO CLAVE A RADAR CHART
+                    type: 'radar', 
                     data: {
                         labels: labels,
                         datasets: [{
                             label: 'Rendimiento (%)',
                             data: dataAciertos,
-                            backgroundColor: 'rgba(0, 135, 98, 0.4)', // Verde CLIDEMED con transparencia
+                            backgroundColor: 'rgba(0, 135, 98, 0.4)', 
                             borderColor: 'var(--clidemd-green)',
                             pointBackgroundColor: 'var(--clidemd-green)',
                             pointBorderColor: '#fff',
@@ -375,7 +373,7 @@
                 const timeSpent = stopTimerAndRecordTime();
                 
                 const currentQuestion = quizData[currentQuestionIndex];
-                currentQuestion.timeSpent = timeSpent; // Guarda el tiempo en la pregunta
+                currentQuestion.timeSpent = timeSpent; 
 
                 const category = currentQuestion.category;
                 
@@ -395,7 +393,6 @@
             restartButton.addEventListener('click', () => {
                 currentQuestionIndex = 0;
                 score = 0;
-                totalQuizTime = 0;
                 
                 resultsContainer.classList.add('hidden');
                 quizContainer.classList.remove('hidden');
@@ -405,7 +402,6 @@
             });
             
             // --- LÓGICA DE FLASHCARDS Y TABS (Mantener la lógica original) ---
-            // ... (Lógica de Flashcards y Tabs aquí - usar la del archivo 90%)
             let currentFlashcardArea = 'Hematología';
             
             function createFlashcardElement(card, index) {
@@ -486,11 +482,10 @@
 
             // --- INICIALIZACIÓN FINAL ---
             document.querySelector('.flashcard-tab[data-area="Hematología"]').click();
-            document.querySelector('[data-tab="examen"]').dataset.selected = 'false'; // Desactivar inicialmente
-            document.querySelector('[data-tab="estudio"]').click(); // Activar Estudio por defecto
+            document.querySelector('[data-tab="examen"]').dataset.selected = 'false'; 
+            document.querySelector('[data-tab="estudio"]').click(); 
             
             generateDynamicExam(4); 
-            // La primera pregunta se carga en el primer clic de "Siguiente" o en la inicialización
             loadQuestion();
         });
     </script>
