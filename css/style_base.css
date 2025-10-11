@@ -50,7 +50,6 @@ nav {
 }
 
 nav ul {
-    /* FIX CRÍTICO: LIMPIEZA DE LISTA (SOLUCIÓN AL ERROR DE MATERIAS.HTML) */
     list-style: none !important; 
     padding: 0 !important;
     margin: 0;
@@ -80,6 +79,28 @@ main {
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
+
+/* --- ESTILOS DE TABLAS PARA CONTENIDO TÉCNICO (NUEVO) --- */
+.content-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    font-size: 0.9em;
+}
+.content-table th, .content-table td {
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    text-align: left;
+}
+.content-table th {
+    background-color: #e9ecef; /* Gris claro profesional */
+    font-weight: 700;
+    color: var(--clidemd-blue);
+}
+.content-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
 
 /* --- PIE DE PÁGINA (FOOTER) --- */
 footer {

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio Virtual y Entrenamiento - CLIDEMED</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Adaptación de la estética CLIDEMED al entorno Tailwind */
+        :root {
+            --clidemd-blue: #1A3450; 
+            --clidemd-green: #008762; 
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        /* Estilos de Pestañas CLIDEMED */
+        .nav-link[data-selected="true"] {
+            border-bottom-color: var(--clidemd-blue);
+            color: var(--clidemd-blue);
+            font-weight: 600;
+        }
+        .sub-nav-link[data-selected="true"] {
+            border-bottom-color: var(--clidemd-green);
+            color: var(--clidemd-green);
+            font-weight: 600;
+        }
+        /* Estilo de la Carta Flashcard */
+        .flashcard { min-height: 200px; transform-style: preserve-3d; transition: transform 0.6s; cursor: pointer; }
+        .flashcard.flipped { transform: rotateY(180deg); }
+        .flashcard-face {
+            position: absolute; width: 100%; height: 100%; backface-visibility: hidden;
+            border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex; align-items: center; justify-content: center; text-align: center; padding: 1.5rem;
+        }
+        .flashcard-back { transform: rotateY(180deg); background-color: var(--clidemd-blue); }
+        .flashcard-front { border: 2px solid #e5e7eb; }
+        .chart-container { position: relative; width: 100%; max-width: 500px; margin: 0 auto; height: 400px; }
+
+        /* Estilo de la Tarea WOW (Pomodoro) */
+        .pomodoro-container { border: 2px dashed #008762; padding: 20px; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen bg-gray-50">
+        <header class="bg-white shadow-md">
+            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <h1 class="text-3xl font-bold text-gray-900" style="color: var(--clidemd-blue);">
+                    🧪 Laboratorio Virtual y Entrenamiento
+                </h1>
+                <p class="mt-1 text-lg text-gray-500">
+                    Simuladores, Exámenes Dinámicos y Técnicas de Estudio Avanzadas.
+                </p>
+            </div>
+        </header>
+
+        <main>
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 py-8">
+                
+                <div class="border-b border-gray-200">
+                    <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+                        <a href="#estudio" class="nav-link text-gray-500 hover:text-gray-700 whitespace-nowrap py-4 px-1 font-medium text-base" data-tab="estudio" data-selected="true">
+                            📖 Técnicas de Estudio (Pomodoro)
+                        </a>
+                        <a href="#flashcards" class="nav-link text-gray-500 hover:text-gray-700 whitespace-nowrap py-4 px-1 font-medium text-base" data-tab="flashcards" data-selected="false">
+                            🧠 Tarjetas Interactivas
+                        </a>
+                        <a href="#examen" class="nav-link text-gray-500 hover:text-gray-700 whitespace-nowrap py-4 px-1 font-medium text-base" data-tab="examen" data-selected="false">
+                            📝 Simulador de Examen (Con Temporizador)
+                        </a>
+                    </nav>
+                </div>
+                
+                <div id="estudio" class="tab-content mt-6">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Enfoque Didáctico y Pedagógico</h2>
+                    <div class="bg-white p-6 rounded-lg shadow-lg pomodoro-container">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4" style="color: var(--clidemd-blue);">Técnica de Estudio Activo: Pomodoro (Próximamente Integrado)</h3>
+                        <p class="text-gray-600 mb-4">Esta técnica divide el tiempo de estudio en intervalos de 25 minutos enfocados (pomodoros), seguidos de 5 minutos de descanso. Para aplicarlo a tus exámenes, te mostraremos cuánto te toma responder en promedio cada pregunta.</p>
+                        
+                        <div class="flex flex-wrap gap-4 mt-6">
+                            <button class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg font-medium" disabled>Activar Pomodoro</button>
+                            <button class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg font-medium" disabled>Activar Sonido en Flashcards</button>
+                            <span class="text-sm text-gray-500 self-center"> (Estas funciones "wow" se integrarán con la base de datos de contenido.)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="flashcards" class="tab-content mt-6 hidden">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Tarjetas Interactivas (Flashcards)</h2>
+                    
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <button class="flashcard-tab bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg font-medium" data-area="Hematología">Hematología</button>
+                        <button class="flashcard-tab bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg font-medium" data-area="Química Clínica">Química Clínica</button>
+                        <button class="flashcard-tab bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg font-medium" data-area="Uro/Copro">Uro/Copro</button>
+                        <button class="flashcard-tab bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg font-medium" data-area="IMSS Protocolos">IMSS Protocolos</button>
+                        <button class="flashcard-tab bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg font-medium" data-area="Micro/Inmuno">Micro/Inmuno</button>
+                        <button id="newCardsButton" class="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 rounded-lg font-medium">✨ Nuevas Tarjetas</button>
+                    </div>
+                    
+                    <div id="flashcardsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        </div>
+                </div>
+
+                <div id="examen" class="tab-content mt-6 hidden">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Simulador de Examen</h2>
+                    
+                    <div id="quizContainer" class="bg-white p-6 rounded-lg shadow-lg">
+                        <div class="flex justify-between items-center mb-4">
+                             <div id="timerDisplay" class="text-lg font-bold text-red-600">Tiempo por Pregunta: 00:00</div>
+                             <div id="totalTimeDisplay" class="text-md font-semibold text-gray-600">Total: 00:00</div>
+                        </div>
+                        
+                        <div id="questionNumber" class="text-lg font-semibold" style="color: var(--clidemd-blue);"></div>
+                        <h3 id="questionText" class="text-xl font-bold text-gray-900 mb-6"></h3>
+                        <div id="optionsContainer" class="space-y-4">
+                            </div>
+                        <button id="nextButton" class="mt-8 w-full text-white py-3 rounded-lg font-semibold transition duration-300 bg-green-600 hover:bg-green-700">Siguiente Pregunta</button>
+                    </div>
+                    
+                    <div id="resultsContainer" class="hidden bg-white p-6 rounded-lg shadow-lg mt-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Resultados del Examen</h3>
+                        <p id="finalScore" class="text-xl text-gray-700 mb-4"></p>
+                        <p id="timeAverages" class="text-lg text-gray-600 mb-6"></p>
+                        
+                        <h4 class="text-xl font-semibold text-gray-800 mb-4">Estadísticas por Habilidad (Gráfico de Radar)</h4>
+                        <div class="chart-container">
+                            <canvas id="scoreChart"></canvas>
+                        </div>
+                        
+                        <button id="restartButton" class="mt-8 w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300">Reiniciar Examen</button>
+                    </div>
+
+                </div>
+                
+            </div>
+        </main>
+        
+        <footer class="bg-white border-t border-gray-200 mt-10">
+            <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+                <p class="text-center text-sm text-gray-500">
+                    © 2025. <strong>labros canul sarao</strong>. Todos los derechos reservados.
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- DATA Y MOCKS ---
+            const allQuizQuestions = [ /* ... Mantener tus preguntas originales aquí ... */
+                { category: 'Hematología', question: '¿Cuál es el valor de Hemoglobina (g/dL) normal mínimo para una mujer adulta?', answer: '12.0', options: ['14.0', '11.0', '12.0', '13.5'] },
+                { category: 'Hematología', question: '¿Qué indica un Volumen Corpuscular Medio (VCM) alto y una Concentración de Hemoglobina Corpuscular Media (CHCM) normal?', answer: 'Anemia macrocítica normocrómica', options: ['Anemia microcítica hipocrómica', 'Anemia hemolítica', 'Anemia macrocítica normocrómica', 'Policitemia'] },
+                { category: 'Hematología', question: '¿Qué prueba se utiliza para monitorear la terapia con Warfarina (anticoagulante oral)?', answer: 'Tiempo de Protrombina (TP) / INR', options: ['TTPa', 'Fibrinógeno', 'Tiempo de Protrombina (TP) / INR', 'Tiempo de Trombina'] },
+                { category: 'Hematología', question: '¿Qué tipo de tubo de recolección se utiliza para la Biometría Hemática (BH)?', answer: 'EDTA (Tapa Lila)', options: ['Citrato de Sodio (Tapa Azul)', 'EDTA (Tapa Lila)', 'Heparina de Litio (Tapa Verde)', 'Tubo seco (Tapa Roja)'] },
+                { category: 'Química Clínica', question: 'Según CLSI, ¿cuál es el nivel de Glucosa en ayunas (mg/dL) que clasifica a un adulto como prediabético?', answer: '100-125', options: ['< 70', '70-99', '100-125', '> 126'] },
+                { category: 'Química Clínica', question: '¿Qué analito se utiliza como marcador más sensible de daño hepático agudo?', answer: 'ALT (TGP)', options: ['Albumina', 'Bilirrubina Total', 'ALT (TGP)', 'Fosfatasa Alcalina'] },
+                { category: 'Química Clínica', question: '¿Qué puede causar una elevación falsa de Potasio sérico (Hiperpotasemia) sin ser un problema clínico real?', answer: 'Hemólisis de la muestra', options: ['Dieta baja en sal', 'Hipotiroidismo', 'Muestra lipémica', 'Hemólisis de la muestra'] },
+                { category: 'Química Clínica', question: '¿Cuál es el criterio de la ADA para diagnosticar Diabetes Mellitus tipo 2 con HbA1c?', answer: '≥ 6.5%', options: ['≥ 5.7%', '≥ 6.0%', '≥ 6.5%', '≥ 7.0%'] },
+                { category: 'Uro/Copro', question: 'Un pH urinario de 8.5 en un EGO reciente podría indicar:', answer: 'Infección por bacterias productoras de ureasa', options: ['Acidosis tubular renal', 'Dieta alta en proteínas', 'Uso de diuréticos', 'Infección por bacterias productoras de ureasa'] },
+                { category: 'Uro/Copro', question: '¿Qué elemento del sedimento urinario indica daño tubular crónico o severo?', answer: 'Cilindros céreos o grasos', options: ['Cilindros hialinos', 'Cristales de oxalato de calcio', 'Cilindros céreos o grasos', 'Bacterias y leucocitos'] },
+                { category: 'Uro/Copro', question: '¿Qué tipo de muestra fecal es la más adecuada para la detección de *Giardia lamblia*?', answer: 'Fresco y concentrado (CPS)', options: ['Muestra en formol únicamente', 'Fresco y concentrado (CPS)', 'Sangre oculta en heces', 'Copro-Cultivo'] },
+                { category: 'Uro/Copro', question: '¿Cuál es el valor de densidad urinaria normal para un niño bien hidratado?', answer: '1.003 - 1.010', options: ['1.025 - 1.030', '1.003 - 1.010', '1.015 - 1.020', 'Mayor a 1.030'] },
+                { category: 'IMSS Protocolos', question: '¿Qué regla de Westgard indica un error sistemático cuando dos puntos consecutivos exceden ± 2 DE del mismo lado de la media?', answer: '2-2S', options: ['1-3S', '2-2S', 'R-4S', '4-1S'] },
+                { category: 'IMSS Protocolos', question: '¿Cuál es la primera muestra que debe extraerse en el orden de extracción CLSI para evitar contaminación por aditivos?', answer: 'Frasco de Hemocultivo (Estéril)', options: ['Tubo con EDTA (Lila)', 'Frasco de Hemocultivo (Estéril)', 'Tubo con Citrato de Sodio (Azul)', 'Tubo con Gel Separador (Rojo/Amarillo)'] },
+                { category: 'IMSS Protocolos', question: 'Un suero lipémico (turbidez por grasas) puede interferir directamente en la medición de qué analito por fotometría?', answer: 'Glucosa y Proteínas Totales', options: ['Electrolitos (Na, K)', 'Glucosa y Proteínas Totales', 'Creatinina y Urea', 'Bilirrubina total'] },
+                { category: 'IMSS Protocolos', question: 'Si la regla 1-3S falla, la acción inmediata del TLC debe ser:', answer: 'Rechazar la corrida y recalibrar', options: ['Continuar con la corrida', 'Avisar al médico de turno', 'Rechazar la corrida y recalibrar', 'Reportar el resultado con una nota'] },
+                { category: 'Micro/Inmuno', question: '¿Qué tipo de reacción utiliza la prueba VDRL para detectar anticuerpos contra la Sífilis?', answer: 'Floculación', options: ['Aglutinación directa', 'Floculación', 'Inhibición de la Hemaglutinación', 'Neutralización'] },
+                { category: 'Micro/Inmuno', question: 'Una muestra de orina de catéter con crecimiento de $10^5$ UFC/mL de $E. coli$ en medio agar McConkey se considera:', answer: 'Infección urinaria significativa', options: ['Contaminación sin significado clínico', 'Infección urinaria significativa', 'Bacteriuria asintomática', 'Muestra no apta para cultivo'] },
+                { category: 'Micro/Inmuno', question: '¿Qué significa un título de Anti-Streptolisina O (ASO) mayor a 200 UI/mL en un paciente pediátrico?', answer: 'Infección reciente por Streptococcus pyogenes', options: ['Inmunidad a Varicela', 'Infección por Micobacterias', 'Infección reciente por Streptococcus pyogenes', 'Artritis reumatoide'] },
+                { category: 'Micro/Inmuno', question: 'La prueba de Coombs Directa positiva es indicativa de:', answer: 'Anemia Hemolítica Autoinmune', options: ['Incompatibilidad ABO', 'Anemia Hemolítica Autoinmune', 'Deficiencia de Factor VIII', 'Talasemia Mayor'] },
+            ];
+
+            const allFlashcards = { /* ... Mantener tus flashcards aquí ... */ 
+                'Hematología': [ { question: 'Frente: Valor de referencia de Plaquetas (x10^9/L) en adultos.', answer: 'Dorso: 150 - 450' }, { question: 'Frente: Causa más común de Anemia microcítica hipocrómica.', answer: 'Dorso: Deficiencia de hierro.' }, { question: 'Frente: ¿Qué célula sanguínea tiene núcleo lobulado y gránulos finos de color neutro?', answer: 'Dorso: Neutrófilo segmentado.' }, { question: 'Frente: ¿Qué parámetro se utiliza para monitorear la terapia con Heparina?', answer: 'Dorso: Tiempo de Tromboplastina Parcial Activada (TTPa).' }, { question: 'Frente: ¿Qué color de tubo y anticoagulante se usa para la BH?', answer: 'Dorso: Tapa lila (EDTA).' } ],
+                'Química Clínica': [ { question: 'Frente: Rangos de referencia de Creatinina sérica (mg/dL) para un hombre adulto.', answer: 'Dorso: 0.7 - 1.3' }, { question: 'Frente: ¿Qué enzima es específica del tejido prostático y se eleva en el cáncer?', answer: 'Dorso: Fosfatasa Ácida Prostática (PAP).' }, { question: 'Frente: Condición donde la GGT se eleva junto con la Fosfatasa Alcalina.', answer: 'Dorso: Colestasis (obstrucción biliar) o consumo de alcohol.' }, { question: 'Frente: ¿Qué significa un LDL de 190 mg/dL?', answer: 'Dorso: Hipercolesterolemia severa (Riesgo cardiovascular alto).' }, { question: 'Frente: Tubo usado para Glucosa y Perfil Hepático.', answer: 'Dorso: Tubo con gel separador (Rojo/Amarillo).' } ],
+                'Uro/Copro': [ { question: 'Frente: Densidad urinaria (g/L) que indica una relativa deshidratación.', answer: 'Dorso: Mayor a 1.020' }, { question: 'Frente: Nombre de los cilindros urinarios que indican enfermedad renal crónica en etapa terminal.', answer: 'Dorso: Cilindros Céreos.' }, { question: 'Frente: Parásito intestinal con quiste tetranucleado y trofozoíto con forma de "pera".', answer: 'Dorso: Giardia lamblia.' }, { question: 'Frente: El resultado de "Nitritos Positivos" en orina es indicativo de...', answer: 'Dorso: Presencia de bacterias Gram Negativas (Enterobacterias) en la vía urinaria.' }, ],
+                'IMSS Protocolos': [ { question: 'Frente: ¿Qué regla de Westgard se considera la de detección de error aleatorio más sensible?', answer: 'Dorso: R-4S.' }, { question: 'Frente: Criterio principal para rechazar una muestra de suero para química clínica.', answer: 'Dorso: Hemólisis o Lipemia severa.' }, { question: 'Frente: NOM que rige la organización y funcionamiento de los laboratorios clínicos en México.', answer: 'Dorso: NOM-007-SSA3-2011.' }, { question: 'Frente: ¿Cuál es el significado de la sigla VCM?', answer: 'Dorso: Volumen Corpuscular Medio.' } ],
+                'Micro/Inmuno': [ { question: 'Frente: Morfología clásica de Neisseria gonorrhoeae en tinción Gram.', answer: 'Dorso: Diplococo Gram-negativo intracelular (en PMN).' }, { question: 'Frente: Prueba serológica no treponémica utilizada para monitorear el tratamiento de Sífilis.', answer: 'Dorso: VDRL o RPR.' }, { question: 'Frente: ¿Qué tipo de células se cuentan en la Cámara de Neubauer para un LCR (Líquido Cefalorraquídeo)?', answer: 'Dorso: Leucocitos (Glóbulos Blancos) y Glóbulos Rojos.' }, { question: 'Frente: Principal marcador tumoral que se eleva en el cáncer de próstata.', answer: 'Dorso: Antígeno Prostático Específico (APE).' } ]
+            };
+
+            // --- VARIABLES GLOBALES DEL QUIZ Y TIEMPO ---
+            let quizData = []; 
+            let currentQuestionIndex = 0;
+            let score = 0;
+            let categoryScores = { 
+                'Hematología': { correct: 0, total: 0, time: 0, count: 0 }, // Añadimos 'time' y 'count' para promedios
+                'Química Clínica': { correct: 0, total: 0, time: 0, count: 0 }, 
+                'Uro/Copro': { correct: 0, total: 0, time: 0, count: 0 }, 
+                'IMSS Protocolos': { correct: 0, total: 0, time: 0, count: 0 },
+                'Micro/Inmuno': { correct: 0, total: 0, time: 0, count: 0 } 
+            };
+            let myChart = null;
+            let startTime = 0;
+            let totalQuizTime = 0;
+            let timerInterval;
+
+            const quizContainer = document.getElementById('quizContainer');
+            const questionNumberElement = document.getElementById('questionNumber');
+            const optionsContainer = document.getElementById('optionsContainer');
+            const nextButton = document.getElementById('nextButton');
+            const resultsContainer = document.getElementById('resultsContainer');
+            const finalScoreElement = document.getElementById('finalScore');
+            const restartButton = document.getElementById('restartButton');
+            const timerDisplay = document.getElementById('timerDisplay');
+            const totalTimeDisplay = document.getElementById('totalTimeDisplay');
+            const timeAveragesElement = document.getElementById('timeAverages');
+            const flashcardsContainer = document.getElementById('flashcardsContainer');
+
+            // --- FUNCIONES DE TIEMPO Y FORMATO ---
+            function formatTime(seconds) {
+                const minutes = Math.floor(seconds / 60);
+                const remainingSeconds = seconds % 60;
+                const paddedMinutes = String(minutes).padStart(2, '0');
+                const paddedSeconds = String(remainingSeconds).padStart(2, '0');
+                return `${paddedMinutes}:${paddedSeconds}`;
+            }
+
+            function startTimer() {
+                startTime = Date.now();
+                clearInterval(timerInterval);
+                timerInterval = setInterval(() => {
+                    const elapsed = Math.floor((Date.now() - startTime) / 1000);
+                    totalQuizTime = elapsed + currentQuestionIndex * 0; // Suma solo el tiempo de la pregunta actual
+                    
+                    timerDisplay.textContent = `Tiempo por Pregunta: ${formatTime(elapsed)}`;
+                    totalTimeDisplay.textContent = `Total: ${formatTime(totalQuizTime + quizData.slice(0, currentQuestionIndex).reduce((sum, q) => sum + q.timeSpent || 0, 0))}`;
+                }, 1000);
+            }
+
+            function stopTimerAndRecordTime() {
+                clearInterval(timerInterval);
+                const timeSpent = Math.floor((Date.now() - startTime) / 1000);
+                return timeSpent;
+            }
+            
+            // --- LÓGICA DE EXAMEN DINÁMICO ---
+            function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+            }
+            
+            function generateDynamicExam(questionsPerCategory = 4) {
+                // ... (Mantener la lógica de generación y shuffle de preguntas) ...
+                quizData = [];
+                const categories = Object.keys(categoryScores).filter(k => k !== 'Micro/Inmuno'); // Excluir Micro/Inmuno si tiene menos preguntas
+                
+                Object.keys(categoryScores).forEach(key => {
+                    categoryScores[key] = { correct: 0, total: 0, time: 0, count: 0 };
+                });
+
+                categories.forEach(category => {
+                    const categoryQuestions = allQuizQuestions.filter(q => q.category === category);
+                    shuffleArray(categoryQuestions); 
+                    
+                    const selectedQuestions = categoryQuestions.slice(0, questionsPerCategory);
+
+                    selectedQuestions.forEach(q => {
+                        const options = q.options.slice();
+                        shuffleArray(options);
+                        const newQ = { ...q, options: options, timeSpent: 0 }; // Añadir timeSpent
+                        quizData.push(newQ);
+                    });
+                });
+
+                shuffleArray(quizData); 
+            }
+            
+            function loadQuestion() {
+                if (currentQuestionIndex < quizData.length) {
+                    const currentQuestion = quizData[currentQuestionIndex];
+                    questionNumberElement.textContent = `Pregunta ${currentQuestionIndex + 1} de ${quizData.length} - Área: ${currentQuestion.category}`;
+                    document.getElementById('questionText').textContent = currentQuestion.question;
+                    optionsContainer.innerHTML = '';
+                    nextButton.disabled = true;
+
+                    currentQuestion.options.forEach(option => {
+                        const button = document.createElement('button');
+                        button.textContent = option;
+                        button.className = 'w-full text-left bg-gray-100 p-3 rounded-lg hover:bg-indigo-100 transition duration-150 text-gray-800 border border-gray-200';
+                        button.dataset.selected = 'false';
+                        
+                        button.addEventListener('click', () => {
+                            Array.from(optionsContainer.children).forEach(btn => {
+                                btn.dataset.selected = 'false';
+                                btn.classList.remove('bg-indigo-600', 'text-white', 'shadow-md');
+                                btn.classList.add('bg-gray-100', 'text-gray-800');
+                            });
+                            
+                            button.dataset.selected = 'true';
+                            button.classList.remove('bg-gray-100', 'text-gray-800');
+                            button.classList.add('bg-indigo-600', 'text-white', 'shadow-md');
+                            nextButton.disabled = false;
+                        });
+
+                        optionsContainer.appendChild(button);
+                    });
+                    startTimer();
+                } else {
+                    showResults();
+                }
+            }
+
+            function showResults() {
+                clearInterval(timerInterval);
+                quizContainer.classList.add('hidden');
+                resultsContainer.classList.remove('hidden');
+                
+                const totalQuestions = quizData.length;
+                const totalTimeSeconds = quizData.reduce((sum, q) => sum + q.timeSpent, 0);
+                const averageTimePerQuestion = totalTimeSeconds / totalQuestions;
+                const percentage = ((score / totalQuestions) * 100).toFixed(1);
+                
+                finalScoreElement.innerHTML = `Puntuación Final: <span class="font-extrabold" style="color: var(--clidemd-blue);">${score} de ${totalQuestions}</span> (${percentage}%)`;
+                timeAveragesElement.innerHTML = `Tiempo Total: ${formatTime(totalTimeSeconds)}. <br> Tiempo Promedio por Pregunta: <span class="font-bold text-red-600">${averageTimePerQuestion.toFixed(1)} segundos.</span>`;
+
+                // --- Generar Gráfico de Radar (Estadística de Habilidad) ---
+                if (myChart) myChart.destroy();
+
+                const labels = Object.keys(categoryScores);
+                const dataAciertos = labels.map(category => {
+                    const { correct, total } = categoryScores[category];
+                    return total > 0 ? (correct / total) * 100 : 0; // % de Aciertos
+                });
+
+                const ctx = document.getElementById('scoreChart').getContext('2d');
+                myChart = new Chart(ctx, {
+                    type: 'radar', // CAMBIO CLAVE A RADAR CHART
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Rendimiento (%)',
+                            data: dataAciertos,
+                            backgroundColor: 'rgba(0, 135, 98, 0.4)', // Verde CLIDEMED con transparencia
+                            borderColor: 'var(--clidemd-green)',
+                            pointBackgroundColor: 'var(--clidemd-green)',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: 'var(--clidemd-green)',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        elements: {
+                            line: { tension: 0.1 }
+                        },
+                        scales: {
+                            r: {
+                                angleLines: { display: false },
+                                suggestedMin: 0,
+                                suggestedMax: 100,
+                                pointLabels: { font: { size: 14, weight: 'bold' } },
+                                grid: { color: 'rgba(0, 0, 0, 0.1)' },
+                                ticks: { backdropColor: '#fff', font: { weight: 'bold' } }
+                            }
+                        },
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: { callbacks: { label: (context) => `Aciertos: ${context.formattedValue}%` } }
+                        }
+                    }
+                });
+            }
+
+            // --- Manejo de Eventos del Quiz ---
+            nextButton.addEventListener('click', () => {
+                const selectedOption = Array.from(optionsContainer.children).find(child => child.dataset.selected === 'true');
+                if (!selectedOption) return;
+
+                const timeSpent = stopTimerAndRecordTime();
+                
+                const currentQuestion = quizData[currentQuestionIndex];
+                currentQuestion.timeSpent = timeSpent; // Guarda el tiempo en la pregunta
+
+                const category = currentQuestion.category;
+                
+                categoryScores[category].total++;
+                categoryScores[category].time += timeSpent;
+                categoryScores[category].count++;
+
+                if (selectedOption.textContent === currentQuestion.answer) {
+                    score++;
+                    categoryScores[category].correct++;
+                }
+
+                currentQuestionIndex++;
+                loadQuestion(); 
+            });
+
+            restartButton.addEventListener('click', () => {
+                currentQuestionIndex = 0;
+                score = 0;
+                totalQuizTime = 0;
+                
+                resultsContainer.classList.add('hidden');
+                quizContainer.classList.remove('hidden');
+                
+                generateDynamicExam(4); 
+                loadQuestion();
+            });
+            
+            // --- LÓGICA DE FLASHCARDS Y TABS (Mantener la lógica original) ---
+            // ... (Lógica de Flashcards y Tabs aquí - usar la del archivo 90%)
+            let currentFlashcardArea = 'Hematología';
+            
+            function createFlashcardElement(card, index) {
+                const cardDiv = document.createElement('div');
+                cardDiv.className = 'flashcard bg-transparent rounded-lg relative';
+                cardDiv.setAttribute('tabindex', index); 
+
+                const frontFace = document.createElement('div');
+                frontFace.className = 'flashcard-face flashcard-front bg-white text-gray-900';
+                frontFace.textContent = card.question;
+
+                const backFace = document.createElement('div');
+                backFace.className = 'flashcard-face flashcard-back text-white';
+                backFace.textContent = card.answer;
+
+                cardDiv.appendChild(frontFace);
+                cardDiv.appendChild(backFace);
+
+                cardDiv.addEventListener('click', () => {
+                    cardDiv.classList.toggle('flipped');
+                });
+                
+                flashcardsContainer.appendChild(cardDiv);
+            }
+
+            function loadFlashcards(area, count = 6) {
+                flashcardsContainer.innerHTML = '';
+                const availableCards = allFlashcards[area] || [];
+                
+                const cardsToLoad = availableCards.slice(); 
+                shuffleArray(cardsToLoad);
+                
+                cardsToLoad.slice(0, count).forEach((card, index) => {
+                    createFlashcardElement(card, index);
+                });
+            }
+
+            document.querySelectorAll('.flashcard-tab').forEach(tab => {
+                tab.addEventListener('click', (e) => {
+                    currentFlashcardArea = e.target.dataset.area;
+                    loadFlashcards(currentFlashcardArea);
+                    
+                    document.querySelectorAll('.flashcard-tab').forEach(t => {
+                        t.classList.remove('bg-indigo-600', 'text-white');
+                        t.classList.add('bg-gray-200');
+                    });
+                    e.target.classList.remove('bg-gray-200');
+                    e.target.classList.add('bg-indigo-600', 'text-white');
+                });
+            });
+            
+            document.getElementById('newCardsButton').addEventListener('click', () => {
+                loadFlashcards(currentFlashcardArea);
+            });
+            
+            document.querySelectorAll('[data-tab]').forEach(tab => {
+                tab.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetTab = e.target.dataset.tab;
+
+                    document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
+                    document.querySelectorAll('[data-tab]').forEach(link => link.dataset.selected = 'false');
+
+                    document.getElementById(targetTab).classList.remove('hidden');
+                    e.target.dataset.selected = 'true';
+                    
+                    if (targetTab === 'examen') {
+                        // Reiniciar el timer cuando se abre la pestaña de examen
+                        if (currentQuestionIndex < quizData.length) {
+                             startTimer();
+                        }
+                    } else {
+                        clearInterval(timerInterval);
+                    }
+                });
+            });
+
+
+            // --- INICIALIZACIÓN FINAL ---
+            document.querySelector('.flashcard-tab[data-area="Hematología"]').click();
+            document.querySelector('[data-tab="examen"]').dataset.selected = 'false'; // Desactivar inicialmente
+            document.querySelector('[data-tab="estudio"]').click(); // Activar Estudio por defecto
+            
+            generateDynamicExam(4); 
+            // La primera pregunta se carga en el primer clic de "Siguiente" o en la inicialización
+            loadQuestion();
+        });
+    </script>
+</body>
+</html>

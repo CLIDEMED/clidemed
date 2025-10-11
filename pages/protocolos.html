@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolos y Calidad - CLIDEMED</title>
+    <link rel="stylesheet" href="../css/style_base.css">
+    <link rel="stylesheet" href="../css/style_materias.css"> 
+</head>
+<body>
+    <header>
+        <h1>🔬 CLIDEMED</h1>
+        <p style="color: #ccc; font-size: 1.2em;">de lo teórico a lo práctico...</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="materias.html">Materias</a></li>
+            <li><a href="capsulas.html">Cápsulas</a></li>
+            <li><a href="protocolos.html" class="active">Protocolos</a></li>
+            <li><a href="entrenamiento.html">Entrenamiento</a></li>
+            <li><a href="laboratorio_virtual.html">Laboratorio Virtual</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <h1>Protocolos de Calidad y Estándares CLSI / IMSS</h1>
+        <p>Domina los procedimientos pre-analíticos, el control de calidad y las normativas esenciales para el laboratorio clínico institucional. Esto es crucial para tu práctica diaria.</p>
+        
+        <div class="card-container">
+            
+            <div class="card module-card">
+                <img src="../images/venopuncion_cover.png" alt="Orden de Extracción CLSI" class="module-cover-image" style="height: 100px; object-fit: contain; background-color: #f0f8ff;">
+                <div class="module-info">
+                    <h3>Orden de Extracción (CLSI)</h3>
+                    <p>La secuencia correcta de tubos para evitar la contaminación cruzada de aditivos y asegurar resultados precisos, siguiendo el estándar del Clinical and Laboratory Standards Institute (CLSI).</p>
+                    <table class="content-table">
+                        <thead>
+                            <tr><th>Orden</th><th>Tubo / Tapa</th><th>Aditivo</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>1</strong></td><td>Botella (Estéril)</td><td>Medios de cultivo</td></tr>
+                            <tr><td><strong>2</strong></td><td>Azul</td><td>Citrato de Sodio (Coagulación)</td></tr>
+                            <tr><td><strong>3</strong></td><td>Rojo/Amarillo</td><td>Gel Separador (Química/Suero)</td></tr>
+                            <tr><td><strong>4</strong></td><td>Verde</td><td>Heparina de Litio (Gasometría/Plasma)</td></tr>
+                            <tr><td><strong>5</strong></td><td>Lila</td><td>EDTA (Hematología/BH)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card module-card">
+                <img src="../images/westgard_cover.png" alt="Reglas de Westgard" class="module-cover-image" style="height: 100px; object-fit: contain; background-color: #f0f8ff;">
+                <div class="module-info">
+                    <h3>Control de Calidad (Reglas de Westgard)</h3>
+                    <p>Criterios estadísticos para aceptar o rechazar una corrida analítica en el laboratorio.</p>
+                    <table class="content-table">
+                        <thead>
+                            <tr><th>Regla</th><th>Tipo de Error Detectado</th><th>Acción TLC</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>1<sub>3S</sub></strong></td><td>Error Aleatorio (Grande)</td><td>Rechazar corrida, recalibrar.</td></tr>
+                            <tr><td><strong>R<sub>4S</sub></strong></td><td>Error Aleatorio (Sensible)</td><td>Rechazar corrida.</td></tr>
+                            <tr><td><strong>2<sub>2S</sub></strong></td><td>Error Sistemático (Inicial)</td><td>Investigar la causa (reactivo, calibración).</td></tr>
+                            <tr><td><strong>4<sub>1S</sub></strong></td><td>Error Sistemático (Constante)</td><td>Indica una deriva constante de la media.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card module-card">
+                <img src="../images/normas_cover.png" alt="Normativas Oficiales" class="module-cover-image" style="height: 100px; object-fit: contain; background-color: #f0f8ff;">
+                <div class="module-info">
+                    <h3>Normatividad y Rechazo de Muestras</h3>
+                    <p>Criterios inamovibles que todo laboratorista debe memorizar para garantizar la seguridad y validez legal del resultado.</p>
+                    <h4 style="font-size: 1.1em; color: var(--clidemd-red-accent); margin-bottom: 5px;">Causas de Rechazo Crítico:</h4>
+                    <ul style="list-style: disc; padding-left: 20px;">
+                        <li>Muestra sin identificación o mal etiquetada.</li>
+                        <li>Tubo de coagulación con llenado incorrecto (no respeta 9:1).</li>
+                        <li>Coágulo en muestra de sangre total (BH o EDTA).</li>
+                        <li>Muestra de LCR refrigerada (NO DEBE REFRIGERARSE).</li>
+                    </ul>
+                    <h4 style="font-size: 1.1em; color: var(--clidemd-blue); margin-top: 10px; margin-bottom: 5px;">Normas Oficiales Mexicanas (NOMs) Clave:</h4>
+                    <ul style="list-style: disc; padding-left: 20px;">
+                        <li><strong>NOM-007-SSA3-2011:</strong> Organización y funcionamiento de laboratorios clínicos.</li>
+                        <li><strong>NOM-087-ECOL-SSA1-2002:</strong> Manejo de Residuos Peligrosos Biológico-Infecciosos (RPBI).</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
+        <div class="legal-links">
+            <a href="../pages/terminos_condiciones.html">Términos y Condiciones</a>
+            |
+            <a href="../pages/aviso_privacidad.html">Aviso de Privacidad</a>
+        </div>
+    </footer>
+</body>
+</html>
