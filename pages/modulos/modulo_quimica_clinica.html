@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cápsulas de Estudio - CLIDEMED</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"> <link rel="stylesheet" href="../css/style_base.css">
-    <link rel="stylesheet" href="../css/style_materias.css"> 
+    <title>Módulo: Química Clínica</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style_base.css">
+<link rel="stylesheet" href="../../css/style_materias.css"> 
 </head>
 <body>
     <header><h1>🔬 Plataforma de Estudio y Consulta para TLC</h1></header>
@@ -20,6 +21,23 @@
         </ul>
     </nav>
     <main id="main-content">
+        <div id="accessibility-panel" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 20px; padding: 10px; background-color: #f1f1f1; border-radius: 8px;">
+            <span style="font-size: 0.9em; font-weight: bold;">Accesibilidad:</span>
+            
+            <button id="toggle-font-style" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white;">
+                Estilo Robusto
+            </button>
+            
+            <button id="font-size-s" data-size="s" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 0.8em;">
+                A-
+            </button>
+            <button id="font-size-n" data-size="n" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1em;">
+                A
+            </button>
+            <button id="font-size-l" data-size="l" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1.2em;">
+                A+
+            </button>
+        </div>
         <h1>Módulo de Química Clínica</h1>
         <p>Análisis de los componentes químicos de los fluidos corporales para el diagnóstico, tratamiento y prevención de enfermedades.</p>
         
@@ -69,5 +87,64 @@
         <a href="../../pages/aviso_privacidad.html">Aviso de Privacidad</a>
     </div>
 </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const body = document.body;
+        const styleToggleBtn = document.getElementById('toggle-font-style');
+        const sizeButtons = document.querySelectorAll('[data-size]');
+
+        // --- Manejo de Estilos de Fuente (Robusto/Normal) ---
+        function applyFontStyle(isRobust) {
+            if (isRobust) {
+                body.classList.add('font-robust');
+                styleToggleBtn.textContent = 'Estilo Normal';
+                localStorage.setItem('fontStyle', 'robust');
+            } else {
+                body.classList.remove('font-robust');
+                styleToggleBtn.textContent = 'Estilo Robusto';
+                localStorage.setItem('fontStyle', 'normal');
+            }
+        }
+
+        styleToggleBtn.addEventListener('click', () => {
+            const currentStyle = localStorage.getItem('fontStyle');
+            applyFontStyle(currentStyle !== 'robust'); // Alternar
+        });
+
+        // --- Manejo de Tamaños de Fuente (S/N/L) ---
+        function applyFontSize(size) {
+            body.classList.remove('size-s', 'size-n', 'size-l');
+            body.classList.add(`size-${size}`);
+            localStorage.setItem('fontSize', size);
+            
+            // Opcional: Resaltar el botón activo
+            sizeButtons.forEach(btn => {
+                btn.style.backgroundColor = btn.dataset.size === size ? '#e6f0ff' : 'white';
+            });
+        }
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                applyFontSize(e.target.dataset.size);
+            });
+        });
+
+        // --- Cargar Preferencias al Iniciar ---
+        const savedFontStyle = localStorage.getItem('fontStyle');
+        if (savedFontStyle === 'robust') {
+            applyFontStyle(true);
+        } else {
+             applyFontStyle(false);
+        }
+        
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            applyFontSize(savedFontSize);
+        } else {
+            applyFontSize('n'); // Tamaño normal por defecto
+        }
+    });
+</script>
 </body>
 </html>

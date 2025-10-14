@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Módulo de Hematología - CLIDEMED</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../css/style_base.css">
-<link rel="stylesheet" href="../../css/style_materias.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../../css/style_base.css">
+    <link rel="stylesheet" href="../../css/style_materias.css"> 
     <style>
         /* Estilos para un índice de módulo limpio y profesional */
         .module-index-container {
@@ -33,33 +34,29 @@
             text-decoration: none;
             color: inherit;
             display: block;
-            padding: 25px;
+            padding: 15px;
         }
         .chapter-title {
-            font-size: 1.5em;
-            color: var(--clidemd-blue); /* Ajustado a variable */
-            margin: 0 0 10px 0;
+            color: var(--clidemd-blue);
+            margin: 0 0 5px 0;
+            font-size: 1.2em;
         }
         .chapter-description {
-            font-size: 1em;
-            color: #555;
             margin: 0;
+            color: #555;
+            font-size: 0.95em;
         }
-        .part-header {
-            font-size: 1.8em;
-            color: #2c3e50;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            border-bottom: 2px solid var(--clidemd-green); /* Ajustado a variable */
-            padding-bottom: 10px;
+        /* Estilo para el enlace activo en la navegación (ejemplo) */
+        nav ul li a[href*="materias.html"] {
+            background-color: var(--clidemd-green); 
         }
     </style>
 </head>
 <body>
-    <header><h1>🔬 Módulo de Hematología</h1></header>
-    <nav>
+    <header><h1>🔬 Plataforma de Estudio y Consulta para TLC</h1></header>
+   <nav>
         <ul>
-             <li><a href="../../index.html">Inicio</a></li>
+            <li><a href="../../index.html">Inicio</a></li>
             <li><a href="../materias.html">Materias</a></li>
             <li><a href="../capsulas.html">Cápsulas</a></li>
             <li><a href="../protocolos.html">Protocolos</a></li>
@@ -67,130 +64,178 @@
             <li><a href="../laboratorio_virtual.html">Laboratorio Virtual</a></li>
         </ul>
     </nav>
+    <main id="main-content">
+        
+        <div id="accessibility-panel" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 20px; padding: 10px; background-color: #f1f1f1; border-radius: 8px;">
+            <span style="font-size: 0.9em; font-weight: bold;">Accesibilidad:</span>
+            
+            <button id="toggle-font-style" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white;">
+                Estilo Robusto
+            </button>
+            
+            <button id="font-size-s" data-size="s" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 0.8em;">
+                A-
+            </button>
+            <button id="font-size-n" data-size="n" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1em;">
+                A
+            </button>
+            <button id="font-size-l" data-size="l" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1.2em;">
+                A+
+            </button>
+        </div>
+        <div class="module-index-container">
+            <h1>Módulo de Hematología 🩸</h1>
+            <p>Guía de estudio completa sobre el sistema hematopoyético, trastornos de la serie roja y blanca, y coagulación.</p>
 
-    <main class="container module-index-container">
-        <h2 class="part-header">Parte I: Fisiología de la Sangre y Serie Roja</h2>
-<ul class="chapter-list">
-    <li class="chapter-list-item">
-        <a href="../cap_1_hematopoyesis.html">
-            <h3 class="chapter-title">Capítulo 1: Fisiología Hematopoyética y Células Troncales</h3>
-            <p class="chapter-description">El origen, la regulación y la **diferenciación** de las células sanguíneas en la médula ósea. **[Corregido Semántica]**</p>
-        </a>
-    </li>
-    <li class="chapter-list-item">
-        <a href="../cap_2_concepto_anemia.html">
-            <h3 class="chapter-title">Capítulo 2: Anemia: Definición, Clínica y Clasificación Morfológica</h3>
-            <p class="chapter-description">Concepto clave, manifestaciones clínicas y el enfoque diagnóstico basado en el VCM **(Volumen Corpuscular Medio)**. **[Corregido Gramática/Acrónimo]**</p>
-        </a>
-    </li>
-    <li class="chapter-list-item">
-        <a href="../cap_3_anemia_ferropenica.html">
-            <h3 class="chapter-title">Capítulo 3: Anemias Microcíticas: Déficit de Hierro, Talasemias y Crónicas</h3>
-            <p class="chapter-description">Metabolismo del hierro, anemia ferropénica, anemia de la enfermedad crónica y diagnósticos diferenciales.</p>
-        </a>
-    </li>
-    <li class="chapter-list-item">
-        <a href="../cap_4_anemia_megaloblastica.html">
-            <h3 class="chapter-title">Capítulo 4: Anemias Macrocíticas: Déficit de B12 y Folato</h3>
-            <p class="chapter-description">Etiología, fisiopatología y alteraciones morfológicas clave de las anemias megaloblásticas.</p>
-        </a>
-    </li>
-    <li class="chapter-list-item">
-        <a href="../cap_5_anemias_hemoliticas_intrinsecas.html">
-            <h3 class="chapter-title">Capítulo 5: Hemólisis Intrínseca: Defectos de Membrana y Enzimopatías</h3>
-            <p class="chapter-description">Esferocitosis hereditaria, enzimopatías (G6PD, Piruvatocinasa) y Hemoglobinuria Paroxística Nocturna (HPN). **[Corregido Gramática]**</p>
-        </a>
-    </li>
-    <li class="chapter-list-item">
-        <a href="../cap_6_hemoglobinopatias_talasemias.html">
-            <h3 class="chapter-title">Capítulo 6: Hemoglobinopatías: Enfermedad Falciforme y Talasemias</h3>
-            <p class="chapter-description">Fisiopatología, clínica y diagnóstico de las hemoglobinopatías estructurales (Hb S, C, etc.) y las talasemias.</p>
-        </a>
-    </li>
-    <li class="chapter-list-item">
-        <a href="../cap_7_anemias_hemoliticas_extrinsecas.html">
-            <h3 class="chapter-title">Capítulo 7: Hemólisis Extrínseca: Anemias Hemolíticas Autoinmunes (AHAI)</h3>
-            <p class="chapter-description">Clasificación, diagnóstico y tratamiento de las AHAI por anticuerpos calientes y fríos, y hemólisis no inmune.</p>
-        </a>
-    </li>
-</ul>
-
-<h2 class="part-header">Parte II: Hemostasia y Coagulación</h2>
-<ul class="chapter-list">
-    <li class="chapter-list-item">
-        <a href="../hem_cap_8_fisiologia_hemostasia.html">
-            <h3 class="chapter-title">Capítulo 8: Fisiología de la Hemostasia y Trombosis</h3>
-            <p class="chapter-description">Estudio integrado de la hemostasia primaria, secundaria, el sistema fibrinolítico y el control natural de la coagulación.</p>
-        </a>
-    </li>
-    <li class="chapter-list-item">
-        <a href="../hem_cap_9_diagnostico_hemostasia.html">
-            <h3 class="chapter-title">Capítulo 9: Evaluación de Laboratorio de Coagulación y Fibrinólisis</h3>
-            <p class="chapter-description">Interpretación de TP, TTPa, Fibrinógeno, Dímero D y pruebas de función plaquetaria.</p>
-        </a>
-    </li>
-    <li class="chapter-list-item">
-        <a href="../hem_cap_10_trastornos_hemostasia_primaria.html">
-            <h3 class="chapter-title">Capítulo 10: Trastornos Plaquetarios y Enfermedad de Von Willebrand (EVW)</h3>
-            <p class="chapter-description">Estudio de púrpuras trombocitopénicas (PTI, PTT) y defectos funcionales de las plaquetas.</p>
-        </a>
-    </li>
-    <li class="chapter-list-item">
-        <a href="../hem_cap_11_coagulopatias_congenitas.html">
-            <h3 class="chapter-title">Capítulo 11: Coagulopatías Congénitas: Hemofilia y Déficits Raros</h3>
-            <p class="chapter-description">Fisiopatología, diagnóstico y tratamiento de las Hemofilias A y B, y otras deficiencias de factores **hereditarios**. **[Corregido Gramática]**</p>
-        </a>
-    </li>
-    <li class="chapter-list-item">
-        <a href="../hem_cap_12_coagulopatias_adquiridas.html">
-            <h3 class="chapter-title">Capítulo 12: Coagulopatías Adquiridas (Hígado, Vitamina K y CID)</h3>
-            <p class="chapter-description">Coagulopatías secundarias a hepatopatías, déficit de vitamina K, **terapia anticoagulante** y Coagulación Intravascular Diseminada (CID). **[Corregido Semántica]**</p>
-        </a>
-    </li>
-    <li class="chapter-list-item">
-        <a href="../hem_cap_13_enfermedad_tromboembolica.html">
-            <h3 class="chapter-title">Capítulo 13: Enfermedad Tromboembólica Venosa (ETEV) y Trombofilias</h3>
-            <p class="chapter-description">Mecanismos de la trombosis, estudio de trombofilias hereditarias y el tratamiento antitrombótico.</p>
-        </a>
-    </li>
-</ul>
-
-<h2 class="part-header">Parte III: Serie Blanca, Inmunología y Neoplasias</h2>
-<ul class="chapter-list">
-     <li class="chapter-list-item">
-        <a href="../hem_cap_14_inmunologia_generalidades.html">
-            <h3 class="chapter-title">Capítulo 14: Inmunofenotipo: Bases, Métodos y Aplicación Clínica</h3>
-            <p class="chapter-description">Fundamentos de Citometría de Flujo e IHQ en el diagnóstico de las enfermedades hematológicas. (Contenido generado con el Prompt Seguro).</p>
-        </a>
-    </li>
-     <li class="chapter-list-item">
-        <a href="../hem_cap_15_leucemias_agudas.html">
-            <h3 class="chapter-title">Capítulo 15: Leucemias Agudas: Clasificación, Fenotipo y Diagnóstico</h3>
-            <p class="chapter-description">LAL y LAM. Se subclasifican según las guías de la OMS (WHO) y se relaciona el fenotipo con alteraciones moleculares.</p>
-        </a>
-    </li>
-    <li class="chapter-list-item">
-        <a href="../hem_cap_16_linfomas_hodgkin.html">
-            <h3 class="chapter-title">Capítulo 16: Linfomas: Hodgkin y No Hodgkin (LNH)</h3>
-            <p class="chapter-description">Diagnóstico, estadios (Clasificación de Lugano) y características fenotípicas de las neoplasias linfoides.</p>
-        </a>
-    </li>
-    <li class="chapter-list-item">
-        <a href="../hem_cap_17_sm_y_smp.html">
-            <h3 class="chapter-title">Capítulo 17: SMD y SMP: Mieloma Múltiple y Otras Discrasias</h3>
-            <p class="chapter-description">Diagnóstico y manejo de los Síndromes Mielodisplásicos **(SMD)** y Mieloproliferativos **(SMP - LMC, PV)** y el Mieloma Múltiple **(MM)**. **[Corregido Semántica/Acrónimo]**</p>
-        </a>
-    </li>
-</ul>
+            <ul class="chapter-list">
+                <li class="chapter-list-item">
+                    <a href="../hem_cap_1_bases.html">
+                        <h3 class="chapter-title">Capítulo 1: Hematopoyesis y Morfología Celular</h3>
+                        <p class="chapter-description">Origen, desarrollo de las células sanguíneas y reconocimiento de células normales en el frotis.</p>
+                    </a>
+                </li>
+                 <li class="chapter-list-item">
+                    <a href="../hem_cap_2_anemias_micro.html">
+                        <h3 class="chapter-title">Capítulo 2: Anemias Microcíticas</h3>
+                        <p class="chapter-description">Deficiencia de hierro, talasemias y anemias por enfermedad crónica. Criterios diagnósticos.</p>
+                    </a>
+                </li>
+                <li class="chapter-list-item">
+                    <a href="../hem_cap_3_anemias_macro.html">
+                        <h3 class="chapter-title">Capítulo 3: Anemias Macrocíticas y Megaloblásticas</h3>
+                        <p class="chapter-description">Deficiencia de Vitamina B12 y Ácido Fólico. Características morfológicas y manejo.</p>
+                    </a>
+                </li>
+                <li class="chapter-list-item">
+                    <a href="../hem_cap_4_anemias_hemoliticas.html">
+                        <h3 class="chapter-title">Capítulo 4: Anemias Hemolíticas</h3>
+                        <p class="chapter-description">Clasificación, pruebas de Coombs y diagnóstico de Esferocitosis Hereditaria.</p>
+                    </a>
+                </li>
+                 <li class="chapter-list-item">
+                    <a href="../hem_cap_5_hemostasia_primaria.html">
+                        <h3 class="chapter-title">Capítulo 5: Hemostasia Primaria y Plaquetas</h3>
+                        <p class="chapter-description">Función plaquetaria, Enfermedad de Von Willebrand y Púrpura Trombocitopénica Trombótica (PTT).</p>
+                    </a>
+                </li>
+                <li class="chapter-list-item">
+                    <a href="../hem_cap_6_coagulacion_secundaria.html">
+                        <h3 class="chapter-title">Capítulo 6: Hemostasia Secundaria y Coagulación</h3>
+                        <p class="chapter-description">Cascada de coagulación, Hemofilia A y B. Interpretación de TP, TPT y Fibrinógeno.</p>
+                    </a>
+                </li>
+                 <li class="chapter-list-item">
+                    <a href="../hem_cap_7_leucocitos_normales.html">
+                        <h3 class="chapter-title">Capítulo 7: Fisiología de Neutrófilos y Linfocitos</h3>
+                        <p class="chapter-description">Maduración, funciones inmunes y valores normales de leucocitos.</p>
+                    </a>
+                </li>
+                 <li class="chapter-list-item">
+                    <a href="../hem_cap_8_sindromes_inmuno.html">
+                        <h3 class="chapter-title">Capítulo 8: Síndromes Inmunodeficientes y HIV</h3>
+                        <p class="chapter-description">Principios del diagnóstico y seguimiento de pacientes con HIV en el laboratorio.</p>
+                    </a>
+                </li>
+                 <li class="chapter-list-item">
+                    <a href="../hem_cap_9_infecciones_bacterianas.html">
+                        <h3 class="chapter-title">Capítulo 9: Infecciones Bacterianas, Virales y Parasitarias</h3>
+                        <p class="chapter-description">Reacciones leucemoides, linfocitosis atípica (VEB) y hallazgos en hemoparásitos.</p>
+                    </a>
+                </li>
+                 <li class="chapter-list-item">
+                    <a href="../hem_cap_10_biopsia_mo.html">
+                        <h3 class="chapter-title">Capítulo 10: Biopsia de Médula Ósea: Técnica e Interpretación</h3>
+                        <p class="chapter-description">Protocolo de la obtención de muestras, tinción y criterios de celularidad.</p>
+                    </a>
+                </li>
+                <li class="chapter-list-item">
+                    <a href="../hem_cap_15_leucemias_agudas.html">
+                        <h3 class="chapter-title">Capítulo 15: Leucemias Agudas: Clasificación, Fenotipo y Diagnóstico</h3>
+                        <p class="chapter-description">LAL y LAM. Se subclasifican según las guías de la OMS (WHO) y se relaciona el fenotipo con alteraciones moleculares.</p>
+                    </a>
+                </li>
+                <li class="chapter-list-item">
+                    <a href="../hem_cap_16_linfomas_hodgkin.html">
+                        <h3 class="chapter-title">Capítulo 16: Linfomas: Hodgkin y No Hodgkin (LNH)</h3>
+                        <p class="chapter-description">Diagnóstico, estadios (Clasificación de Lugano) y características fenotípicas de las neoplasias linfoides.</p>
+                    </a>
+                </li>
+                <li class="chapter-list-item">
+                    <a href="../hem_cap_17_sm_y_smp.html">
+                        <h3 class="chapter-title">Capítulo 17: SMD y SMP: Mieloma Múltiple y Otras Discrasias</h3>
+                        <p class="chapter-description">Diagnóstico y manejo de los Síndromes Mielodisplásicos, Mieloproliferativos (LMC, PV) y el Mieloma Múltiple.</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
         <div class="legal-links">
-            <a href="../terminos_condiciones.html">Términos y Condiciones</a>
+            <a href="../../pages/terminos_condiciones.html">Términos y Condiciones</a>
             |
-            <a href="../aviso_privacidad.html">Aviso de Privacidad</a>
+            <a href="../../pages/aviso_privacidad.html">Aviso de Privacidad</a>
         </div>
     </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const body = document.body;
+        const styleToggleBtn = document.getElementById('toggle-font-style');
+        const sizeButtons = document.querySelectorAll('[data-size]');
+
+        // --- Manejo de Estilos de Fuente (Robusto/Normal) ---
+        function applyFontStyle(isRobust) {
+            if (isRobust) {
+                body.classList.add('font-robust');
+                styleToggleBtn.textContent = 'Estilo Normal';
+                localStorage.setItem('fontStyle', 'robust');
+            } else {
+                body.classList.remove('font-robust');
+                styleToggleBtn.textContent = 'Estilo Robusto';
+                localStorage.setItem('fontStyle', 'normal');
+            }
+        }
+
+        styleToggleBtn.addEventListener('click', () => {
+            const currentStyle = localStorage.getItem('fontStyle');
+            applyFontStyle(currentStyle !== 'robust'); // Alternar
+        });
+
+        // --- Manejo de Tamaños de Fuente (S/N/L) ---
+        function applyFontSize(size) {
+            body.classList.remove('size-s', 'size-n', 'size-l');
+            body.classList.add(`size-${size}`);
+            localStorage.setItem('fontSize', size);
+            
+            // Opcional: Resaltar el botón activo
+            sizeButtons.forEach(btn => {
+                btn.style.backgroundColor = btn.dataset.size === size ? '#e6f0ff' : 'white';
+            });
+        }
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                applyFontSize(e.target.dataset.size);
+            });
+        });
+
+        // --- Cargar Preferencias al Iniciar ---
+        const savedFontStyle = localStorage.getItem('fontStyle');
+        if (savedFontStyle === 'robust') {
+            applyFontStyle(true);
+        } else {
+             applyFontStyle(false);
+        }
+        
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            applyFontSize(savedFontSize);
+        } else {
+            applyFontSize('n'); // Tamaño normal por defecto
+        }
+    });
+</script>
 </body>
 </html>

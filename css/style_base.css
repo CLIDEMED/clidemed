@@ -22,13 +22,27 @@ body {
     background-color: var(--bg-light);
     color: var(--text-dark);
     line-height: 1.6;
+    /* Ajuste de peso de fuente base para mejor legibilidad */
+    font-weight: 450; /* Un poco más fuerte que el regular (400) */
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+/* --- CLASES DE ACCESIBILIDAD (NUEVO) --- */
+/* Estilos para el modo de Alto Contraste/Robusto */
+body.font-robust p, 
+body.font-robust li,
+body.font-robust .module-info p,
+body.font-robust .subject-info p {
+    font-weight: 600 !important; /* Texto más fuerte para mejor contraste */
+    color: #000000 !important; /* Tinta pura para máximo contraste */
 }
+/* Estilos de Tamaño de Fuente (SMALL, NORMAL, LARGE) */
+body.size-s {
+    font-size: 0.9em;
+}
+body.size-l {
+    font-size: 1.15em;
+}
+/* El tamaño normal (size-n) es el predeterminado del body */
 
 /* --- ENCABEZADO (HEADER) --- */
 header {
