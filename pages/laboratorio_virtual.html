@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laboratorio Virtual y Entrenamiento - CLIDEMED</title>
-    <link rel="stylesheet" href="../css/style_base.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"> <link rel="stylesheet" href="../css/style_base.css"> 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     
     <style>
         /* Adaptación de la estética CLIDEMED al entorno interno */
@@ -42,9 +41,7 @@
 </head>
 <body>
     <header>
-        <h1>🧪 Laboratorio Virtual</h1>
-        <p style="color: #ccc; font-size: 1.2em;">Simuladores y Técnicas de Estudio Avanzadas</p>
-    </header>
+        <h1>🧪 Laboratorio Virtual y Simulación</h1> <p style="color: #ccc; font-size: 1.2em;">Casos Clínicos, Microscopía y Aplicación de Protocolos</p> </header>
     <nav>
         <ul>
             <li><a href="../index.html">Inicio</a></li>
@@ -62,35 +59,27 @@
                 <div class="border-b border-gray-200" style="margin-top: 20px;">
                     <nav class="-mb-px flex space-x-8" aria-label="Tabs">
                         <a href="#estudio" class="nav-link text-gray-500 hover:text-gray-700 whitespace-nowrap py-4 px-1 font-medium text-base" data-tab="estudio" data-selected="true">
-                            📖 Técnicas de Estudio (Pomodoro)
-                        </a>
+                            📖 Casos Clínicos (Diagnóstico Diferencial) </a>
                         <a href="#flashcards" class="nav-link text-gray-500 hover:text-gray-700 whitespace-nowrap py-4 px-1 font-medium text-base" data-tab="flashcards" data-selected="false">
-                            🧠 Tarjetas Interactivas
-                        </a>
+                            🧠 Tarjetas de Protocolo/Criterio </a>
                         <a href="#examen" class="nav-link text-gray-500 hover:text-gray-700 whitespace-nowrap py-4 px-1 font-medium text-base" data-tab="examen" data-selected="false">
-                            📝 Simulador de Examen (Con Temporizador)
-                        </a>
+                            🔬 Módulo de Microscopía Virtual (Próximamente) </a>
                     </nav>
                 </div>
                 
                 <div id="estudio" class="tab-content mt-6">
-                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Enfoque Didáctico y Pedagógico</h2>
-                    <div class="bg-white p-6 rounded-lg shadow-lg pomodoro-container">
-                        <h3 class="text-xl font-bold text-gray-900 mb-4" style="color: var(--clidemd-blue);">Técnica de Estudio Activo: Pomodoro (Próximamente Integrado)</h3>
-                        <p class="text-gray-600 mb-4">Esta técnica divide el tiempo de estudio en intervalos de 25 minutos enfocados (pomodoros), seguidos de 5 minutos de descanso. Para aplicarlo a tus exámenes, te mostraremos cuánto te toma responder en promedio cada pregunta.</p>
-                        
-                        <div class="flex flex-wrap gap-4 mt-6">
-                            <button class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg font-medium" disabled>Activar Pomodoro</button>
-                            <button class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg font-medium" disabled>Activar Sonido en Flashcards</button>
-                            <span class="text-sm text-gray-500 self-center"> (Estas funciones "wow" se integrarán con la base de datos de contenido.)</span>
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Simulación de Casos Clínicos</h2> <div class="bg-white p-6 rounded-lg shadow-lg pomodoro-container">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4" style="color: var(--clidemd-blue);">Análisis e Interpretación de Resultados (Próximamente)</h3>
+                        <p class="text-gray-600 mb-4">Esta sección se enfocará en presentar análisis de laboratorio completos y guiar al estudiante a través del proceso de diagnóstico diferencial, identificando errores pre-analíticos y post-analíticos.</p> <div class="flex flex-wrap gap-4 mt-6">
+                            <button class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg font-medium" disabled>Iniciar Caso Clínico</button>
+                            <button class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg font-medium" disabled>Revisar Protocolos</button>
+                            <span class="text-sm text-gray-500 self-center"> (Estas funciones se integrarán para ofrecer una experiencia práctica detallada.)</span>
                         </div>
                     </div>
                 </div>
 
                 <div id="flashcards" class="tab-content mt-6 hidden">
-                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Tarjetas Interactivas (Flashcards)</h2>
-                    
-                    <div class="flex flex-wrap gap-2 mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Tarjetas Interactivas (Criterios de Laboratorio)</h2> <div class="flex flex-wrap gap-2 mb-6">
                         <button class="flashcard-tab bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg font-medium" data-area="Hematología">Hematología</button>
                         <button class="flashcard-tab bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg font-medium" data-area="Química Clínica">Química Clínica</button>
                         <button class="flashcard-tab bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg font-medium" data-area="Uro/Copro">Uro/Copro</button>
@@ -104,9 +93,7 @@
                 </div>
 
                 <div id="examen" class="tab-content mt-6 hidden">
-                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Simulador de Examen</h2>
-                    
-                    <div id="quizContainer" class="bg-white p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Simulador de Microscopía y Análisis Morfológico</h2> <div id="quizContainer" class="bg-white p-6 rounded-lg shadow-lg">
                         <div class="flex justify-between items-center mb-4">
                              <div id="timerDisplay" class="text-lg font-bold text-red-600">Tiempo por Pregunta: 00:00</div>
                              <div id="totalTimeDisplay" class="text-md font-semibold text-gray-600">Total: 00:00</div>
@@ -116,8 +103,8 @@
                         <h3 id="questionText" class="text-xl font-bold text-gray-900 mb-6"></h3>
                         <div id="optionsContainer" class="space-y-4">
                             </div>
-                        <button id="nextButton" class="mt-8 w-full text-white py-3 rounded-lg font-semibold transition duration-300 bg-green-600 hover:bg-green-700">Siguiente Pregunta</button>
-                    </div>
+<button id="nextButton" class="mt-8 w-full text-white py-3 rounded-lg font-semibold transition duration-300 bg-green-600 hover:bg-green-700">Siguiente Pregunta</button>                    
+</div>
                     
                     <div id="resultsContainer" class="hidden bg-white p-6 rounded-lg shadow-lg mt-6">
                         <h3 class="text-2xl font-bold text-gray-900 mb-4">Resultados del Examen</h3>
