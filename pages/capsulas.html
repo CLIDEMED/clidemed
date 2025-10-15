@@ -3,14 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cápsulas de Estudio - CLIDEMED</title>
+    <title>Cápsulas y Recursos Rápidos - CLIDEMED</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style_base.css">
     <link rel="stylesheet" href="../css/style_materias.css"> 
+    <style>
+        /* Estilos específicos para la nueva estructura de Cápsulas */
+        .resource-card {
+            background-color: #f1f8e9; /* Tono suave de verde */
+            border: 1px solid var(--clidemd-green);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+            text-decoration: none;
+            color: var(--text-dark);
+            display: block;
+        }
+        .resource-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+        .resource-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: var(--clidemd-blue);
+        }
+    </style>
 </head>
 <body>
   <header>
-      <h1>🔬 CLIDEMED</h1>
+      <h1>🧪 CLIDEMED</h1>
       <p style="color: #ccc; font-size: 1.2em;">de lo teórico a lo práctico...</p>
   </header>
     
@@ -43,48 +66,36 @@
                 A+
             </button>
         </div>
-        <h1>Cápsulas de Estudio por Área</h1>
-        <p>Selecciona un área clínica para ver la lista de capítulos disponibles.</p>
+        <h1>Cápsulas de Repaso Rápido y Recursos</h1>
+        <p>Accede a guías rápidas, tablas de referencia y resúmenes para memorizar datos esenciales en tu formación.</p>
         
        <div class="card-container">
         
-    <a href="modulos/modulo_hematologia.html" class="card module-card">
-        <img src="../images/hematologia_cover.png" alt="Módulo de Hematología" class="module-cover-image">
-        <div class="module-info">
-            <h3>Módulo de Hematología</h3>
-            <p>Fundamentos de la formación de la sangre, patologías de la serie roja, serie blanca y trastornos de la coagulación.</p>
-            <span class="module-button">Acceder al Módulo</span>
-        </div>
-    </a>
+        <a href="recursos/valores_hematologia.html" class="resource-card">
+            <div class="resource-icon">🩸</div>
+            <h3>Tablas de Valores de Referencia (Hematología)</h3>
+            <p>Rangos normales y críticos para Biometría Hemática y Pruebas de Coagulación.</p>
+        </a>
 
-    <a href="modulos/modulo_quimica_clinica.html" class="card module-card">
-        <img src="../images/quimica_clinica_cover.png" alt="Módulo de Química Clínica" class="module-cover-image">
-        <div class="module-info">
-            <h3>Módulo de Química Clínica</h3>
-            <p>Análisis de los componentes químicos de los fluidos corporales para el diagnóstico de enfermedades.</p>
-            <span class="module-button">Acceder al Módulo</span>
-        </div>
-    </a>
+        <a href="recursos/mnemotecnias_quimica.html" class="resource-card">
+            <div class="resource-icon">🧠</div>
+            <h3>Mnemotecnias Esenciales (Química Clínica)</h3>
+            <p>Reglas y trucos para memorizar las interacciones de electrolitos y perfiles hepáticos.</p>
+        </a>
 
-    <div class="card module-card disabled">
-        <img src="../images/microbiologia_cover.png" alt="Módulo de Microbiología" class="module-cover-image">
-        <div class="module-info">
-            <h3>Módulo de Microbiología</h3>
-            <p>Identificación y estudio de microorganismos causantes de enfermedades.</p>
-            <span class="module-button disabled">Próximamente</span>
+        <div class="resource-card disabled">
+            <div class="resource-icon">🖼️</div>
+            <h3>Atlas de Células Atípicas (Microscopía)</h3>
+            <p>Imágenes clave y descripción morfológica de células, cristales y parásitos.</p>
         </div>
+
+        <div class="resource-card disabled">
+            <div class="resource-icon">📜</div>
+            <h3>Guía de Triage de Muestras (Protocolos)</h3>
+            <p>Criterios de aceptación y rechazo según la norma CLSI para evitar errores pre-analíticos.</p>
+        </div>
+
     </div>
-
-    <div class="card module-card disabled">
-        <img src="../images/uroanalisis_cover.png" alt="Módulo de Uroanálisis y Coprología" class="module-cover-image">
-        <div class="module-info">
-            <h3>Uroanálisis y Coprología</h3>
-            <p>Examen físico, químico y microscópico de orina y heces.</p>
-            <span class="module-button disabled">Próximamente</span>
-        </div>
-    </div>
-
-</div>
     </main>
     <footer>
     <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
@@ -142,7 +153,6 @@
         if (savedFontStyle === 'robust') {
             applyFontStyle(true);
         } else {
-             // Aplicar estilo por defecto y actualizar texto del botón si es necesario
              applyFontStyle(false);
         }
         
