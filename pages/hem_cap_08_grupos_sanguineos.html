@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 8: Grupos Sanguíneos y Medicina Transfusional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_base.css">
+    <link rel="stylesheet" href="../css/style_materias.css"> 
+</head>
+<body>
+    <header><h1>🔬 Plataforma de Estudio y Consulta para TLC</h1></header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="materias.html">Materias</a></li>
+            <li><a href="capsulas.html">Cápsulas</a></li>
+            <li><a href="protocolos.html">Protocolos</a></li>
+            <li><a href="entrenamiento.html">Entrenamiento</a></li>
+            <li><a href="laboratorio_virtual.html">Laboratorio Virtual</a></li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <div id="accessibility-panel" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 20px; padding: 10px; background-color: #f1f1f1; border-radius: 8px;">
+            <span style="font-size: 0.9em; font-weight: bold;">Accesibilidad:</span>
+            
+            <button id="toggle-font-style" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white;">
+                Estilo Robusto
+            </button>
+            
+            <button id="font-size-s" data-size="s" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 0.8em;">
+                A-
+            </button>
+            <button id="font-size-n" data-size="n" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1em;">
+                A
+            </button>
+            <button id="font-size-l" data-size="l" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1.2em;">
+                A+
+            </button>
+        </div>
+        <h1>Capítulo 8: Grupos Sanguíneos y Medicina Transfusional</h1>
+        <div class="summary">
+            <h2>Resumen del Capítulo</h2>
+            <p>La **Inmunohematología** es la base de la transfusión segura. El **Sistema $\text{ABO}$** y el **Sistema $\text{Rh}$** son los más importantes, ya que los anticuerpos correspondientes ($\text{anti-}\text{A}$, $\text{anti-}\text{B}$ y $\text{anti-}\text{D}$) son capaces de causar reacciones hemolíticas graves. La compatibilidad se verifica con pruebas de laboratorio, siendo el **Test de Coombs Indirecto** (TCI) esencial para la detección de anticuerpos irregulares antes de la transfusión. La Medicina Transfusional gestiona la obtención, procesamiento y uso adecuado de **Hemoderivados**.</p>
+        </div>
+        
+        <h2 class="part-header">8.1. El Sistema $\text{ABO}$</h2>
+        <p>Es el sistema de grupos sanguíneos clínicamente más importante. Los antígenos $\text{A}$ y $\text{B}$ son **carbohidratos** presentes en la superficie del glóbulo rojo, controlados por un gen en el **cromosoma 9**.</p>
+        
+        <h3>Anticuerpos $\text{ABO}$</h3>
+        <p>Los anticuerpos anti-$\text{A}$ y anti-$\text{B}$ son **naturales**, es decir, se producen sin necesidad de una exposición previa (embarazo o transfusión). Son principalmente de clase **$\text{IgM}$** y son capaces de activar el complemento, causando una **hemólisis intravascular** inmediata y potencialmente fatal ante una transfusión incompatible.</p>
+        <div class="table-marker-box">
+            <h4>[MARCADOR DE TABLA]</h4>
+            <p><strong>Referencia: TABLA 12. GRUPOS SANGUÍNEOS $\text{ABO}$: ANTÍGENOS Y ANTICUERPOS</strong></p>
+            <p>Detalle de los cuatro grupos, los antígenos que poseen y los anticuerpos que producen naturalmente.</p>
+        </div>
+
+        <h2 class="part-header">8.2. El Sistema $\text{Rh}$</h2>
+        <p>El antígeno $\text{D}$ del sistema $\text{Rh}$ es el segundo más relevante. A diferencia de los $\text{ABO}$, los antígenos $\text{Rh}$ son **proteínas** (no carbohidratos).</p>
+        
+        <h3>Anticuerpos $\text{Rh}$ ($\text{Anti-}\text{D}$)</h3>
+        <p>El anticuerpo $\text{anti-}\text{D}$ no es natural; es un anticuerpo **inmune** que solo se produce tras la exposición (sensibilización) a sangre $\text{Rh}$ positiva. Es de clase **$\text{IgG}$**, por lo que:
+        <ol>
+            <li>No causa hemólisis intravascular inmediata.</li>
+            <li>Es capaz de **atravesar la placenta**, causando la **Anemia Hemolítica del Recién Nacido (AHND)** en gestaciones posteriores.</li>
+        </ol>
+        </p>
+
+        <h2 class="part-header">8.3. La Prueba de Coombs y el Rastreo de Anticuerpos</h2>
+        <p>La prueba de Coombs (Test de Antiglobulina) es la base para detectar anticuerpos unidos a la superficie del eritrocito.</p>
+
+        <h3>Test de Coombs Indirecto (TCI)</h3>
+        <p>El **TCI** es esencial en la medicina transfusional. Su objetivo es detectar **anticuerpos irregulares ($\text{IgG}$)** en el **plasma** del paciente que puedan reaccionar contra los hematíes del donante o en embarazadas que puedan afectar al feto.
+        <ul>
+            <li>**Función:** Se utiliza para el **Rastreo de Anticuerpos Irregulares (RAI)** y en las **Pruebas Cruzadas**.</li>
+            <li>**Principio:** Muestra del plasma del paciente + Células de panel con antígenos conocidos. Si hay $\text{IgG}$ en el plasma, se unen. El reactivo de Coombs ($\text{anti-}\text{IgG}$) aglutina las células recubiertas.</li>
+        </ul>
+        </p>
+        
+        <h3>Diferencia con Coombs Directo (TCD)</h3>
+        <p>Mientras el **TCI** busca anticuerpos libres en el **plasma**, el **TCD** busca anticuerpos ya fijados a los glóbulos rojos del **paciente** (utilizado para el diagnóstico de **AHAI** o AHND).</p>
+        <div class="figure-marker-box">
+            <h4>[MARCADOR DE FIGURA]</h4>
+            <p><strong>Referencia: FIGURA 15. ESQUEMA DE LA PRUEBA DE COOMBS INDIRECTA (TCI) Y SU APLICACIÓN EN EL RAI</strong></p>
+            <p>Diagrama del proceso de incubación de plasma con células de panel y la aglutinación final.</p>
+        </div>
+
+        <h2 class="part-header">8.4. Componentes Sanguíneos (Hemoderivados)</h2>
+        <p>Los componentes se obtienen por fraccionamiento de la sangre total y deben ser transfundidos solo cuando existe una indicación clínica clara.</p>
+
+        <h3>Concentrado de Hematíes (CH)</h3>
+        <p>Principalmente para aumentar la capacidad de transporte de oxígeno. Indicado en **anemia sintomática aguda** o en anemias crónicas severas. Requiere compatibilidad $\text{ABO}$ y $\text{Rh}$ para evitar reacciones.</p>
+        
+        <h3>Concentrado de Plaquetas (CP)</h3>
+        <p>Indicado para prevenir o tratar el sangrado en pacientes con **trombocitopenia** o función plaquetaria alterada. Se prefiere la compatibilidad $\text{ABO}$, aunque no es estrictamente necesaria en todos los casos.</p>
+        
+        <h3>Plasma Fresco Congelado (PFC)</h3>
+        <p>Contiene todos los factores de la coagulación. Indicado para el reemplazo de múltiples déficits de factores (ej. en **$\text{CID}$** o hepatopatía grave) o reversión de anticoagulantes. Debe ser **$\text{ABO}$ compatible** (el plasma $\text{AB}$ es el donante universal de plasma, pues no contiene $\text{anti-}\text{A}$ ni $\text{anti-}\text{B}$).</p>
+        <div class="callout note">
+            <p><strong>Dato Clínico:</strong> El plasma ideal para la transfusión de emergencia (sin tipaje previo) es el **Plasma $\text{AB}$** y los hematíes ideales son los del **Grupo $\text{O}$ $\text{Rh}$ Negativo**.</p>
+        </div>
+
+        <hr>
+        
+        <div class="chapter-nav-container">
+            <a href="/pages/hem_cap_07_hemolisis_extrínseca.html" class="chapter-nav-button chapter-nav-prev">
+                &larr; Cap. 7: Hemólisis Extracorpuscular
+            </a>
+            <a href="/pages/hem_cap_09_serie_blanca_fisiologia.html" class="chapter-nav-button chapter-nav-next">
+                Cap. 9: Fisiología de la Serie Blanca &rarr;
+            </a>
+        </div>
+    </main>
+<footer>
+    <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
+    <div class="legal-links">
+        <a href="../terminos_condiciones.html">Términos y Condiciones</a>
+        |
+        <a href="../aviso_privacidad.html">Aviso de Privacidad</a>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const body = document.body;
+        const styleToggleBtn = document.getElementById('toggle-font-style');
+        const sizeButtons = document.querySelectorAll('[data-size]');
+
+        function applyFontStyle(isRobust) {
+            if (isRobust) {
+                body.classList.add('font-robust');
+                styleToggleBtn.textContent = 'Estilo Normal';
+                localStorage.setItem('fontStyle', 'robust');
+            } else {
+                body.classList.remove('font-robust');
+                styleToggleBtn.textContent = 'Estilo Robusto';
+                localStorage.setItem('fontStyle', 'normal');
+            }
+        }
+
+        styleToggleBtn.addEventListener('click', () => {
+            const currentStyle = localStorage.getItem('fontStyle');
+            applyFontStyle(currentStyle !== 'robust');
+        });
+
+        function applyFontSize(size) {
+            body.classList.remove('size-s', 'size-n', 'size-l');
+            body.classList.add(`size-${size}`);
+            localStorage.setItem('fontSize', size);
+            
+            sizeButtons.forEach(btn => {
+                btn.style.backgroundColor = btn.dataset.size === size ? '#e6f0ff' : 'white';
+            });
+        }
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                applyFontSize(e.target.dataset.size);
+            });
+        });
+
+        const savedFontStyle = localStorage.getItem('fontStyle');
+        if (savedFontStyle === 'robust') {
+            applyFontStyle(true);
+        } else {
+             applyFontStyle(false);
+        }
+        
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            applyFontSize(savedFontSize);
+        } else {
+            applyFontSize('n');
+        }
+    });
+</script>
+</body>
+</html>

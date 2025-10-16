@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 3: Anemias Microcíticas: Déficit de Hierro y AEC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_base.css">
+    <link rel="stylesheet" href="../css/style_materias.css"> 
+</head>
+<body>
+    <header><h1>🔬 Plataforma de Estudio y Consulta para TLC</h1></header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="materias.html">Materias</a></li>
+            <li><a href="capsulas.html">Cápsulas</a></li>
+            <li><a href="protocolos.html">Protocolos</a></li>
+            <li><a href="entrenamiento.html">Entrenamiento</a></li>
+            <li><a href="laboratorio_virtual.html">Laboratorio Virtual</a></li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <div id="accessibility-panel" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 20px; padding: 10px; background-color: #f1f1f1; border-radius: 8px;">
+            <span style="font-size: 0.9em; font-weight: bold;">Accesibilidad:</span>
+            
+            <button id="toggle-font-style" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white;">
+                Estilo Robusto
+            </button>
+            
+            <button id="font-size-s" data-size="s" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 0.8em;">
+                A-
+            </button>
+            <button id="font-size-n" data-size="n" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1em;">
+                A
+            </button>
+            <button id="font-size-l" data-size="l" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1.2em;">
+                A+
+            </button>
+        </div>
+        <h1>Capítulo 3: Anemias Microcíticas: Déficit de Hierro y AEC</h1>
+        <div class="summary">
+            <h2>Resumen del Capítulo</h2>
+            <p>La **anemia microcítica** se caracteriza por glóbulos rojos de tamaño reducido (VCM bajo) y es causada, en la mayoría de los casos, por un trastorno en el metabolismo o la utilización del hierro. La causa más común globalmente es la **anemia ferropénica**, mientras que la **anemia de las enfermedades crónicas (AEC)** es la más frecuente en pacientes hospitalizados. Este capítulo aborda la regulación del hierro mediante la **hepcidina**, el diagnóstico diferencial basado en los marcadores séricos (Ferritina, IST) y los trastornos de la síntesis del grupo hemo (Anemias Sideroblásticas).</p>
+        </div>
+        
+        <h2 class="part-header">3.1. Metabolismo y Homeostasis del Hierro</h2>
+        <p>El hierro es un componente esencial para el transporte de oxígeno (en Hemoglobina y Mioglobina) y para enzimas celulares clave. [cite_start]El cuerpo humano mantiene un balance muy ajustado entre la absorción (principalmente en duodeno/yeyuno) y las pérdidas (mínimas, por descamación epitelial), ya que el hierro libre es tóxico[cite: 9804, 9806, 9835, 9838].</p>
+        
+        <h3>Distribución y Depósito</h3>
+        <ul>
+            [cite_start]<li>**Funcional (Hemoglobina/Mioglobina):** Representa el 65-70% del hierro total y está implicado en el transporte y almacenamiento de oxígeno[cite: 9817, 9819, 9860, 9863].</li>
+            [cite_start]<li>**Depósito (Ferritina/Hemosiderina):** Constituye el 25-30% restante, almacenado en macrófagos y hepatocitos[cite: 9820, 9821, 9861, 9862]. [cite_start]La **Ferritina** es la forma de reserva fácilmente disponible[cite: 9823, 9824].</li>
+            [cite_start]<li>**Transporte (Transferrina):** La transferrina, sintetizada en el hígado, transporta el hierro férrico ($\text{Fe}^{+++}$) desde el enterocito y el macrófago hasta los eritroblastos en la médula ósea[cite: 9830, 9832].</li>
+        </ul>
+        <p><strong>[PENDIENTE: FIGURA DEL CIRCUITO CERRADO DEL HIERRO (FIGURA 2)]</strong></p>
+
+        <h3>Regulación Central: La Hepcidina</h3>
+        [cite_start]<p>La **Hepcidina**, una hormona peptídica sintetizada en el hígado, es el regulador maestro de la homeostasis del hierro[cite: 9886, 9917, 9927].</p>
+        <ul>
+            <li>**Mecanismo de Acción:** La hepcidina actúa uniéndose a la **Ferroportina** (la proteína exportadora de hierro en macrófagos y enterocitos), provocando su degradación. [cite_start]Esto bloquea la salida de hierro a la circulación[cite: 9886, 9917, 9918].</li>
+            [cite_start]<li>**Estímulos:** La síntesis de hepcidina aumenta en la **sobrecarga de hierro** y en **procesos inflamatorios/infecciosos** (mediado por IL-6)[cite: 9920, 9921]. [cite_start]Disminuye con la deficiencia de hierro y la hipoxia[cite: 9922].</li>
+        </ul>
+        <p><strong>[PENDIENTE: FIGURA DE LA ABSORCIÓN DE HIERRO Y EL CONTROL POR HEPCIDINA (FIGURA 3)]</strong></p>
+
+        <h2 class="part-header">3.2. Anemia Ferropénica</h2>
+        [cite_start]<p>La anemia ferropénica es el resultado final de un balance negativo de hierro persistente[cite: 9964, 9965]. [cite_start]Es la causa más frecuente de anemia en el mundo y en la práctica hematológica[cite: 9967, 9968].</p>
+
+        <h3>Etiología y Grupos de Riesgo (Reestructuración de Tabla III)</h3>
+        [cite_start]<p>La deficiencia de hierro se produce por un desequilibrio entre el aporte, la absorción y las pérdidas[cite: 9811].</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Pérdida Crónica de Sangre (Causa más común en adultos):**
+                <ul>
+                    [cite_start]<li>**Mujeres en edad fértil:** Pérdidas ginecológicas (hipermenorrea, metrorragias)[cite: 9984, 9985].</li>
+                    <li>**Varones y Postmenopáusicas:** Hemorragias digestivas (úlceras, neoplasias, esofagitis, divertículos). [cite_start]Requiere estudio bidireccional[cite: 9989, 9990, 10074].</li>
+                </ul>
+            </li>
+            [cite_start]<li>**Disminución de la Absorción (Malabsorción):** Cirugía bariátrica, gastrectomía total/subtotal, gastritis atrófica, enfermedad celíaca, infección por *H. pylori*, o uso de antiácidos/inhibidores de bomba de protones[cite: 10018, 10019, 9880].</li>
+            [cite_start]<li>**Aumento de las Necesidades:** Embarazo (pérdidas hacia el feto), lactancia, o periodos de crecimiento rápido (adolescencia)[cite: 10015, 10016].</li>
+            [cite_start]<li>**Aporte Insuficiente:** Dietas vegetarianas/veganas o desequilibradas[cite: 10010].</li>
+        </ul>
+
+        <h3>Criterios de Laboratorio (Transformación de Tablas y Figuras)</h3>
+        [cite_start]<p>La deficiencia se desarrolla en tres etapas progresivas (agotamiento de depósitos, eritropoyesis deficiente, anemia franca)[cite: 9966].</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            [cite_start]<li>**Anemia Microcítica Hipocrómica:** VCM bajo (< 80 fl) y HCM/CHCM disminuidos[cite: 10046, 10047, 10049].</li>
+            <li>**Ferritina Sérica:** **Disminuida (< 12 ng/ml)**. [cite_start]Es el marcador más sensible de la depleción de reservas[cite: 9976, 9473].
+                <ul>
+                    [cite_start]<li>*Nota:* Si la Ferritina es normal o alta ($>100~ng/ml$), pero hay microcitosis, sugiere **Anemia de Enfermedad Crónica** (AEC) o **Rasgo Talasémico**[cite: 10133, 10137].</li>
+                </ul>
+            </li>
+            [cite_start]<li>**Índice de Saturación de la Transferrina (IST):** **Muy bajo (< 10-15%)**[cite: 9976, 9467].</li>
+            [cite_start]<li>**Capacidad Total de Fijación del Hierro (CTFH):** **Aumentada**[cite: 9976].</li>
+            [cite_start]<li>**Morfología:** Anisocitosis, poiquilocitosis, microcitosis, hipocromía, dianocitos, y puede haber dacriocitos[cite: 10052]. [cite_start]Coiloniquia (uñas cóncavas) es un signo clínico distintivo[cite: 10034].</li>
+        </ul>
+        <p><strong>[PENDIENTE: FIGURA DEL DIAGNÓSTICO DIFERENCIAL CON HIERRO SÉRICO (FIGURA 4)]</strong></p>
+        <p><strong>[PENDIENTE: FIGURA DEL ALGORITMO DIAGNÓSTICO SEGÚN EL VCM (FIGURA 6)]</strong></p>
+
+        <h2 class="part-header">3.3. Anemia de las Enfermedades Crónicas (AEC)</h2>
+        [cite_start]<p>La AEC, o anemia de la inflamación, es la segunda anemia más común y está asociada a procesos crónicos como artritis reumatoide, infecciones persistentes (TBC), insuficiencia renal o neoplasias[cite: 10221, 10222, 10277, 10279, 10281].</p>
+
+        <h3>Patogenia Clave: Bloqueo del Hierro</h3>
+        [cite_start]<p>El mecanismo principal es la **eritropoyesis deficiente en hierro** debido a una disregulación del metabolismo del hierro, no a una falta de reservas[cite: 10284, 10285].</p>
+        <ul>
+            <li>**Citoquinas y Hepcidina:** La inflamación (p. ej., IL-6) induce la síntesis de hepcidina.</li>
+            [cite_start]<li>**Bloqueo:** La hepcidina elevada bloquea la liberación de hierro desde los macrófagos y disminuye la absorción intestinal[cite: 10289, 10290, 10291].</li>
+            [cite_start]<li>**Resultado:** Hay **hierro de depósito alto** (Ferritina alta), pero **hierro circulante bajo** (Sideremia baja)[cite: 10221, 10285, 10303, 10305].</li>
+        </ul>
+
+        <h3>Diagnóstico Diferencial (AEC vs. Ferropenia)</h3>
+        <p>A diferencia de la ferropenia, la AEC cursa con:</p>
+        <ul>
+            <li>**Ferritina Sérica:** **Normal o elevada** ($>100~ng/ml$). [cite_start]Es el dato más importante para el diagnóstico diferencial[cite: 10303, 10312].</li>
+            [cite_start]<li>**Sideremia:** Baja[cite: 10305].</li>
+            [cite_start]<li>**CTFH e IST:** Normales o bajos[cite: 10306, 10307].</li>
+            [cite_start]<li>**Morfología:** Normocítica/normocrómica en la mayoría de los casos, microcítica solo en casos graves[cite: 10299].</li>
+            [cite_start]<li>**Tratamiento:** El hierro está **contraindicado** en la AEC pura, ya que empeora el bloqueo[cite: 10321, 10322]. [cite_start]El tratamiento es de la enfermedad subyacente o, en casos específicos, EPO[cite: 10320, 10329].</li>
+        </ul>
+
+        <h2 class="part-header">3.4. Anemias Sideroblásticas y Porfirias</h2>
+        [cite_start]<p>Las anemias sideroblásticas (AS) son un grupo heterogéneo de anemias microcíticas con un defecto en la **síntesis del grupo hemo**, lo que provoca la acumulación de hierro en las mitocondrias de los eritroblastos[cite: 10341, 10342].</p>
+
+        <h3>Sideroblastos en Anillo (Criterio Diagnóstico)</h3>
+        [cite_start]<p>El diagnóstico se confirma por la presencia de **sideroblastos en anillo** en la médula ósea (eritroblastos con gránulos de hemosiderina rodeando más de un tercio del núcleo)[cite: 10343, 10405].</p>
+        <p><strong>[PENDIENTE: FIGURA DE LA SÍNTESIS DEL HEMO Y EL BLOQUEO (FIGURA 10)]</strong></p>
+        <p><strong>[PENDIENTE: FIGURA DE SIDERBLASTOS EN ANILLO (FIGURA 11)]</strong></p>
+
+        <h3>Clasificación y Etiología (Reestructuración de Tabla VII)</h3>
+        <ul style="list-style: disc; padding-left: 20px;">
+            [cite_start]<li>**Hereditarias (Congénitas):** Más frecuente la ligada al cromosoma X (XLSA), causada por una mutación en el gen **ALA2** (delta-aminolevulínico sintetasa)[cite: 10348, 10349].</li>
+            [cite_start]<li>**Adquiridas (Clonales):** Se incluyen en los Síndromes Mielodisplásicos (SMD), específicamente la **Anemia Refractaria con Sideroblastos en Anillo (ARSA)**[cite: 10432].</li>
+            <li>**Adquiridas (Secundarias/Reversibles):**
+                <ul>
+                    [cite_start]<li>**Tóxicas:** Alcoholismo (reversible), intoxicación por plomo (saturnismo)[cite: 10425, 10443, 10445].</li>
+                    [cite_start]<li>**Fármacos:** Antituberculosos (Isoniacida) o citotóxicos[cite: 10426, 10427].</li>
+                    [cite_start]<li>**Déficit de Cobre**[cite: 10428, 10450].</li>
+                </ul>
+            </li>
+        </ul>
+
+        <hr>
+        
+        <div class="chapter-nav-container">
+            <a href="/pages/hem_cap_02_anemia_concepto.html" class="chapter-nav-button chapter-nav-prev">
+                &larr; Cap. 2: Anemia: Concepto y Clasificación
+            </a>
+            <a href="/pages/hem_cap_04_anemia_megaloblastica.html" class="chapter-nav-button chapter-nav-next">
+                Cap. 4: Anemia Megaloblástica &rarr;
+            </a>
+        </div>
+    </main>
+<footer>
+    <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
+    <div class="legal-links">
+        <a href="../terminos_condiciones.html">Términos y Condiciones</a>
+        |
+        <a href="../aviso_privacidad.html">Aviso de Privacidad</a>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const body = document.body;
+        const styleToggleBtn = document.getElementById('toggle-font-style');
+        const sizeButtons = document.querySelectorAll('[data-size]');
+
+        function applyFontStyle(isRobust) {
+            if (isRobust) {
+                body.classList.add('font-robust');
+                styleToggleBtn.textContent = 'Estilo Normal';
+                localStorage.setItem('fontStyle', 'robust');
+            } else {
+                body.classList.remove('font-robust');
+                styleToggleBtn.textContent = 'Estilo Robusto';
+                localStorage.setItem('fontStyle', 'normal');
+            }
+        }
+
+        styleToggleBtn.addEventListener('click', () => {
+            const currentStyle = localStorage.getItem('fontStyle');
+            applyFontStyle(currentStyle !== 'robust');
+        });
+
+        function applyFontSize(size) {
+            body.classList.remove('size-s', 'size-n', 'size-l');
+            body.classList.add(`size-${size}`);
+            localStorage.setItem('fontSize', size);
+            
+            sizeButtons.forEach(btn => {
+                btn.style.backgroundColor = btn.dataset.size === size ? '#e6f0ff' : 'white';
+            });
+        }
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                applyFontSize(e.target.dataset.size);
+            });
+        });
+
+        const savedFontStyle = localStorage.getItem('fontStyle');
+        if (savedFontStyle === 'robust') {
+            applyFontStyle(true);
+        } else {
+             applyFontStyle(false);
+        }
+        
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            applyFontSize(savedFontSize);
+        } else {
+            applyFontSize('n');
+        }
+    });
+</script>
+</body>
+</html>

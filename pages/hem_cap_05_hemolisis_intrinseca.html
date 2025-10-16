@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 5: Anemias Hemolíticas Intrínsecas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_base.css">
+    <link rel="stylesheet" href="../css/style_materias.css"> 
+</head>
+<body>
+    <header><h1>🔬 Plataforma de Estudio y Consulta para TLC</h1></header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="materias.html">Materias</a></li>
+            <li><a href="capsulas.html">Cápsulas</a></li>
+            <li><a href="protocolos.html">Protocolos</a></li>
+            <li><a href="entrenamiento.html">Entrenamiento</a></li>
+            <li><a href="laboratorio_virtual.html">Laboratorio Virtual</a></li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <div id="accessibility-panel" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 20px; padding: 10px; background-color: #f1f1f1; border-radius: 8px;">
+            <span style="font-size: 0.9em; font-weight: bold;">Accesibilidad:</span>
+            
+            <button id="toggle-font-style" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white;">
+                Estilo Robusto
+            </button>
+            
+            <button id="font-size-s" data-size="s" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 0.8em;">
+                A-
+            </button>
+            <button id="font-size-n" data-size="n" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1em;">
+                A
+            </button>
+            <button id="font-size-l" data-size="l" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1.2em;">
+                A+
+            </button>
+        </div>
+        <h1>Capítulo 5: Anemias Hemolíticas Intrínsecas (Membrana, Enzimas y HPN)</h1>
+        <div class="summary">
+            <h2>Resumen del Capítulo</h2>
+            <p>Las **Anemias Hemolíticas (AH)** son causadas por la destrucción prematura de los eritrocitos. Se clasifican como **Intrínsecas** cuando el defecto reside en el propio glóbulo rojo (membrana, enzimas o hemoglobina) o **Extrínsecas** si el defecto es ambiental (inmune, mecánico, tóxico). Este capítulo se centra en las causas intrínsecas, destacando la Esferocitosis Hereditaria (defecto de membrana), el Déficit de G6PD (defecto enzimático) y la Hemoglobinuria Paroxística Nocturna (defecto adquirido del anclaje de superficie).</p>
+        </div>
+        
+        <h2 class="part-header">5.1. Introducción a la Hemólisis</h2>
+        <p>La hemólisis ocurre cuando la vida media del eritrocito se reduce de 120 días a menos de 15 días, superando la capacidad compensatoria de la médula ósea para aumentar la eritropoyesis (hasta 6-8 veces lo normal).</p>
+        
+        <h3>Manifestaciones Comunes de la Hemólisis</h3>
+        <ul>
+            <li>**Anemia Normocítica Normocrómica** (excepto si hay deficiencias asociadas).</li>
+            <li>**Bilirrubina Indirecta/No Conjugada Alta:** Por el metabolismo del grupo hemo liberado.</li>
+            <li>**LDH Alta:** Liberada por las células destruidas.</li>
+            <li>**Haptoglobina Baja/Ausente:** La haptoglobina se consume al unirse a la hemoglobina libre.</li>
+            <li>**Eritropoyesis Compensatoria:** **Reticulocitosis** (anemia arregenerativa) y médula ósea hiperplásica.</li>
+        </ul>
+        <p>La hemólisis se puede dar en el bazo, hígado o ganglios (**extravascular**) o directamente en el torrente sanguíneo (**intravascular**).</p>
+        **[PENDIENTE: FIGURA 1. ESQUEMA DE LAS ANEMIAS HEMOLÍTICAS INTRAVASCULAR Y EXTRAVASCULAR]**
+
+        <h2 class="part-header">5.2. Defectos de la Membrana Eritrocitaria</h2>
+        <p>Estos trastornos hereditarios se deben a mutaciones en proteínas estructurales del citoesqueleto, lo que disminuye la estabilidad y deformabilidad del eritrocito, volviéndolos vulnerables al bazo (hemólisis extravascular).</p>
+
+        <h3>Esferocitosis Hereditaria (EH)</h3>
+        <p>Es el defecto de membrana más frecuente. Se hereda generalmente de forma **autosómica dominante**.</p>
+        <ul>
+            <li>**Defecto Principal:** Mutación en proteínas de la membrana, siendo la más común la deficiencia de **Espectrina** y **Anquirina**.</li>
+            <li>**Morfología:** Pérdida de superficie de membrana, lo que obliga al glóbulo rojo a tomar forma de **esferocito** (eritrocito pequeño y denso, sin palidez central).</li>
+            <li>**Hemólisis:** Predominantemente **extravascular** en el bazo, debido a que el esferocito no puede deformarse para pasar los cordones de Billroth.</li>
+            <li>**Diagnóstico:** Se confirma con la demostración de fragilidad osmótica aumentada (**Test de Osmolaridad**) y, más modernamente, por **Crioablación/Criohemoaglutinación** (Eosina-5-Maleimida, o E-5-M).</li>
+            <li>**Tratamiento:** **Esplenectomía**, que cura la anemia, aunque no el defecto del eritrocito.</li>
+        </ul>
+
+        <h3>Otras Defectos de Membrana</h3>
+        <ul>
+            <li>**Eliptocitosis Hereditaria:** Defecto en **Espectrina** o **Proteína 4.1**. Suele ser asintomática, solo casos graves requieren esplenectomía.</li>
+            <li>**Estomatocitosis Hereditaria:** El eritrocito presenta una palidez central en forma de "boca" o "estoma". Se debe a defectos en proteínas de transporte iónico.</li>
+        </ul>
+
+        <h2 class="part-header">5.3. Defectos Enzimáticos</h2>
+        <p>Los trastornos enzimáticos hereditarios son la segunda causa más frecuente de AH intrínsecas. Se centran en las dos vías metabólicas principales: la protección oxidativa (vía de la pentosa) y la generación de energía (vía glucolítica).</p>
+
+        <h3>Déficit de Glucosa-6-Fosfato Deshidrogenasa (G6PD)</h3>
+        <p>Es la deficiencia enzimática más común en el mundo y se hereda ligada al **cromosoma X**.</p>
+        <ul>
+            <li>**Mecanismo:** La G6PD es esencial para generar **NADPH** y mantener el **Glutatión** reducido (GSH), el principal antioxidante del eritrocito. Su déficit deja al glóbulo rojo vulnerable al **estrés oxidativo**.</li>
+            <li>**Clínica:** Hemólisis aguda y episódica (intravascular) desencadenada por:
+                <ul>
+                    <li>**Fármacos Oxidantes:** Antipalúdicos (Primaquina), Sulfonamidas, Analgésicos.</li>
+                    <li>**Infecciones Agudas.**</li>
+                    <li>**Ingesta de Habas (Favismo).**</li>
+                </ul>
+            </li>
+            <li>**Frotis:** Presencia de **Cuerpos de Heinz** (precipitados de hemoglobina desnaturalizada) y "células mordidas" (**bite cells**).</li>
+        </ul>
+
+        <h3>Déficit de Piruvato Cinasa (PK)</h3>
+        <p>Es el segundo defecto enzimático más común. Se hereda de forma **autosómica recesiva**.</p>
+        <ul>
+            <li>**Mecanismo:** La PK es la enzima clave en la última fase de la glucólisis (vía de Embden-Meyerhof), encargada de producir la mayor parte del **ATP** del eritrocito. Su déficit causa un fallo energético.</li>
+            <li>**Clínica:** Anemia hemolítica crónica, congénita, con ictericia y esplenomegalia.</li>
+            <li>**Tratamiento:** Esplenectomía (aunque no cura el defecto, mejora la vida media al eliminar el principal sitio de destrucción).</li>
+        </ul>
+
+        <h2 class="part-header">5.4. Hemoglobinuria Paroxística Nocturna (HPN)</h2>
+        <p>La HPN es un trastorno adquirido y clonal de la célula madre hematopoyética. Es la única anemia hemolítica adquirida de origen intrínseco. </p>
+
+        <h3>Fisiopatología</h3>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Defecto Molecular:** Mutación somática en el gen **PIGA** de la célula madre.</li>
+            <li>**Consecuencia:** El gen PIGA es esencial para la síntesis del anclaje de **Glucosilfosfatidilinositol (GPI)**. Al no tener el anclaje GPI, la célula pierde proteínas de superficie esenciales.</li>
+            <li>**Deficiencia Clave:** Pérdida de **CD55** y **CD59** (inhibidores del complemento).</li>
+            <li>**Hemólisis:** La deficiencia de CD59 permite que el complemento se active y destruya al eritrocito (**hemólisis intravascular**) de forma crónica.</li>
+        </ul>
+
+        <h3>Tríada Clínica</h3>
+        <p>La HPN se caracteriza por una triada patológica:</p>
+        <ol style="padding-left: 20px;">
+            <li>**Hemólisis Intravascular:** Crónica, con episodios agudos (clásicamente por las mañanas, de ahí lo "nocturna", aunque la hemólisis es constante).</li>
+            <li>**Trombosis:** Es la principal causa de muerte, con riesgo aumentado en venas hepáticas, cerebrales y abdominales.</li>
+            <li>**Insuficiencia Medular/Pancitopenia:** Puede coexistir con o evolucionar a Aplasia Medular (AM) o Síndromes Mielodisplásicos (SMD).</li>
+        </ol>
+
+        <h3>Diagnóstico y Tratamiento</h3>
+        <ul>
+            <li>**Diagnóstico:** **Citometría de Flujo** para detectar la ausencia de las proteínas ancladas a GPI (CD55/CD59) en eritrocitos y granulocitos.</li>
+            <li>**Tratamiento:** El estándar es **Eculizumab** (un anticuerpo monoclonal que inhibe el complemento C5) y, en casos de falla medular, el **Trasplante de Progenitores Hematopoyéticos**.</li>
+        </ul>
+
+        <hr>
+        
+        <div class="chapter-nav-container">
+            <a href="/pages/hem_cap_04_anemia_megaloblastica.html" class="chapter-nav-button chapter-nav-prev">
+                &larr; Cap. 4: Anemia Megaloblástica
+            </a>
+            <a href="/pages/hem_cap_06_hemolisis_extrínseca.html" class="chapter-nav-button chapter-nav-next">
+                Cap. 6: Hemólisis Extrínseca &rarr;
+            </a>
+        </div>
+    </main>
+<footer>
+    <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
+    <div class="legal-links">
+        <a href="../terminos_condiciones.html">Términos y Condiciones</a>
+        |
+        <a href="../aviso_privacidad.html">Aviso de Privacidad</a>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const body = document.body;
+        const styleToggleBtn = document.getElementById('toggle-font-style');
+        const sizeButtons = document.querySelectorAll('[data-size]');
+
+        function applyFontStyle(isRobust) {
+            if (isRobust) {
+                body.classList.add('font-robust');
+                styleToggleBtn.textContent = 'Estilo Normal';
+                localStorage.setItem('fontStyle', 'robust');
+            } else {
+                body.classList.remove('font-robust');
+                styleToggleBtn.textContent = 'Estilo Robusto';
+                localStorage.setItem('fontStyle', 'normal');
+            }
+        }
+
+        styleToggleBtn.addEventListener('click', () => {
+            const currentStyle = localStorage.getItem('fontStyle');
+            applyFontStyle(currentStyle !== 'robust');
+        });
+
+        function applyFontSize(size) {
+            body.classList.remove('size-s', 'size-n', 'size-l');
+            body.classList.add(`size-${size}`);
+            localStorage.setItem('fontSize', size);
+            
+            sizeButtons.forEach(btn => {
+                btn.style.backgroundColor = btn.dataset.size === size ? '#e6f0ff' : 'white';
+            });
+        }
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                applyFontSize(e.target.dataset.size);
+            });
+        });
+
+        const savedFontStyle = localStorage.getItem('fontStyle');
+        if (savedFontStyle === 'robust') {
+            applyFontStyle(true);
+        } else {
+             applyFontStyle(false);
+        }
+        
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            applyFontSize(savedFontSize);
+        } else {
+            applyFontSize('n');
+        }
+    });
+</script>
+</body>
+</html>

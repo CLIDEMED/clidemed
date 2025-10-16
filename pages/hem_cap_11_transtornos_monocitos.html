@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 11: Trastornos de Monocitos y Macrófagos (Histiocitosis)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_base.css">
+    <link rel="stylesheet" href="../css/style_materias.css"> 
+</head>
+<body>
+    <header><h1>🔬 Plataforma de Estudio y Consulta para TLC</h1></header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="materias.html">Materias</a></li>
+            <li><a href="capsulas.html">Cápsulas</a></li>
+            <li><a href="protocolos.html">Protocolos</a></li>
+            <li><a href="entrenamiento.html">Entrenamiento</a></li>
+            <li><a href="laboratorio_virtual.html">Laboratorio Virtual</a></li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <div id="accessibility-panel" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 20px; padding: 10px; background-color: #f1f1f1; border-radius: 8px;">
+            <span style="font-size: 0.9em; font-weight: bold;">Accesibilidad:</span>
+            
+            <button id="toggle-font-style" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white;">
+                Estilo Robusto
+            </button>
+            
+            <button id="font-size-s" data-size="s" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 0.8em;">
+                A-
+            </button>
+            <button id="font-size-n" data-size="n" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1em;">
+                A
+            </button>
+            <button id="font-size-l" data-size="l" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1.2em;">
+                A+
+            </button>
+        </div>
+        <h1>Capítulo 11: Trastornos de Monocitos y Macrófagos (Histiocitosis)</h1>
+        <div class="summary">
+            <h2>Resumen del Capítulo</h2>
+            <p>Los **monocitos** son precursores circulantes de los **macrófagos** y las **células dendríticas**, elementos centrales del sistema fagocítico mononuclear. La **monocitosis** (aumento) es común en infecciones crónicas, mientras que la **monocitopenia** (disminución) es menos frecuente. Los trastornos neoplásicos de estas células se conocen como **Histiocitosis**, que se dividen en histiocitosis de células de Langerhans (HCL) y no-Langerhans, dependiendo de si presentan el fenotipo de las células dendríticas.</p>
+        </div>
+        
+        <h2 class="part-header">11.1. Fisiología y Trastornos Cuantitativos del Monocito</h2>
+        <p>Los monocitos son producidos en la médula ósea y circulan por la sangre periférica por un periodo corto antes de migrar a los tejidos, donde se transforman en macrófagos, microglia, o células de Kupffer. Son células presentadoras de antígenos ($\text{APC}$) y cumplen roles críticos en la fagocitosis y la inmunidad.</p>
+
+        <h3>Monocitosis (Monocitos $> 1.0 \times 10^9/\text{L}$)</h3>
+        <p>El aumento de monocitos es un hallazgo común que se relaciona con la necesidad de defensa crónica del organismo.</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Infecciones Crónicas:** Tuberculosis, endocarditis bacteriana subaguda y brucelosis son causas clásicas, ya que requieren una respuesta macrofágica sostenida.</li>
+            <li>**Enfermedades Inflamatorias:** Artritis reumatoide, enfermedad inflamatoria intestinal, sarcoidosis.</li>
+            <li>**Trastornos Hematológicos:** La monocitosis es un hallazgo importante en el diagnóstico de la **Leucemia Mielomonocítica Crónica ($\text{LMMC}$)** y otros síndromes mielodisplásicos ($\text{SMD}$).</li>
+        </ul>
+        <p>**[PENDIENTE: TABLA 1. CAUSAS PRINCIPALES DE MONOCITOSIS REACTIVA Y NEOPLÁSICA]**</p>
+
+        <h3>Monocitopenia (Monocitos $< 0.1 \times 10^9/\text{L}$)</h3>
+        <p>La disminución de monocitos es rara y suele estar asociada a:</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Fallo Medular:** Aplasia medular grave, quimioterapia o tratamiento con glucocorticoides.</li>
+            <li>**Neoplasias:** Leucemia de células pilosas ($\text{Leukemia Hairy Cell}$), un tipo de leucemia linfoide crónica.</li>
+        </ul>
+
+        <h2 class="part-header">11.2. El Sistema Fagocítico Mononuclear (SFM) y Macrófagos</h2>
+        <p>El SFM está formado por todos los monocitos y macrófagos tisulares. El macrófago, la célula tisular, tiene diversas funciones:</p>
+        <ul>
+            <li>**Fagocitosis:** Elimina bacterias, células envejecidas (ej. eritrocitos en el bazo), y restos celulares.</li>
+            <li>**Presentación de Antígenos ($\text{APC}$):** Procesan y presentan antígenos a los linfocitos $\text{T}$, iniciando la respuesta inmune adaptativa.</li>
+            <li>**Producción de Citoquinas:** Secretan mediadores inflamatorios y factores de crecimiento.</li>
+        </ul>
+
+        <h3>Enfermedades por Acumulación Macrófagica (Depósito)</h3>
+        <p>Estas enfermedades se deben a defectos enzimáticos que impiden la degradación normal de ciertos lípidos o metabolitos, lo que lleva a su acumulación tóxica en el citoplasma de los macrófagos.</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Enfermedad de Gaucher:** Déficit de la enzima **glucocerebrosidasa**. Provoca la acumulación de glucocerebrósido en los macrófagos (células de Gaucher) del bazo, hígado y médula ósea.</li>
+            <li>**Enfermedad de Niemann-Pick:** Acumulación de esfingomielina y colesterol en los macrófagos (células espumosas) debido al déficit de esfingomielinasa.</li>
+        </ul>
+        <p><strong>[PENDIENTE: IMAGEN DEL MACRÓFAGO DE GAUCHER (APARIENCIA DE "PAPEL ARRUGADO")]</strong></p>
+
+        <h2 class="part-header">11.3. Histiocitosis</h2>
+        <p>El término **Histiocitosis** abarca un conjunto de enfermedades raras que se originan por la proliferación neoplásica o reactiva de células del $\text{SFM}$ o de células dendríticas. El diagnóstico depende del fenotipo de la célula proliferante.</p>
+
+        <h3>Histiocitosis de Células de Langerhans (HCL)</h3>
+        <p>Es la histiocitosis más común. Las células que proliferan tienen el fenotipo de las células dendríticas epidérmicas de Langerhans.</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Fenotipo:** La célula $\text{HCL}$ expresa el marcador **CD1a** y la proteína **S100**. Se caracteriza por la presencia del orgánulo intracitoplasmático: el **gránulo de Birbeck** (visible por microscopía electrónica).</li>
+            <li>**Clínica:** La enfermedad es clonal y a menudo asociada a la mutación **$\text{BRAF}$ V600E**. Puede ser una enfermedad ósea localizada (más benigna) o multisistémica (más grave).</li>
+        </ul>
+        
+        <h3>Histiocitosis No-Langerhans</h3>
+        <p>Incluye una amplia gama de trastornos reactivos o neoplásicos de macrófagos, diferenciados por su fenotipo y las proteínas que expresan.</p>
+        <ul>
+            <li>**Linfohistiocitosis Hemofagocítica ($\text{HLH}$):** Es una forma grave de histiocitosis reactiva. Se debe a una activación incontrolada del sistema inmune (principalmente Linfocitos $\text{T}$ y macrófagos), lo que lleva a una **hemofagocitosis** (macrófagos que fagocitan otras células sanguíneas, incluyendo eritrocitos, plaquetas y leucocitos).</li>
+            <li>**Diagnóstico de $\text{HLH}$:** Se establece por fiebre, esplenomegalia, citopenias, hiperferritinemia masiva e hipofibrinogenemia.</li>
+        </ul>
+
+        <hr>
+        
+        <div class="chapter-nav-container">
+            <a href="/pages/hem_cap_10_transtornos_neutrofilos.html" class="chapter-nav-button chapter-nav-prev">
+                &larr; Cap. 10: Trastornos de Neutrófilos
+            </a>
+            <a href="/pages/hem_cap_12_hemostasia_introduccion.html" class="chapter-nav-button chapter-nav-next">
+                Cap. 12: Introducción a la Hemostasia &rarr;
+            </a>
+        </div>
+    </main>
+<footer>
+    <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
+    <div class="legal-links">
+        <a href="../terminos_condiciones.html">Términos y Condiciones</a>
+        |
+        <a href="../aviso_privacidad.html">Aviso de Privacidad</a>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const body = document.body;
+        const styleToggleBtn = document.getElementById('toggle-font-style');
+        const sizeButtons = document.querySelectorAll('[data-size]');
+
+        function applyFontStyle(isRobust) {
+            if (isRobust) {
+                body.classList.add('font-robust');
+                styleToggleBtn.textContent = 'Estilo Normal';
+                localStorage.setItem('fontStyle', 'robust');
+            } else {
+                body.classList.remove('font-robust');
+                styleToggleBtn.textContent = 'Estilo Robusto';
+                localStorage.setItem('fontStyle', 'normal');
+            }
+        }
+
+        styleToggleBtn.addEventListener('click', () => {
+            const currentStyle = localStorage.getItem('fontStyle');
+            applyFontStyle(currentStyle !== 'robust');
+        });
+
+        function applyFontSize(size) {
+            body.classList.remove('size-s', 'size-n', 'size-l');
+            body.classList.add(`size-${size}`);
+            localStorage.setItem('fontSize', size);
+            
+            sizeButtons.forEach(btn => {
+                btn.style.backgroundColor = btn.dataset.size === size ? '#e6f0ff' : 'white';
+            });
+        }
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                applyFontSize(e.target.dataset.size);
+            });
+        });
+
+        const savedFontStyle = localStorage.getItem('fontStyle');
+        if (savedFontStyle === 'robust') {
+            applyFontStyle(true);
+        } else {
+             applyFontStyle(false);
+        }
+        
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            applyFontSize(savedFontSize);
+        } else {
+            applyFontSize('n');
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 7: Anemias Hemolíticas Extracorpusculares (AHAI)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_base.css">
+    <link rel="stylesheet" href="../css/style_materias.css"> 
+</head>
+<body>
+    <header><h1>🔬 Plataforma de Estudio y Consulta para TLC</h1></header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="materias.html">Materias</a></li>
+            <li><a href="capsulas.html">Cápsulas</a></li>
+            <li><a href="protocolos.html">Protocolos</a></li>
+            <li><a href="entrenamiento.html">Entrenamiento</a></li>
+            <li><a href="laboratorio_virtual.html">Laboratorio Virtual</a></li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <div id="accessibility-panel" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 20px; padding: 10px; background-color: #f1f1f1; border-radius: 8px;">
+            <span style="font-size: 0.9em; font-weight: bold;">Accesibilidad:</span>
+            
+            <button id="toggle-font-style" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white;">
+                Estilo Robusto
+            </button>
+            
+            <button id="font-size-s" data-size="s" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 0.8em;">
+                A-
+            </button>
+            <button id="font-size-n" data-size="n" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1em;">
+                A
+            </button>
+            <button id="font-size-l" data-size="l" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1.2em;">
+                A+
+            </button>
+        </div>
+        <h1>Capítulo 7: Anemias Hemolíticas Extracorpusculares (AHAI)</h1>
+        <div class="summary">
+            <h2>Resumen del Capítulo</h2>
+            <p>Las **Anemias Hemolíticas Extracorpusculares** son causadas por factores externos al glóbulo rojo. El grupo más importante es el de las **Anemias Hemolíticas Autoinmunes (AHAI)**, cuyo diagnóstico se centra en el **Test de Coombs Directo**. Otras causas incluyen el trauma mecánico en vasos pequeños, conocido como **Hemólisis Microangiopática** (caracterizada por **esquistocitos**), y la acción de agentes tóxicos o infecciosos (como la malaria).</p>
+        </div>
+        
+        <h2 class="part-header">7.1. Anemias Hemolíticas Autoinmunes (AHAI)</h2>
+        <p>Las AHAI son causadas por autoanticuerpos que reaccionan contra antígenos de la membrana eritrocitaria, activando mecanismos de destrucción celular. Se clasifican según la temperatura óptima de reacción del anticuerpo.</p>
+
+        <h3>AHAI por Anticuerpos Calientes (IgG)</h3>
+        <p>Es la forma más frecuente (70-80% de las AHAI). Está mediada por anticuerpos **IgG** que reaccionan óptimamente a $37^{\circ}\text{C}$.</p>
+        <ul>
+            <li>**Mecanismo de Destrucción:** **Hemólisis extravascular** en el bazo. Los macrófagos esplénicos retiran la membrana eritrocitaria recubierta de IgG, lo que resulta en la formación de **esferocitos**.</li>
+            <li>**Etiología:** Idiopática (primaria) o secundaria a enfermedades linfoproliferativas (LLC, Linfoma), enfermedades autoinmunes (Lupus) o por fármacos.</li>
+            <li>**Prueba de Coombs Directo (CD):** Positiva con anticuerpos anti-$\text{IgG}$ y a menudo anti-$\text{C3d}$.</li>
+        </ul>
+
+        <h3>AHAI por Anticuerpos Fríos (IgM)</h3>
+        <p>Mediadas por anticuerpos **IgM** que reaccionan óptimamente a temperaturas bajas ($<37^{\circ}\text{C}$).</p>
+        <ul>
+            <li>**Mecanismo de Destrucción:** La $\text{IgM}$ se une en las extremidades y activa el complemento (vía clásica). Cuando el eritrocito regresa a la circulación central, la $\text{IgM}$ se disocia, pero el complemento ($\text{C3d}$) permanece unido, llevando a hemólisis **intravascular** y **extravascular**.</li>
+            <li>**Tipos y Etiología:**
+                <ul>
+                    <li>**Enfermedad por Crioaglutininas:** Crónica y clonal (asociada a neoplasias linfoides).</li>
+                    <li>**Síndrome de Crioaglutininas Agudo:** Secundario a infecciones, siendo la principal el **Mycoplasma pneumoniae** y la Mononucleosis Infecciosa.</li>
+                </ul>
+            </li>
+            <li>**Prueba de Coombs Directo (CD):** Positiva **solo** para anti-$\text{C3d}$ (complemento), y negativa para anti-$\text{IgG}$.</li>
+        </ul>
+        <div class="table-marker-box">
+            <h4>[MARCADOR DE TABLA]</h4>
+            <p><strong>Referencia: TABLA 10. DIAGNÓSTICO DIFERENCIAL ENTRE AHAI POR ANTICUERPOS CALIENTES Y FRÍOS</strong></p>
+            <p>Detalle comparativo de la clínica, los anticuerpos y la prueba de Coombs para los dos tipos de AHAI.</p>
+        </div>
+
+        <h2 class="part-header">7.2. Hemólisis Traumática y Microangiopática</h2>
+        <p>Se produce por daño físico o mecánico de los eritrocitos en la circulación, resultando en hemólisis **intravascular**.</p>
+        
+        <h3>Hemólisis Microangiopática (MAT)</h3>
+        <p>La fragmentación eritrocitaria ocurre al chocar con hebras de fibrina o depósitos plaquetarios en la microvasculatura.</p>
+        <ul>
+            <li>**Morfología Clave:** La presencia de **Esquistocitos** (fragmentos celulares) en el frotis sanguíneo es el signo patognomónico de una MAT.</li>
+            <li>**Causas Principales (Síndromes de MAT):**
+                <ul>
+                    <li>**Púrpura Trombótica Trombocitopénica (PTT):** Deficiencia de la enzima ADAMTS13.</li>
+                    <li>**Síndrome Hemolítico Urémico (SHU):** Típicamente post-infección por <em>E. coli</em> productora de toxina Shiga.</li>
+                    <li>**Coagulación Intravascular Diseminada (CID):** Formación masiva de fibrina.</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="figure-marker-box">
+            <h4>[MARCADOR DE FIGURA]</h4>
+            <p><strong>Referencia: FIGURA 14. ESQUISTOCITOS EN FROTIS SANGUÍNEO POR HEMÓLISIS MICROANGIOPÁTICA</strong></p>
+            <p>Ilustración de las células fragmentadas y su morfología característica.</p>
+        </div>
+
+        <h3>Otras Causas Mecánicas</h3>
+        <ul>
+            <li>**Válvulas Cardíacas Protésicas:** Especialmente las mecánicas, debido al flujo turbulento y las turbulencias de cizallamiento.</li>
+            <li>**Hemólisis del Marchador:** Microtrauma repetitivo por impacto en corredores de larga distancia.</li>
+        </ul>
+
+        <h2 class="part-header">7.3. Hemólisis por Agentes Tóxicos e Infecciosos</h2>
+        <p>Agentes externos pueden desencadenar la destrucción eritrocitaria a través de mecanismos directos o indirectos.</p>
+        
+        <h3>Agentes Tóxicos y Químicos</h3>
+        <ul>
+            <li>**Tóxicos Directos:** Intoxicación por arsénico, plomo (saturnismo), cobre, y ciertos compuestos clorados.</li>
+            <li>**Estrés Oxidativo:** Fármacos o químicos que actúan como oxidantes (relevante en pacientes con déficit de G6PD).</li>
+            <li>**Daño Térmico:** Grandes quemaduras o exposición a altas tensiones de oxígeno.</li>
+        </ul>
+
+        <h3>Agentes Infecciosos</h3>
+        <p>Los microorganismos pueden causar hemólisis por tres vías principales:</p>
+        <ol style="padding-left: 20px;">
+            <li>**Invasión Directa del Hematíe:** Parasitosis como la **Malaria** (Plasmodium), **Bartonelosis** o **Babesiosis**.</li>
+            <li>**Liberación de Toxinas Hemolíticas:** Bacterias como <em>Clostridium perfringens</em> ($\text{toxina} \ \alpha$) que lisan la membrana de forma directa (**hemólisis intravascular**).</li>
+            <li>**Mecanismo Inmune Indirecto:** Depósito de complejos inmunes o inducción de autoanticuerpos.</li>
+        </ol>
+        <p class="callout warning">La **Malaria** es la causa infecciosa más notable de hemólisis a nivel mundial, caracterizada por esplenomegalia y cuadros graves de anemia hemolítica.</p>
+
+        <hr>
+        
+        <div class="chapter-nav-container">
+            <a href="/pages/hem_cap_06_hemoglobinopatias.html" class="chapter-nav-button chapter-nav-prev">
+                &larr; Cap. 6: Talasemias y Hemoglobinopatías
+            </a>
+            <a href="/pages/hem_cap_08_grupos_sanguineos.html" class="chapter-nav-button chapter-nav-next">
+                Cap. 8: Grupos Sanguíneos y Hemoderivados &rarr;
+            </a>
+        </div>
+    </main>
+<footer>
+    <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
+    <div class="legal-links">
+        <a href="../terminos_condiciones.html">Términos y Condiciones</a>
+        |
+        <a href="../aviso_privacidad.html">Aviso de Privacidad</a>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const body = document.body;
+        const styleToggleBtn = document.getElementById('toggle-font-style');
+        const sizeButtons = document.querySelectorAll('[data-size]');
+
+        function applyFontStyle(isRobust) {
+            if (isRobust) {
+                body.classList.add('font-robust');
+                styleToggleBtn.textContent = 'Estilo Normal';
+                localStorage.setItem('fontStyle', 'robust');
+            } else {
+                body.classList.remove('font-robust');
+                styleToggleBtn.textContent = 'Estilo Robusto';
+                localStorage.setItem('fontStyle', 'normal');
+            }
+        }
+
+        styleToggleBtn.addEventListener('click', () => {
+            const currentStyle = localStorage.getItem('fontStyle');
+            applyFontStyle(currentStyle !== 'robust');
+        });
+
+        function applyFontSize(size) {
+            body.classList.remove('size-s', 'size-n', 'size-l');
+            body.classList.add(`size-${size}`);
+            localStorage.setItem('fontSize', size);
+            
+            sizeButtons.forEach(btn => {
+                btn.style.backgroundColor = btn.dataset.size === size ? '#e6f0ff' : 'white';
+            });
+        }
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                applyFontSize(e.target.dataset.size);
+            });
+        });
+
+        const savedFontStyle = localStorage.getItem('fontStyle');
+        if (savedFontStyle === 'robust') {
+            applyFontStyle(true);
+        } else {
+             applyFontStyle(false);
+        }
+        
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            applyFontSize(savedFontSize);
+        } else {
+            applyFontSize('n');
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 6: Talasemias y Hemoglobinopatías</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_base.css">
+    <link rel="stylesheet" href="../css/style_materias.css"> 
+</head>
+<body>
+    <header><h1>🔬 Plataforma de Estudio y Consulta para TLC</h1></header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="materias.html">Materias</a></li>
+            <li><a href="capsulas.html">Cápsulas</a></li>
+            <li><a href="protocolos.html">Protocolos</a></li>
+            <li><a href="entrenamiento.html">Entrenamiento</a></li>
+            <li><a href="laboratorio_virtual.html">Laboratorio Virtual</a></li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <div id="accessibility-panel" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 20px; padding: 10px; background-color: #f1f1f1; border-radius: 8px;">
+            <span style="font-size: 0.9em; font-weight: bold;">Accesibilidad:</span>
+            
+            <button id="toggle-font-style" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white;">
+                Estilo Robusto
+            </button>
+            
+            <button id="font-size-s" data-size="s" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 0.8em;">
+                A-
+            </button>
+            <button id="font-size-n" data-size="n" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1em;">
+                A
+            </button>
+            <button id="font-size-l" data-size="l" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1.2em;">
+                A+
+            </button>
+        </div>
+        <h1>Capítulo 6: Talasemias y Hemoglobinopatías</h1>
+        <div class="summary">
+            <h2>Resumen del Capítulo</h2>
+            <p>Las **Hemoglobinopatías** son trastornos genéticos que afectan la molécula de hemoglobina (Hb). Se dividen en trastornos **estructurales o cualitativos** (ej. Hemoglobina S, alteración en la cadena de globina) y **Talasemias o trastornos cuantitativos** (disminución de la síntesis de una cadena, $\alpha$ o $\beta$). La **Drepanocitosis** (anemia de células falciformes) se produce por la polimerización de la Hb S al desoxigenarse, lo que deforma el eritrocito y provoca crisis vasooclusivas. Las Talasemias se definen por la **microcitosis e hipocromía** y por el desequilibrio entre cadenas, causando una eritropoyesis ineficaz y hemólisis.</p>
+        </div>
+        
+        <h2 class="part-header">6.1. Estructura y Genética de la Hemoglobina Humana</h2>
+        [cite_start]<p>La Hemoglobina ($\text{Hb}$) es una proteína tetramérica, compuesta por dos pares de cadenas de globina y cuatro grupos hemo[cite: 10262]. [cite_start]Existen seis tipos de cadenas de globina ($\alpha$, $\beta$, $\gamma$, $\delta$, $\epsilon$, $\zeta$), cuya síntesis está regulada por genes en los **cromosomas 11 y 16**[cite: 10318, 10320].</p>
+        
+        <h3>Tipos de Hemoglobina en el Desarrollo</h3>
+        [cite_start]<p>La composición de $\text{Hb}$ cambia con la edad, lo que es clave para entender la clínica de las hemoglobinopatías[cite: 10268, 10270].</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            [cite_start]<li>**Hemoglobinas Embrionarias ($\text{Hb}$ Gower I, II, Portland):** Se sintetizan en el saco vitelino y desaparecen al final del primer trimestre[cite: 10296, 10299].</li>
+            [cite_start]<li>**Hemoglobina Fetal ($\text{Hb}$ F - $\alpha_2\gamma_2$):** Es la principal durante la gestación (hasta el 75%)[cite: 10301, 10302, 10303]. Desciende rápidamente tras el nacimiento. [cite_start]Su presencia atenúa la clínica de la drepanocitosis en recién nacidos[cite: 10501].</li>
+            [cite_start]<li>**Hemoglobina del Adulto ($\text{Hb}$ A - $\alpha_2\beta_2$):** Constituye el 95-97% de la $\text{Hb}$ total en el adulto[cite: 10292, 10314].</li>
+            [cite_start]<li>**$\text{Hb}$ $\text{A}_2$ ($\alpha_2\delta_2$):** Representa el 0.5-3.5% del total[cite: 10292, 10312]. [cite_start]Su elevación es un marcador diagnóstico clave de la $\beta$-talasemia[cite: 10292].</li>
+        </ul>
+        **[PENDIENTE: FIGURA 1. SÍNTESIS DE LAS CADENAS DE GLOBINA DURANTE EL DESARROLLO (Cap. 6, Fig. 1)]**
+        
+        <h2 class="part-header">6.2. Hemoglobinopatías Estructurales (Cualitativas)</h2>
+        [cite_start]<p>Son causadas por una **mutación puntual** en la secuencia de aminoácidos de una cadena de globina, dando lugar a una $\text{Hb}$ anormal[cite: 10367, 10406, 10410]. [cite_start]El trastorno más común afecta la cadena $\beta$[cite: 10414].</p>
+
+        <h3>Hemoglobinopatía S (Drepanocitosis / Anemia de Células Falciformes)</h3>
+        [cite_start]<p>Es el trastorno estructural más común a nivel mundial, especialmente en poblaciones de origen africano, debido a su ventaja evolutiva contra la malaria[cite: 10456, 10462].</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            [cite_start]<li>**Defecto Molecular:** Sustitución de un solo aminoácido: **Ácido Glutámico (Glu) por Valina (Val)** en la sexta posición de la cadena $\beta$ de globina ($\beta_6\text{(A}_3)\text{Glu}\to\text{Val}$)[cite: 10463].</li>
+            [cite_start]<li>**Mecanismo Vasooclusivo:** Cuando la $\text{Hb}$ S se **desoxigena**, polimeriza y forma cristales alargados ("cuerpos tactoides")[cite: 10420, 10464]. [cite_start]Estos cristales fuerzan al eritrocito a adoptar una **forma de hoz (drepanocito)**, volviéndolo rígido y adhesivo[cite: 10465, 10467].</li>
+            [cite_start]<li>**Clínica:** Los drepanocitos obstruyen la microcirculación, provocando **crisis vasooclusivas** (dolor intenso en huesos/articulaciones, isquemia), **síndrome torácico agudo** (pulmón), **ictus** (cerebro) e **hipoesplenismo funcional** (riesgo de infección)[cite: 10518, 10523, 10541, 10562].</li>
+            <li>**Genotipo/Fenotipo:**
+                <ul>
+                    <li>**Rasgo Falciforme (S/A):** Heterocigoto. Generalmente asintomático. [cite_start]La $\text{Hb}$ S representa el 30-50%[cite: 10454, 10459, 10493, 10499].</li>
+                    <li>**Enfermedad Falciforme (S/S o S/Talasemia):** Homocigoto. [cite_start]Fenotipo grave, con $\text{Hb}$ S entre 75-95%[cite: 10456, 10459, 10516].</li>
+                </ul>
+            </li>
+        </ul>
+        **[PENDIENTE: FIGURA 4. FISIOPATOLOGÍA DE LA HEMOGLOBINOPATÍA S (VASOOCCLUSIÓN)]**
+        
+        <h3>Otras Variantes Estructurales</h3>
+        [cite_start]<p>Las mutaciones pueden afectar las propiedades fisicoquímicas de la $\text{Hb}$, manifestándose como[cite: 10417]:</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            [cite_start]<li>**Inestabilidad Molecular:** La $\text{Hb}$ se desnaturaliza y precipita en el interior del eritrocito, formando **Cuerpos de Inclusión** ($\text{Hb}$ Köln)[cite: 10426].</li>
+            <li>**Acumulación de Metahemoglobina ($\text{Hb}$ M):** El hierro del grupo hemo permanece en estado férrico ($\text{Fe}^{+++}$) y no puede transportar oxígeno. [cite_start]Produce cianosis[cite: 10431, 10433].</li>
+            [cite_start]<li>**Alteración de la Afinidad por $\text{O}_2$:** Aumento de afinidad (curva a la izquierda, $\text{Hb}$ Chesapeake) que causa hipoxia tisular y **poliglobulia**[cite: 10423, 10424].</li>
+        </ul>
+
+        <h2 class="part-header">6.3. Síndromes Talasémicos (Cuantitativos)</h2>
+        [cite_start]<p>Las talasemias son trastornos hereditarios que reducen o anulan la síntesis de una o más cadenas de globina, sin que la cadena sintetizada sea estructuralmente anómala[cite: 10253, 10435].</p>
+        
+        <h3>Patogenia: El Desequilibrio de Cadenas</h3>
+        [cite_start]<p>La patogenia clave no es la falta de $\text{Hb}$, sino la presencia de un **exceso** de las cadenas de globina no defectuosas[cite: 10437].</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            [cite_start]<li>**Eritropoyesis Ineficaz:** Las cadenas sobrantes (ej., cadenas $\alpha$ en la $\beta$-talasemia) son inestables, precipitan precozmente en la médula ósea e inducen la apoptosis de los precursores eritroides (**aborto intramedular**), lo que causa eritropoyesis ineficaz y macroscópicas deformidades óseas[cite: 10438, 10681, 10682].</li>
+            [cite_start]<li>**Hemólisis:** Las cadenas sobrantes que no precipitan en la médula se depositan en el eritrocito maduro, dañando la membrana y provocando **hemólisis extravascular**[cite: 10440].</li>
+            [cite_start]<li>**Hallazgos Comunes:** Anemia **microcítica e hipocrómica** ($\text{VCM}$ y $\text{HCM}$ bajos) [cite: 10435, 10688][cite_start], recuento de hematíes normal o elevado [cite: 10687][cite_start], y **Ferritina normal o alta** (a diferencia de la ferropenia)[cite: 10698].</li>
+        </ul>
+        **[PENDIENTE: FIGURA 8. FISIOPATOLOGÍA DE LA $\beta$-TALASEMIA HOMOCIGOTA (Cap. 6, Fig. 8)]**
+
+        <h3>Tipos de Talasemia</h3>
+        [cite_start]<p>Se clasifican según la cadena defectuosa ($\alpha$ o $\beta$) y la gravedad clínica[cite: 10644, 10645].</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            [cite_start]<li>**$\beta$-Talasemia (Defecto en $\beta$ - $\text{Cr}$ 11):** Causada principalmente por **mutaciones puntuales** que afectan el procesamiento del $\text{ARN}$m o la traducción[cite: 10659].
+                <ul>
+                    <li>**Rasgo Talasémico ($\beta$-Menor):** Heterocigoto ($\beta^+/\beta$ o $\beta^0/\beta$). Asintomático. [cite_start]La clave diagnóstica es la **$\text{Hb}$ $\text{A}_2$ elevada** (3.5-6.0%)[cite: 10686, 10694].</li>
+                    <li>**$\beta$-Talasemia Mayor (Anemia de Cooley):** Homocigoto o doble heterocigoto. [cite_start]Requiere **transfusiones periódicas** para sobrevivir[cite: 10707]. [cite_start]Se diagnostica en los primeros meses de vida debido a la caída de la $\text{Hb}$ $\text{F}$[cite: 10711]. [cite_start]La $\text{Hb}$ F está elevada (60-95%)[cite: 10726].</li>
+                </ul>
+            </li>
+            [cite_start]<li>**$\alpha$-Talasemia (Defecto en $\alpha$ - $\text{Cr}$ 16):** Causada principalmente por la **deleción** de uno a cuatro genes $\alpha$[cite: 10817].
+                <ul>
+                    <li>**Portador Silente (-$\alpha/\alpha\alpha$):** Un solo gen delecionado. [cite_start]Asintomático y sin alteraciones hematológicas[cite: 10822, 10823].</li>
+                    <li>**Rasgo $\alpha$-Talasémico (--/$\alpha\alpha$ o -$\alpha/-\alpha$):** Dos genes delecionados. Microcitosis discreta. [cite_start]$\text{Hb}$ $\text{A}_2$ y $\text{Hb}$ F son normales[cite: 10826, 10828].</li>
+                    <li>**Enfermedad por $\text{Hb}$ $\text{H}$ (--/$\alpha$-):** Tres genes delecionados. [cite_start]Se comporta como una talasemia intermedia[cite: 10831, 10833].</li>
+                    <li>**Hydrops Fetalis (--/--):** Cuatro genes delecionados. [cite_start]Incompatible con la vida[cite: 10839].</li>
+                </ul>
+            </li>
+        </ul>
+        **[PENDIENTE: TABLA IV. DIAGNÓSTICO DIFERENCIAL DE ANEMIAS MICROCÍTICAS (Cap. 3, Tabla IV)]**
+
+        <h2 class="part-header">6.4. Tratamiento</h2>
+        <p>El tratamiento se individualiza por el genotipo y la gravedad clínica:</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            [cite_start]<li>**$\beta$-Talasemia Mayor:** Requiere **transfusiones periódicas** y terapia con **quelantes de hierro** (Deferoxamina, Deferiprona, Deferasirox) para prevenir la hemosiderosis secundaria (daño cardiaco y endocrino)[cite: 10749, 10772, 10774]. [cite_start]El **Trasplante Alogénico de Progenitores Hematopoyéticos** es la única cura[cite: 10805].</li>
+            [cite_start]<li>**Drepanocitosis (ACF):** El **Hidroxiurea** es el tratamiento estándar, ya que incrementa la producción de $\text{Hb}$ F, que atenúa la polimerización de la $\text{Hb}$ S[cite: 10616, 10617]. [cite_start]Se administra profilaxis con penicilina y vacunas para prevenir infecciones graves por hipoesplenismo[cite: 10612, 10613].</li>
+        </ul>
+
+        <hr>
+        
+        <div class="chapter-nav-container">
+            <a href="/pages/hem_cap_05_hemolisis_intrinseca.html" class="chapter-nav-button chapter-nav-prev">
+                &larr; Cap. 5: Hemólisis Intrínseca
+            </a>
+            <a href="/pages/hem_cap_07_hemolisis_extrínseca.html" class="chapter-nav-button chapter-nav-next">
+                Cap. 7: Hemólisis Extracorpuscular &rarr;
+            </a>
+        </div>
+    </main>
+<footer>
+    <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
+    <div class="legal-links">
+        <a href="../terminos_condiciones.html">Términos y Condiciones</a>
+        |
+        <a href="../aviso_privacidad.html">Aviso de Privacidad</a>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const body = document.body;
+        const styleToggleBtn = document.getElementById('toggle-font-style');
+        const sizeButtons = document.querySelectorAll('[data-size]');
+
+        function applyFontStyle(isRobust) {
+            if (isRobust) {
+                body.classList.add('font-robust');
+                styleToggleBtn.textContent = 'Estilo Normal';
+                localStorage.setItem('fontStyle', 'robust');
+            } else {
+                body.classList.remove('font-robust');
+                styleToggleBtn.textContent = 'Estilo Robusto';
+                localStorage.setItem('fontStyle', 'normal');
+            }
+        }
+
+        styleToggleBtn.addEventListener('click', () => {
+            const currentStyle = localStorage.getItem('fontStyle');
+            applyFontStyle(currentStyle !== 'robust');
+        });
+
+        function applyFontSize(size) {
+            body.classList.remove('size-s', 'size-n', 'size-l');
+            body.classList.add(`size-${size}`);
+            localStorage.setItem('fontSize', size);
+            
+            sizeButtons.forEach(btn => {
+                btn.style.backgroundColor = btn.dataset.size === size ? '#e6f0ff' : 'white';
+            });
+        }
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                applyFontSize(e.target.dataset.size);
+            });
+        });
+
+        const savedFontStyle = localStorage.getItem('fontStyle');
+        if (savedFontStyle === 'robust') {
+            applyFontStyle(true);
+        } else {
+             applyFontStyle(false);
+        }
+        
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            applyFontSize(savedFontSize);
+        } else {
+            applyFontSize('n');
+        }
+    });
+</script>
+</body>
+</html>
