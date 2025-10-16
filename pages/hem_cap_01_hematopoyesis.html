@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 1: Hematopoyesis. Hematíes: Estructura y Función</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_base.css">
+    <link rel="stylesheet" href="../css/style_materias.css"> 
+</head>
+<body>
+    <header><h1>🔬 Plataforma de Estudio y Consulta para TLC</h1></header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="materias.html">Materias</a></li>
+            <li><a href="capsulas.html">Cápsulas</a></li>
+            <li><a href="protocolos.html">Protocolos</a></li>
+            <li><a href="entrenamiento.html">Entrenamiento</a></li>
+            <li><a href="laboratorio_virtual.html">Laboratorio Virtual</a></li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <div id="accessibility-panel" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 20px; padding: 10px; background-color: #f1f1f1; border-radius: 8px;">
+            <span style="font-size: 0.9em; font-weight: bold;">Accesibilidad:</span>
+            
+            <button id="toggle-font-style" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white;">
+                Estilo Robusto
+            </button>
+            
+            <button id="font-size-s" data-size="s" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 0.8em;">
+                A-
+            </button>
+            <button id="font-size-n" data-size="n" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1em;">
+                A
+            </button>
+            <button id="font-size-l" data-size="l" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1.2em;">
+                A+
+            </button>
+        </div>
+        <h1>Capítulo 1: Hematopoyesis. Hematíes: Estructura y Función</h1>
+        <div class="summary">
+            <h2>Resumen del Capítulo</h2>
+            <p>Este capítulo detalla la **hematopoyesis**, el proceso dinámico y constante de formación de células sanguíneas, explicando la evolución de sus sitios de producción desde la vida embrionaria hasta la médula ósea. Se explora el papel de las **células madre hematopoyéticas (HSC)**, su diferenciación controlada por citoquinas y se finaliza con la estructura y el metabolismo único de la célula madura más numerosa: el **eritrocito**.</p>
+        </div>
+        
+        <h2 class="part-header">1.1. Hematopoyesis: Origen y Evolución</h2>
+        <p>La **Hematopoyesis** es el proceso biológico que produce y renueva de forma permanente a las células sanguíneas (glóbulos rojos, blancos y plaquetas). Dada la corta vida media de estas células (ej. eritrocitos ~120 días, granulocitos ~1-2 días en tejido), se necesita una producción masiva diaria, ajustada a las demandas periféricas del organismo.</p>
+
+        <h3>Sitios de la Hematopoyesis a lo largo del Desarrollo</h3>
+        <p>La localización anatómica de la hematopoyesis se desplaza durante la gestación:</p>
+        <ol style="padding-left: 20px;">
+            <li>**Fase Mesoblástica (Saco Vitelino):** Inicia en la tercera semana de gestación. Produce predominantemente hematíes (eritropoyesis), sin leucocitos o plaquetas.</li>
+            <li>**Fase Hepática (Hígado y Bazo):** Domina desde el segundo al séptimo mes. El hígado se convierte en el principal órgano productor de los tres linajes celulares.</li>
+            <li>**Fase Mieloide (Médula Ósea):** Comienza en el cuarto mes y se establece como el sitio principal a partir del nacimiento y durante toda la vida.</li>
+        </ol>
+
+        <h2 class="part-header">1.2. Células Madre y Diferenciación</h2>
+        <p>La base de la hematopoyesis reside en las **Células Madre Hematopoyéticas (HSC)**, un grupo celular pequeño (< 0.05% de las células medulares) caracterizado por dos propiedades fundamentales:</p>
+        <ul>
+            <li>**Autorrenovación:** Capacidad de dividirse y crear más células madre idénticas, manteniendo el <em>pool</em> (reservorio).</li>
+            <li>**Diferenciación:** Capacidad de generar todas las líneas celulares maduras, a través de precursores con menor potencial (progenitores).</li>
+        </ul>
+
+        <h3>Líneas de Progenitores</h3>
+        <p>Las HSC dan origen a dos grandes líneas de progenitores, que a su vez se ramifican:</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Progenitor Linfoide Común (CLP):** Genera linfocitos T, B y Células NK.</li>
+            <li>**Progenitor Mieloide Común (CMP):** Genera unidades formadoras de colonias (CFU) que producen el resto de las células:
+                <ul>
+                    <li>**Eritrocitos** (a través de BFU-E y CFU-E)</li>
+                    <li>**Plaquetas** (a través de Megacariocitos)</li>
+                    <li>**Granulocitos** (Neutrófilos, Eosinófilos, Basófilos)</li>
+                    <li>**Monocitos**</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2 class="part-header">1.3. Regulación de la Producción Celular</h2>
+        <p>La diferenciación, proliferación y maduración de las células está estrictamente controlada por factores solubles conocidos como **citoquinas** o factores de crecimiento hematopoyético.</p>
+
+        <h3>Factores Estimuladores Clave</h3>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Eritropoyetina (EPO):** Producida principalmente en el riñón en respuesta a la hipoxia. Es el factor clave para la maduración de los precursores eritroides (CFU-E).</li>
+            <li>**Trombopoyetina (TPO):** Producida en el hígado y riñón. Regula la producción de plaquetas a partir de los megacariocitos.</li>
+            <li>**Factores Estimuladores de Colonias (CSF):** Incluyen G-CSF (Neutrófilos) y GM-CSF (Granulocitos y Monocitos), esenciales para la serie blanca.</li>
+        </ul>
+
+        <h2 class="part-header">1.4. El Linaje Eritroide (Eritropoyesis)</h2>
+        <p>El proceso que da lugar a los hematíes maduros dura aproximadamente **7 días** y se caracteriza por una disminución progresiva del tamaño celular, condensación y expulsión del núcleo, y un aumento en la síntesis de **hemoglobina**.</p>
+        
+        <h3>Etapas de Maduración (Visibles en Médula Ósea)</h3>
+        <p>La serie roja se identifica por la progresiva acidofilia (color rojo) del citoplasma debido a la acumulación de hemoglobina:</p>
+        <ol style="padding-left: 20px;">
+            <li>**Proeritroblasto:** Célula más grande, con núcleo laxo.</li>
+            <li>**Eritroblasto Basófilo y Policromatófilo:** El citoplasma empieza a tornarse grisáceo-rosado debido a la síntesis de Hb.</li>
+            <li>**Eritroblasto Ortokromático:** El núcleo se vuelve picnótico (denso e inactivo).</li>
+            <li>**Reticulocito:** Después de la expulsión del núcleo, es el estadio que pasa a la sangre periférica, manteniendo restos de ARN que le dan policromasia en el frotis.</li>
+            <li>**Eritrocito (Hematíe):** Célula madura anucleada.</li>
+        </ol>
+        <p class="callout warning">La producción eficiente de eritrocitos depende críticamente del aporte adecuado de **hierro**, **vitamina B12** y **ácido fólico**.</p>
+
+        <h2 class="part-header">1.5. El Eritrocito: Estructura y Metabolismo</h2>
+        <p>El eritrocito es una célula anucleada con forma de **disco bicóncavo** (7.5 µm de diámetro). Esta forma es vital, ya que le permite aumentar la superficie de intercambio de oxígeno y tener la **elasticidad** necesaria para pasar por capilares más estrechos (hasta 3 µm) y por el bazo sin romperse.</p>
+
+        <h3>Mantenimiento de la Forma: El Citoesqueleto</h3>
+        <p>La membrana es una bicapa lipídica sostenida por un esqueleto proteico. La proteína clave es la **Espectrina**, la cual forma una red estructural que confiere al glóbulo rojo su elasticidad y resistencia al estrés osmótico.</p>
+        <p><strong>[PENDIENTE: FIGURA DE LA MEMBRANA ERITROCITARIA Y EL CITOESQUELETO DE ESPECTRINA]</strong></p>
+
+        <h3>Metabolismo Energético (Anaeróbico)</h3>
+        <p>Al carecer de mitocondrias, el eritrocito depende exclusivamente de la glucosa como fuente de energía y presenta vías metabólicas adaptadas a su función:</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Vía Glucolítica (Embden-Meyerhof):** Produce las **2 moléculas de ATP** netas. Este ATP es fundamental para las bombas iónicas de la membrana (principalmente la bomba Na+/K+), manteniendo el volumen y la forma de la célula.</li>
+            <li>**Derivación de la Hexosa-Monofosfato:** Genera **NADPH**, que mantiene el glutatión reducido (**GSH**). El GSH es el principal mecanismo de defensa para proteger a la hemoglobina del daño oxidativo (metahemoglobinemia).</li>
+            <li>**Vía de Luebering-Rapaport:** Produce **2,3-Difosfoglicerato (2,3-DPG)**. Esta molécula es crítica para la función de transporte de oxígeno de la hemoglobina.</li>
+        </ul>
+
+        <h2 class="part-header">1.6. La Función de la Hemoglobina y el 2,3-DPG</h2>
+        <p>La función principal del eritrocito es transportar oxígeno. La **hemoglobina** (Hb) es una proteína tetramérica (cuatro subunidades de globina y cuatro grupos hemo) que realiza esta tarea. Su afinidad por el oxígeno no es constante y se describe mediante la curva de disociación sigmoidea.</p>
+
+        <h3>Regulación de la Afinidad (Curva de Disociación)</h3>
+        <p>La liberación de oxígeno en los tejidos es favorecida por:</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**2,3-Difosfoglicerato:** En los tejidos (baja PO₂), el 2,3-DPG se une a la Hb. Esto provoca un cambio conformacional que **disminuye la afinidad de la Hb por el oxígeno**, facilitando su liberación. Esto desplaza la curva de disociación hacia la **derecha**.</li>
+            <li>**Efecto Bohr (pH y CO₂):** La disminución del pH (por alta concentración de CO₂) también disminuye la afinidad de la Hb por el oxígeno.</li>
+        </ul>
+        <p>Un desplazamiento de la curva hacia la derecha indica una **menor afinidad** (más liberación de O₂), mientras que un desplazamiento a la izquierda indica una **mayor afinidad** (menos liberación de O₂).</p>
+        <p><strong>[PENDIENTE: FIGURA DE LA CURVA DE DISOCIACIÓN DE LA HEMOGLOBINA Y EL EFECTO DEL 2,3-DPG (FIGURA 11)]</strong></p>
+        
+        <hr>
+        
+        <div class="chapter-nav-container">
+            <a href="/pages/hem_introduccion.html" class="chapter-nav-button chapter-nav-prev">
+                &larr; Introducción a la Hematología
+            </a>
+            <a href="/pages/hem_cap_02_anemia_concepto.html" class="chapter-nav-button chapter-nav-next">
+                Cap. 2: Anemia: Concepto, Clínica y Clasificación &rarr;
+            </a>
+        </div>
+    </main>
+<footer>
+    <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
+    <div class="legal-links">
+        <a href="../terminos_condiciones.html">Términos y Condiciones</a>
+        |
+        <a href="../aviso_privacidad.html">Aviso de Privacidad</a>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const body = document.body;
+        const styleToggleBtn = document.getElementById('toggle-font-style');
+        const sizeButtons = document.querySelectorAll('[data-size]');
+
+        function applyFontStyle(isRobust) {
+            if (isRobust) {
+                body.classList.add('font-robust');
+                styleToggleBtn.textContent = 'Estilo Normal';
+                localStorage.setItem('fontStyle', 'robust');
+            } else {
+                body.classList.remove('font-robust');
+                styleToggleBtn.textContent = 'Estilo Robusto';
+                localStorage.setItem('fontStyle', 'normal');
+            }
+        }
+
+        styleToggleBtn.addEventListener('click', () => {
+            const currentStyle = localStorage.getItem('fontStyle');
+            applyFontStyle(currentStyle !== 'robust');
+        });
+
+        function applyFontSize(size) {
+            body.classList.remove('size-s', 'size-n', 'size-l');
+            body.classList.add(`size-${size}`);
+            localStorage.setItem('fontSize', size);
+            
+            sizeButtons.forEach(btn => {
+                btn.style.backgroundColor = btn.dataset.size === size ? '#e6f0ff' : 'white';
+            });
+        }
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                applyFontSize(e.target.dataset.size);
+            });
+        });
+
+        const savedFontStyle = localStorage.getItem('fontStyle');
+        if (savedFontStyle === 'robust') {
+            applyFontStyle(true);
+        } else {
+             applyFontStyle(false);
+        }
+        
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            applyFontSize(savedFontSize);
+        } else {
+            applyFontSize('n');
+        }
+    });
+</script>
+</body>
+</html>

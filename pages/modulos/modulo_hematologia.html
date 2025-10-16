@@ -5,58 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Módulo de Hematología - CLIDEMED</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="../../css/style_base.css">
     <link rel="stylesheet" href="../../css/style_materias.css"> 
     <style>
-        /* Estilos para un índice de módulo limpio y profesional */
-        .module-index-container {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 20px;
-        }
-        .chapter-list {
-            list-style: none;
-            padding: 0;
-        }
-        .chapter-list-item {
-            background-color: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .chapter-list-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-        .chapter-list-item a {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            padding: 15px;
-        }
-        .chapter-title {
-            color: var(--clidemd-blue);
-            margin: 0 0 5px 0;
-            font-size: 1.2em;
-        }
-        .chapter-description {
-            margin: 0;
-            color: #555;
-            font-size: 0.95em;
-        }
-        /* Estilo para el enlace activo en la navegación (ejemplo) */
-        nav ul li a[href*="materias.html"] {
-            background-color: var(--clidemd-green); 
-        }
+        /* Estilos para el índice de módulo (mantener consistencia) */
+        .module-index-container { max-width: 900px; margin: 30px auto; padding: 20px; }
+        .chapter-list { list-style: none; padding: 0; }
+        .chapter-list-item { background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 10px; margin-bottom: 15px; transition: transform 0.2s, box-shadow 0.2s; }
+        .chapter-list-item:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .chapter-list-item a { text-decoration: none; color: inherit; display: block; padding: 25px; }
+        .chapter-title { font-size: 1.5em; color: var(--clidemd-blue); margin: 0 0 10px 0; }
+        .chapter-description { font-size: 1em; color: #555; margin: 0; }
+        .part-header { font-size: 1.8em; color: #2c3e50; margin-top: 40px; margin-bottom: 20px; border-bottom: 2px solid var(--clidemd-green); padding-bottom: 10px; }
     </style>
 </head>
 <body>
-    <header><h1>🔬 Plataforma de Estudio y Consulta para TLC</h1></header>
-   <nav>
+    <header><h1>🔬 Módulo de Hematología</h1></header>
+    <nav>
         <ul>
-            <li><a href="../../index.html">Inicio</a></li>
+             <li><a href="../../index.html">Inicio</a></li>
             <li><a href="../materias.html">Materias</a></li>
             <li><a href="../capsulas.html">Cápsulas</a></li>
             <li><a href="../protocolos.html">Protocolos</a></li>
@@ -64,8 +31,8 @@
             <li><a href="../laboratorio_virtual.html">Laboratorio Virtual</a></li>
         </ul>
     </nav>
-    <main id="main-content">
-        
+
+    <main class="container module-index-container">
         <div id="accessibility-panel" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 20px; padding: 10px; background-color: #f1f1f1; border-radius: 8px;">
             <span style="font-size: 0.9em; font-weight: bold;">Accesibilidad:</span>
             
@@ -83,159 +50,144 @@
                 A+
             </button>
         </div>
-        <div class="module-index-container">
-            <h1>Módulo de Hematología 🩸</h1>
-            <p>Guía de estudio completa sobre el sistema hematopoyético, trastornos de la serie roja y blanca, y coagulación.</p>
+        <h2 class="part-header">Parte I: Fisiología, Morfología y Anemias (Capítulos 1 al 8)</h2>
+        <ul class="chapter-list">
+            <li class="chapter-list-item">
+                <a href="../hem_introduccion.html">
+                    <h3 class="chapter-title">Introducción al Módulo de Hematología</h3>
+                    <p class="chapter-description">Definición, campo de estudio y la relevancia del laboratorio clínico en Hematología.</p>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_01_hematopoyesis.html">
+                    <h3 class="chapter-title">Capítulo 1: Hematopoyesis. Hematíes: Estructura y Función</h3>
+                    <p class="chapter-description">Fisiología medular, células troncales y eritropoyesis. Basado en el Capítulo 1 del libro.</p>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_02_anemia_concepto.html">
+                    <h3 class="chapter-title">Capítulo 2: Anemia: Concepto, Clínica y Clasificación</h3>
+                    <p class="chapter-description">Definición de anemia (OMS), mecanismos etiopatogénicos y bases de la clasificación morfológica. **(Basado en el Capítulo 2)**</p>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_03_anemias_micro.html">
+                    <h3 class="chapter-title">Capítulo 3: Anemias Microcíticas: Déficit de Hierro y AEC</h3>
+                    <p class="chapter-description">Metabolismo del hierro, diagnóstico etiológico de la Ferropenia y Anemia de Enfermedades Crónicas. **(Basado en el Capítulo 3)**</p>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_04_anemia_megaloblastica.html">
+                    <h3 class="chapter-title">Capítulo 4: Anemia Megaloblástica y Macrocitosis</h3>
+                    <p class="chapter-description">Déficit de Vitamina B12 y Ácido Fólico. Mecanismos de malabsorción y manifestaciones neurológicas. **(Basado en el Capítulo 4)**</p>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_05_hemolisis_intrinseca.html">
+                    <h3 class="chapter-title">Capítulo 5: Anemias Hemolíticas Intrínsecas (Membrana, Enzimas y HPN)</h3>
+                    <p class="chapter-description">Fisiopatología de la hemólisis, Esferocitosis, Enzimopatías (G6PD) y Hemoglobinuria Paroxística Nocturna. **(Basado en el Capítulo 5)**</p>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_06_hemoglobinopatias.html">
+                    <h3 class="chapter-title">Capítulo 6: Hemoglobinopatías y Talasemias</h3>
+                    <p class="chapter-description">Estructura de la Hemoglobina, Hemoglobinopatía S (Drepanocitosis) y Síndromes Talasémicos. **(Basado en el Capítulo 6)**</p>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_07_hemolisis_extrinseca.html">
+                    <h3 class="chapter-title">Capítulo 7: Anemias Hemolíticas Extrínsecas (Inmunes y No Inmunes)</h3>
+                    <p class="chapter-description">Anemias Hemolíticas Autoinmunes (AHAI) por anticuerpos fríos y calientes, y hemólisis microangiopática. **(Basado en el Capítulo 7)**</p>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_08_grupos_sanguineos.html">
+                    <h3 class="chapter-title">Capítulo 8: Inmunohematología. Grupos Sanguíneos</h3>
+                    <p class="chapter-description">Sistemas ABO, Rh y otros grupos. Pruebas de compatibilidad y Enfermedad Hemolítica del Recién Nacido. **(Basado en el Capítulo 8)**</p>
+                </a>
+            </li>
+        </ul>
 
-            <ul class="chapter-list">
-                <li class="chapter-list-item">
-                    <a href="../hem_cap_1_bases.html">
-                        <h3 class="chapter-title">Capítulo 1: Hematopoyesis y Morfología Celular</h3>
-                        <p class="chapter-description">Origen, desarrollo de las células sanguíneas y reconocimiento de células normales en el frotis.</p>
-                    </a>
-                </li>
-                 <li class="chapter-list-item">
-                    <a href="../hem_cap_2_anemias_micro.html">
-                        <h3 class="chapter-title">Capítulo 2: Anemias Microcíticas</h3>
-                        <p class="chapter-description">Deficiencia de hierro, talasemias y anemias por enfermedad crónica. Criterios diagnósticos.</p>
-                    </a>
-                </li>
-                <li class="chapter-list-item">
-                    <a href="../hem_cap_3_anemias_macro.html">
-                        <h3 class="chapter-title">Capítulo 3: Anemias Macrocíticas y Megaloblásticas</h3>
-                        <p class="chapter-description">Deficiencia de Vitamina B12 y Ácido Fólico. Características morfológicas y manejo.</p>
-                    </a>
-                </li>
-                <li class="chapter-list-item">
-                    <a href="../hem_cap_4_anemias_hemoliticas.html">
-                        <h3 class="chapter-title">Capítulo 4: Anemias Hemolíticas</h3>
-                        <p class="chapter-description">Clasificación, pruebas de Coombs y diagnóstico de Esferocitosis Hereditaria.</p>
-                    </a>
-                </li>
-                 <li class="chapter-list-item">
-                    <a href="../hem_cap_5_hemostasia_primaria.html">
-                        <h3 class="chapter-title">Capítulo 5: Hemostasia Primaria y Plaquetas</h3>
-                        <p class="chapter-description">Función plaquetaria, Enfermedad de Von Willebrand y Púrpura Trombocitopénica Trombótica (PTT).</p>
-                    </a>
-                </li>
-                <li class="chapter-list-item">
-                    <a href="../hem_cap_6_coagulacion_secundaria.html">
-                        <h3 class="chapter-title">Capítulo 6: Hemostasia Secundaria y Coagulación</h3>
-                        <p class="chapter-description">Cascada de coagulación, Hemofilia A y B. Interpretación de TP, TPT y Fibrinógeno.</p>
-                    </a>
-                </li>
-                 <li class="chapter-list-item">
-                    <a href="../hem_cap_7_leucocitos_normales.html">
-                        <h3 class="chapter-title">Capítulo 7: Fisiología de Neutrófilos y Linfocitos</h3>
-                        <p class="chapter-description">Maduración, funciones inmunes y valores normales de leucocitos.</p>
-                    </a>
-                </li>
-                 <li class="chapter-list-item">
-                    <a href="../hem_cap_8_sindromes_inmuno.html">
-                        <h3 class="chapter-title">Capítulo 8: Síndromes Inmunodeficientes y HIV</h3>
-                        <p class="chapter-description">Principios del diagnóstico y seguimiento de pacientes con HIV en el laboratorio.</p>
-                    </a>
-                </li>
-                 <li class="chapter-list-item">
-                    <a href="../hem_cap_9_infecciones_bacterianas.html">
-                        <h3 class="chapter-title">Capítulo 9: Infecciones Bacterianas, Virales y Parasitarias</h3>
-                        <p class="chapter-description">Reacciones leucemoides, linfocitosis atípica (VEB) y hallazgos en hemoparásitos.</p>
-                    </a>
-                </li>
-                 <li class="chapter-list-item">
-                    <a href="../hem_cap_10_biopsia_mo.html">
-                        <h3 class="chapter-title">Capítulo 10: Biopsia de Médula Ósea: Técnica e Interpretación</h3>
-                        <p class="chapter-description">Protocolo de la obtención de muestras, tinción y criterios de celularidad.</p>
-                    </a>
-                </li>
-                <li class="chapter-list-item">
-                    <a href="../hem_cap_15_leucemias_agudas.html">
-                        <h3 class="chapter-title">Capítulo 15: Leucemias Agudas: Clasificación, Fenotipo y Diagnóstico</h3>
-                        <p class="chapter-description">LAL y LAM. Se subclasifican según las guías de la OMS (WHO) y se relaciona el fenotipo con alteraciones moleculares.</p>
-                    </a>
-                </li>
-                <li class="chapter-list-item">
-                    <a href="../hem_cap_16_linfomas_hodgkin.html">
-                        <h3 class="chapter-title">Capítulo 16: Linfomas: Hodgkin y No Hodgkin (LNH)</h3>
-                        <p class="chapter-description">Diagnóstico, estadios (Clasificación de Lugano) y características fenotípicas de las neoplasias linfoides.</p>
-                    </a>
-                </li>
-                <li class="chapter-list-item">
-                    <a href="../hem_cap_17_sm_y_smp.html">
-                        <h3 class="chapter-title">Capítulo 17: SMD y SMP: Mieloma Múltiple y Otras Discrasias</h3>
-                        <p class="chapter-description">Diagnóstico y manejo de los Síndromes Mielodisplásicos, Mieloproliferativos (LMC, PV) y el Mieloma Múltiple.</p>
-                    </a>
-                </li>
+        <h2 class="part-header">Parte II: Neoplasias, Monocitos y Diagnóstico (Capítulos 9 en adelante)</h2>
+        <ul class="chapter-list">
+            <li class="chapter-list-item">
+                <a href="hem_cap_14_inmunofenotipo.html">
+                    <h3 class="chapter-title">Capítulo 14: El Inmunofenotipo en Hematología: Conceptos y Aplicaciones</h3>
+                    <p class="chapter-description">Fundamentos de Citometría de Flujo, IHQ y su uso en el diagnóstico y monitoreo de neoplasias. **(Basado en el Capítulo 33)**</p>
+                </a>
+            </li>
+            <li class="chapter-list-item disabled">
+                <a href="#">
+                    <h3 class="chapter-title">Capítulo 15: Síndromes Mielodisplásicos</h3>
+                    <p class="chapter-description">Fallo medular y citopenias. **(Próximamente)**</p>
+                </a>
+            </li>
             </ul>
-        </div>
+        
     </main>
 
     <footer>
         <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
         <div class="legal-links">
-            <a href="../../pages/terminos_condiciones.html">Términos y Condiciones</a>
+            <a href="../terminos_condiciones.html">Términos y Condiciones</a>
             |
-            <a href="../../pages/aviso_privacidad.html">Aviso de Privacidad</a>
+            <a href="../aviso_privacidad.html">Aviso de Privacidad</a>
         </div>
     </footer>
-
+    
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const body = document.body;
-        const styleToggleBtn = document.getElementById('toggle-font-style');
-        const sizeButtons = document.querySelectorAll('[data-size]');
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.body;
+            const styleToggleBtn = document.getElementById('toggle-font-style');
+            const sizeButtons = document.querySelectorAll('[data-size]');
 
-        // --- Manejo de Estilos de Fuente (Robusto/Normal) ---
-        function applyFontStyle(isRobust) {
-            if (isRobust) {
-                body.classList.add('font-robust');
-                styleToggleBtn.textContent = 'Estilo Normal';
-                localStorage.setItem('fontStyle', 'robust');
-            } else {
-                body.classList.remove('font-robust');
-                styleToggleBtn.textContent = 'Estilo Robusto';
-                localStorage.setItem('fontStyle', 'normal');
+            function applyFontStyle(isRobust) {
+                if (isRobust) {
+                    body.classList.add('font-robust');
+                    styleToggleBtn.textContent = 'Estilo Normal';
+                    localStorage.setItem('fontStyle', 'robust');
+                } else {
+                    body.classList.remove('font-robust');
+                    styleToggleBtn.textContent = 'Estilo Robusto';
+                    localStorage.setItem('fontStyle', 'normal');
+                }
             }
-        }
 
-        styleToggleBtn.addEventListener('click', () => {
-            const currentStyle = localStorage.getItem('fontStyle');
-            applyFontStyle(currentStyle !== 'robust'); // Alternar
-        });
+            styleToggleBtn.addEventListener('click', () => {
+                const currentStyle = localStorage.getItem('fontStyle');
+                applyFontStyle(currentStyle !== 'robust');
+            });
 
-        // --- Manejo de Tamaños de Fuente (S/N/L) ---
-        function applyFontSize(size) {
-            body.classList.remove('size-s', 'size-n', 'size-l');
-            body.classList.add(`size-${size}`);
-            localStorage.setItem('fontSize', size);
+            function applyFontSize(size) {
+                body.classList.remove('size-s', 'size-n', 'size-l');
+                body.classList.add(`size-${size}`);
+                localStorage.setItem('fontSize', size);
+                
+                sizeButtons.forEach(btn => {
+                    btn.style.backgroundColor = btn.dataset.size === size ? '#e6f0ff' : 'white';
+                });
+            }
+
+            sizeButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    applyFontSize(e.target.dataset.size);
+                });
+            });
+
+            const savedFontStyle = localStorage.getItem('fontStyle');
+            if (savedFontStyle === 'robust') {
+                applyFontStyle(true);
+            } else {
+                applyFontStyle(false);
+            }
             
-            // Opcional: Resaltar el botón activo
-            sizeButtons.forEach(btn => {
-                btn.style.backgroundColor = btn.dataset.size === size ? '#e6f0ff' : 'white';
-            });
-        }
-
-        sizeButtons.forEach(button => {
-            button.addEventListener('click', (e) => {
-                applyFontSize(e.target.dataset.size);
-            });
+            const savedFontSize = localStorage.getItem('fontSize');
+            if (savedFontSize) {
+                applyFontSize(savedFontSize);
+            } else {
+                applyFontSize('n');
+            }
         });
-
-        // --- Cargar Preferencias al Iniciar ---
-        const savedFontStyle = localStorage.getItem('fontStyle');
-        if (savedFontStyle === 'robust') {
-            applyFontStyle(true);
-        } else {
-             applyFontStyle(false);
-        }
-        
-        const savedFontSize = localStorage.getItem('fontSize');
-        if (savedFontSize) {
-            applyFontSize(savedFontSize);
-        } else {
-            applyFontSize('n'); // Tamaño normal por defecto
-        }
-    });
-</script>
+    </script>
 </body>
 </html>
