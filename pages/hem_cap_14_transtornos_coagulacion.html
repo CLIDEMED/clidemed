@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 14: Trastornos Congénitos y Adquiridos de la Coagulación</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_base.css">
+    <link rel="stylesheet" href="../css/style_materias.css"> 
+</head>
+<body>
+    <header><h1>🔬 Plataforma de Estudio y Consulta para TLC</h1></header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="materias.html">Materias</a></li>
+            <li><a href="capsulas.html">Cápsulas</a></li>
+            <li><a href="protocolos.html">Protocolos</a></li>
+            <li><a href="entrenamiento.html">Entrenamiento</a></li>
+            <li><a href="laboratorio_virtual.html">Laboratorio Virtual</a></li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <div id="accessibility-panel" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 20px; padding: 10px; background-color: #f1f1f1; border-radius: 8px;">
+            <span style="font-size: 0.9em; font-weight: bold;">Accesibilidad:</span>
+            
+            <button id="toggle-font-style" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white;">
+                Estilo Robusto
+            </button>
+            
+            <button id="font-size-s" data-size="s" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 0.8em;">
+                A-
+            </button>
+            <button id="font-size-n" data-size="n" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1em;">
+                A
+            </button>
+            <button id="font-size-l" data-size="l" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1.2em;">
+                A+
+            </button>
+        </div>
+        <h1>Capítulo 14: Trastornos Congénitos y Adquiridos de la Coagulación</h1>
+        <div class="summary">
+            <h2>Resumen del Capítulo</h2>
+            <p>Los trastornos de la **Hemostasia Secundaria** resultan en una formación deficiente o inestable del coágulo de fibrina. Se manifiestan típicamente como hemorragias tardías, profundas o en cavidades (hematomas, hemartrosis). Las **Hemofilias** son el ejemplo congénito más relevante, mientras que la **CID** o la **Hepatopatía** representan las formas adquiridas más graves.</p>
+        </div>
+        
+        <h2 class="part-header">14.1. Coagulopatías Congénitas: Las Hemofilias</h2>
+        <p>Las hemofilias son déficits hereditarios de factores de la coagulación de la vía intrínseca, lo que provoca un alargamiento del **Tiempo de Tromboplastina Parcial Activada ($\text{TTPa}$)**.</p>
+
+        <h3>Hemofilia A (Déficit de Factor VIII)</h3>
+        <p>Es la coagulopatía congénita grave más común. La herencia es recesiva ligada al cromosoma **$\text{X}$** (afecta casi exclusivamente a hombres).</p>
+        <ul>
+            <li>**Defecto:** Deficiencia o disfunción del **Factor VIII** ($\text{FVIII}$), un cofactor esencial para la activación del Factor $\text{X}$ en la cascada.</li>
+            <li>**Manifestación:** Hemorragia profunda, especialmente la **hemartrosis** (sangrado dentro de las articulaciones), que puede causar daño articular crónico.</li>
+        </ul>
+
+        <h3>Hemofilia B (Déficit de Factor IX)</h3>
+        <p>Menos frecuente, también ligada al cromosoma **$\text{X}$**.</p>
+        <ul>
+            <li>**Defecto:** Deficiencia del **Factor IX** ($\text{FIX}$).</li>
+            <li>**Manifestación:** Clínica indistinguible de la Hemofilia $\text{A}$. Su diagnóstico diferencial requiere la cuantificación específica de los factores.</li>
+        </ul>
+        <p class="callout note">**Nota:** La Enfermedad de Von Willebrand (Cap. 13) es un trastorno primario y secundario, ya que el $\text{FvW}$ transporta y protege al $\text{FVIII}$. Una deficiencia grave de $\text{FvW}$ puede simular una Hemofilia $\text{A}$ leve en las pruebas.</p>
+
+        <h2 class="part-header">14.2. Coagulopatías Adquiridas</h2>
+        <p>Son más frecuentes que las congénitas y a menudo involucran múltiples factores o un consumo excesivo de ellos.</p>
+
+        <h3>Déficit de Vitamina K</h3>
+        <p>La vitamina $\text{K}$ es esencial como cofactor para la gamma-carboxilación de ciertos factores de la coagulación en el hígado.</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Factores $\text{K}$-Dependientes:** $\text{II}$ (Protrombina), $\text{VII}$, $\text{IX}$ y $\text{X}$, además de los anticoagulantes naturales **Proteínas $\text{C}$ y $\text{S}$**.</li>
+            <li>**Causas:** Malabsorción intestinal, deficiencia dietética o uso de antagonistas de la vitamina $\text{K}$ (ej. Warfarina/Acenocumarol).</li>
+            <li>**Laboratorio:** El Factor $\text{VII}$ tiene la vida media más corta, por lo que el **$\text{TP}$ (vía extrínseca)** se alarga antes que el $\text{TTPa}$.</li>
+        </ul>
+
+        <h3>Hepatopatía y Falla Hepática</h3>
+        <p>Dado que la mayoría de los factores de coagulación, así como los reguladores ($\text{Antitrombina}$, $\text{PC}$ y $\text{PS}$), se sintetizan en el hígado, la falla hepática grave es una causa de coagulopatía compleja.</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Defecto:** Producción deficiente de factores procoagulantes.</li>
+            <li>**Laboratorio:** Alargamiento tanto del **$\text{TP}$** como del **$\text{TTPa}$**, y reducción del **Fibrinógeno**.</li>
+        </ul>
+
+        <h3>Coagulación Intravascular Diseminada (CID)</h3>
+        <p>Es un síndrome de activación sistémica y descontrolada de la coagulación, lo que lleva a la formación masiva de trombos microvasculares y, paradójicamente, a un estado hemorrágico por consumo rápido de plaquetas y factores.</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Causas:** Sepsis (la más común), trauma masivo, obstetricia (eclampsia, abruptio placentae), cánceres.</li>
+            <li>**Tríada de Consumo:** **Trombocitopenia**, prolongación de **$\text{TP}$/$\text{TTPa}$** y elevación extrema del **Dímero D**.</li>
+        </ul>
+
+        <h2 class="part-header">14.3. Laboratorio Diagnóstico de la Hemostasia Secundaria</h2>
+        <p>Las pruebas de coagulación evalúan la funcionalidad de las vías de la cascada y son el pilar diagnóstico de la Hemostasia Secundaria.</p>
+
+        <h3>Tiempo de Protrombina ($\text{TP}$) e INR</h3>
+        <p>Mide el tiempo que tarda la sangre en coagular después de añadir Factor Tisular (Tromboplastina) y Calcio. Evalúa la **Vía Extrínseca ($\text{FVII}$)** y la **Vía Común ($\text{FX, FV, FII}$ - Protrombina)**.</p>
+        <ul>
+            <li>**Uso Clínico:** Monitorización de Warfarina (anticoagulante oral $\text{K}$-dependiente) mediante el índice **$\text{INR}$** (International Normalized Ratio).</li>
+        </ul>
+
+        <h3>Tiempo de Tromboplastina Parcial Activada ($\text{TTPa}$)</h3>
+        <p>Mide el tiempo que tarda la sangre en coagular después de añadir un activador de contacto y Calcio. Evalúa la **Vía Intrínseca ($\text{FXII, XI, IX, VIII}$)** y la **Vía Común**.</p>
+        <ul>
+            <li>**Uso Clínico:** Detección de Hemofilias ($\text{FVIII}$ y $\text{FIX}$), Enfermedad de Von Willebrand y monitorización de la **Heparina no fraccionada**.</li>
+        </ul>
+
+        <h3>Fibrinógeno y Dímero D</h3>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Fibrinógeno ($\text{FI}$):** Es el sustrato final que la Trombina convierte en fibrina. Se mide para evaluar la síntesis hepática y su consumo (disminuye en $\text{CID}$). Es un reactante de fase aguda (aumenta en inflamación).</li>
+            <li>**Dímero D:** Producto de la degradación de la fibrina estable por la plasmina. Indica la activación concurrente de la coagulación y la fibrinólisis (ej. en $\text{CID}$, $\text{TEP}$, $\text{TVP}$).</li>
+        </ul>
+        <p><strong>[PENDIENTE: TABLA COMPARATIVA DE LABORATORIO (TP, TTPa, Plaquetas, Dímero D) para Hemofilia, Hepatopatía y CID]</strong></p>
+
+        <hr>
+        
+        <div class="chapter-nav-container">
+            <a href="/pages/hem_cap_13_transtornos_plaquetarios.html" class="chapter-nav-button chapter-nav-prev">
+                &larr; Cap. 13: Trastornos Plaquetarios
+            </a>
+            <a href="/pages/hem_cap_15_trombofilias.html" class="chapter-nav-button chapter-nav-next">
+                Cap. 15: Trombofilias &rarr;
+            </a>
+        </div>
+    </main>
+<footer>
+    <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
+    <div class="legal-links">
+        <a href="../terminos_condiciones.html">Términos y Condiciones</a>
+        |
+        <a href="../aviso_privacidad.html">Aviso de Privacidad</a>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const body = document.body;
+        const styleToggleBtn = document.getElementById('toggle-font-style');
+        const sizeButtons = document.querySelectorAll('[data-size]');
+
+        function applyFontStyle(isRobust) {
+            if (isRobust) {
+                body.classList.add('font-robust');
+                styleToggleBtn.textContent = 'Estilo Normal';
+                localStorage.setItem('fontStyle', 'robust');
+            } else {
+                body.classList.remove('font-robust');
+                styleToggleBtn.textContent = 'Estilo Robusto';
+                localStorage.setItem('fontStyle', 'normal');
+            }
+        }
+
+        styleToggleBtn.addEventListener('click', () => {
+            const currentStyle = localStorage.getItem('fontStyle');
+            applyFontStyle(currentStyle !== 'robust');
+        });
+
+        function applyFontSize(size) {
+            body.classList.remove('size-s', 'size-n', 'size-l');
+            body.classList.add(`size-${size}`);
+            localStorage.setItem('fontSize', size);
+            
+            sizeButtons.forEach(btn => {
+                btn.style.backgroundColor = btn.dataset.size === size ? '#e6f0ff' : 'white';
+            });
+        }
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                applyFontSize(e.target.dataset.size);
+            });
+        });
+
+        const savedFontStyle = localStorage.getItem('fontStyle');
+        if (savedFontStyle === 'robust') {
+            applyFontStyle(true);
+        } else {
+             applyFontStyle(false);
+        }
+        
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            applyFontSize(savedFontSize);
+        } else {
+            applyFontSize('n');
+        }
+    });
+</script>
+</body>
+</html>

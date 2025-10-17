@@ -11,12 +11,28 @@
         /* Estilos para el índice de módulo (mantener consistencia) */
         .module-index-container { max-width: 900px; margin: 30px auto; padding: 20px; }
         .chapter-list { list-style: none; padding: 0; }
-        .chapter-list-item { background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 10px; margin-bottom: 15px; transition: transform 0.2s, box-shadow 0.2s; }
-        .chapter-list-item:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
-        .chapter-list-item a { text-decoration: none; color: inherit; display: block; padding: 25px; }
-        .chapter-title { font-size: 1.5em; color: var(--clidemd-blue); margin: 0 0 10px 0; }
-        .chapter-description { font-size: 1em; color: #555; margin: 0; }
-        .part-header { font-size: 1.8em; color: #2c3e50; margin-top: 40px; margin-bottom: 20px; border-bottom: 2px solid var(--clidemd-green); padding-bottom: 10px; }
+        .chapter-list-item { 
+            background-color: #ffffff; 
+            border: 1px solid #e0e0e0; 
+            border-radius: 10px; 
+            margin-bottom: 15px; 
+            transition: transform 0.2s, box-shadow 0.2s; 
+            overflow: hidden; /* Asegura que el contenido esté dentro */
+        }
+        .chapter-list-item:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .chapter-list-item a { text-decoration: none; color: inherit; display: block; padding: 20px; }
+        .chapter-title { font-size: 1.2em; color: var(--clidemd-blue); margin: 0 0 5px 0; font-weight: 700; }
+        .chapter-description { font-size: 0.9em; color: #555; margin: 0; }
+        /* Estilo para las cabeceras de las Partes Temáticas */
+        .part-header { 
+            font-size: 1.8em; 
+            color: #2c3e50; 
+            margin-top: 40px; 
+            margin-bottom: 15px; 
+            border-bottom: 4px solid var(--clidemd-green); /* Línea verde de separación */
+            padding-bottom: 8px; 
+            font-weight: 800;
+        }
     </style>
 </head>
 <body>
@@ -50,7 +66,9 @@
                 A+
             </button>
         </div>
-        <h2 class="part-header">Parte I: Fisiología, Morfología y Anemias (Capítulos 1 al 8)</h2>
+        <h1>Índice de Módulo: Hematología Clínica</h1>
+
+        <h2 class="part-header">Parte I: Fisiología, Morfología y Anemias</h2>
         <ul class="chapter-list">
             <li class="chapter-list-item">
                 <a href="../hem_introduccion.html">
@@ -61,68 +79,153 @@
             <li class="chapter-list-item">
                 <a href="hem_cap_01_hematopoyesis.html">
                     <h3 class="chapter-title">Capítulo 1: Hematopoyesis. Hematíes: Estructura y Función</h3>
-                    <p class="chapter-description">Fisiología medular, células troncales y eritropoyesis. Basado en el Capítulo 1 del libro.</p>
+                    <p class="chapter-description">Fisiología medular, células troncales y eritropoyesis. El metabolismo del eritrocito.</p>
                 </a>
             </li>
             <li class="chapter-list-item">
                 <a href="hem_cap_02_anemia_concepto.html">
                     <h3 class="chapter-title">Capítulo 2: Anemia: Concepto, Clínica y Clasificación</h3>
-                    <p class="chapter-description">Definición de anemia (OMS), mecanismos etiopatogénicos y bases de la clasificación morfológica. **(Basado en el Capítulo 2)**</p>
+                    <p class="chapter-description">Definición de anemia (OMS), mecanismos etiopatogénicos y bases de la clasificación morfológica.</p>
                 </a>
             </li>
             <li class="chapter-list-item">
                 <a href="hem_cap_03_anemias_micro.html">
                     <h3 class="chapter-title">Capítulo 3: Anemias Microcíticas: Déficit de Hierro y AEC</h3>
-                    <p class="chapter-description">Metabolismo del hierro, diagnóstico etiológico de la Ferropenia y Anemia de Enfermedades Crónicas. **(Basado en el Capítulo 3)**</p>
+                    <p class="chapter-description">Metabolismo del hierro, Ferropenia, Anemia de Enfermedades Crónicas (AEC) y Sideroblásticas.</p>
                 </a>
             </li>
             <li class="chapter-list-item">
                 <a href="hem_cap_04_anemia_megaloblastica.html">
                     <h3 class="chapter-title">Capítulo 4: Anemia Megaloblástica y Macrocitosis</h3>
-                    <p class="chapter-description">Déficit de Vitamina B12 y Ácido Fólico. Mecanismos de malabsorción y manifestaciones neurológicas. **(Basado en el Capítulo 4)**</p>
+                    <p class="chapter-description">Déficit de Vitamina B12/Folato, asincronía madurativa y macrocitosis no megaloblástica.</p>
                 </a>
             </li>
             <li class="chapter-list-item">
                 <a href="hem_cap_05_hemolisis_intrinseca.html">
-                    <h3 class="chapter-title">Capítulo 5: Anemias Hemolíticas Intrínsecas (Membrana, Enzimas y HPN)</h3>
-                    <p class="chapter-description">Fisiopatología de la hemólisis, Esferocitosis, Enzimopatías (G6PD) y Hemoglobinuria Paroxística Nocturna. **(Basado en el Capítulo 5)**</p>
+                    <h3 class="chapter-title">Capítulo 5: Anemias Hemolíticas Intrínsecas</h3>
+                    <p class="chapter-description">Defectos de membrana (Esferocitosis), enzimopatías (G6PD, Piruvato Cinasa) y Hemoglobinuria Paroxística Nocturna (HPN).</p>
                 </a>
             </li>
             <li class="chapter-list-item">
                 <a href="hem_cap_06_hemoglobinopatias.html">
-                    <h3 class="chapter-title">Capítulo 6: Hemoglobinopatías y Talasemias</h3>
-                    <p class="chapter-description">Estructura de la Hemoglobina, Hemoglobinopatía S (Drepanocitosis) y Síndromes Talasémicos. **(Basado en el Capítulo 6)**</p>
+                    <h3 class="chapter-title">Capítulo 6: Talasemias y Hemoglobinopatías</h3>
+                    <p class="chapter-description">Trastornos estructurales (Hb S) y cuantitativos ($\alpha/\beta$-Talasemias). Drepanocitosis y crisis vasooclusivas.</p>
                 </a>
             </li>
             <li class="chapter-list-item">
-                <a href="hem_cap_07_hemolisis_extrinseca.html">
-                    <h3 class="chapter-title">Capítulo 7: Anemias Hemolíticas Extrínsecas (Inmunes y No Inmunes)</h3>
-                    <p class="chapter-description">Anemias Hemolíticas Autoinmunes (AHAI) por anticuerpos fríos y calientes, y hemólisis microangiopática. **(Basado en el Capítulo 7)**</p>
+                <a href="hem_cap_07_hemolisis_extrínseca.html">
+                    <h3 class="chapter-title">Capítulo 7: Anemias Hemolíticas Extracorpusculares (AHAI)</h3>
+                    <p class="chapter-description">AHAI por anticuerpos calientes y fríos, hemólisis traumática (MAT) e infecciosa (Malaria).</p>
                 </a>
             </li>
             <li class="chapter-list-item">
                 <a href="hem_cap_08_grupos_sanguineos.html">
-                    <h3 class="chapter-title">Capítulo 8: Inmunohematología. Grupos Sanguíneos</h3>
-                    <p class="chapter-description">Sistemas ABO, Rh y otros grupos. Pruebas de compatibilidad y Enfermedad Hemolítica del Recién Nacido. **(Basado en el Capítulo 8)**</p>
+                    <h3 class="chapter-title">Capítulo 8: Grupos Sanguíneos y Medicina Transfusional</h3>
+                    <p class="chapter-description">Sistemas ABO/Rh, anticuerpos naturales e inmunes. Prueba de Coombs y $\text{RAI}$.</p>
                 </a>
             </li>
         </ul>
 
-        <h2 class="part-header">Parte II: Neoplasias, Monocitos y Diagnóstico (Capítulos 9 en adelante)</h2>
+        <h2 class="part-header">Parte II: Leucocitos, Hemostasia y Oncohematología</h2>
         <ul class="chapter-list">
             <li class="chapter-list-item">
+                <a href="hem_cap_09_serie_blanca_fisiologia.html">
+                    <h3 class="chapter-title">Capítulo 9: Fisiología y Morfología de la Serie Blanca</h3>
+                    <p class="chapter-description">Leucopoyesis, cinética celular y morfología normal de Granulocitos, Linfocitos y Monocitos.</p>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_10_transtornos_neutrofilos.html">
+                    <h3 class="chapter-title">Capítulo 10: Trastornos Cuantitativos y Cualitativos de Neutrófilos</h3>
+                    <p class="chapter-description">Neutropenia, Leucocitosis Reactiva (Reacción Leucemoide), y Enfermedad Granulomatosa Crónica (EGC).</p>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_11_transtornos_monocitos.html">
+                    <h3 class="chapter-title">Capítulo 11: Trastornos de Monocitos y Macrófagos (Histiocitosis)</h3>
+                    <p class="chapter-description">Monocitosis, Macrófagos (SFM) y clasificación de las Histiocitosis (Langerhans).</p>
+                </a>
+            </li>
+            
+            <li class="chapter-list-item">
+                <a href="hem_cap_12_hemostasia_introduccion.html">
+                    <h3 class="chapter-title">Capítulo 12: Fisiología de la Hemostasia y Trombosis</h3>
+                    <p class="chapter-description">Hemostasia Primaria (Plaquetas), Secundaria (Cascada de Coagulación) y el Sistema Fibrinolítico.</p>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_13_transtornos_plaquetarios.html">
+                    <h3 class="chapter-title">Capítulo 13: Trastornos Cuantitativos y Cualitativos Plaquetarios</h3>
+                    <p class="chapter-description">Trombocitopenia (PTI, PTT), Trombocitosis y Trastornos Cualitativos ($\text{EVW}$, Glanzmann, Bernard-Soulier).</p>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_14_transtornos_coagulacion.html">
+                    <h3 class="chapter-title">Capítulo 14: Trastornos Congénitos y Adquiridos de la Coagulación</h3>
+                    <p class="chapter-description">Hemofilia A/B, Coagulopatías adquiridas (Vitamina K, Hepatopatía) y Coagulación Intravascular Diseminada (CID).</p>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_15_trombofilias.html">
+                    <h3 class="chapter-title">Capítulo 15: Trombofilias (Estados de Hipercoagulabilidad)</h3>
+                    <p class="chapter-description">Tríada de Virchow, Factor V Leiden, Déficit de Antitrombina/PS/PC, y Síndrome Antifosfolipídico ($\text{SAF}$).</p>
+                </a>
+            </li>
+
+            <li class="chapter-list-item">
+                <a href="hem_cap_16_leucemias_agudas.html">
+                    <h3 class="chapter-title">Capítulo 16: Leucemias Agudas (LAL y LAM)</h3>
+                    <p class="chapter-description">Fisiopatología, Clasificación OMS, Cuerpos de Auer y Fenotipo Inmunológico.</p>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_17_leucemias_cronicas.html">
+                    <h3 class="chapter-title">Capítulo 17: Leucemias Crónicas (LLC, LMC)</h3>
+                    <p class="chapter-description">Cromosoma Filadelfia ($\text{BCR-}\text{ABL}$), Fenotipo $\text{CD}5/\text{CD}23$ y diagnóstico diferencial.</p>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_18_linfomas.html">
+                    <h3 class="chapter-title">Capítulo 18: Linfomas (Hodgkin y No Hodgkin)</h3>
+                    <p class="chapter-description">Células de Reed-Sternberg, Linfomas B y T, y Estadiaje de Lugano.</p>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_19_mieloma_multiple.html">
+                    <h3 class="chapter-title">Capítulo 19: Mieloma Múltiple y Gammapatías Monoclonales</h3>
+                    <p class="chapter-description">Criterios $\text{CRAB}$, Proteína $\text{M}$, Electroforesis e Inmunofijación.</p>
+                </a>
+            </li>
+            
+        </ul>
+
+        <h2 class="part-header">Parte III: Técnicas de Laboratorio y Anexos (Capítulos 14, 20, 21, 22)</h2>
+        <ul class="chapter-list">
+             <li class="chapter-list-item">
                 <a href="hem_cap_14_inmunofenotipo.html">
-                    <h3 class="chapter-title">Capítulo 14: El Inmunofenotipo en Hematología: Conceptos y Aplicaciones</h3>
-                    <p class="chapter-description">Fundamentos de Citometría de Flujo, IHQ y su uso en el diagnóstico y monitoreo de neoplasias. **(Basado en el Capítulo 33)**</p>
+                    <h3 class="chapter-title">Capítulo 14: Inmunofenotipo y Citometría de Flujo</h3>
+                    <p class="chapter-description">Análisis de $\text{CD}$'s clave para diagnóstico de $\text{LAM}/\text{LAL}$ y HPN. (Basado en Cap. 33)</p>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_20_anexos_leucocitarios.html">
+                    <h3 class="chapter-title">Capítulo 20: Anexos de Eosinófilos, Basófilos e Infecciones</h3>
+                    <p class="chapter-description">Eosinofilia (parásitos/alergias), Basofilia ($\text{SMP}$), $\text{MI}$ y $\text{VIH}$ ($\text{CD}4^{+}$).</p>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_21_tratamiento_transfusional.html">
+                    <h3 class="chapter-title">Capítulo 21: Tratamiento Transfusional y Banco de Sangre</h3>
+                    <p class="chapter-description">Donación, Componentes Sanguíneos, Pruebas Pretransfusionales y Hemovigilancia. (Basado en Cap. 31)</p>
                 </a>
             </li>
             <li class="chapter-list-item disabled">
                 <a href="#">
-                    <h3 class="chapter-title">Capítulo 15: Síndromes Mielodisplásicos</h3>
-                    <p class="chapter-description">Fallo medular y citopenias. **(Próximamente)**</p>
+                    <h3 class="chapter-title">Capítulo 22: Fundamentos de Citogenética Molecular</h3>
+                    <p class="chapter-description">Principios del Cariotipo y $\text{FISH}$. Translocaciones ($\text{t}(9;22), \ \text{t}(15;17)$). (Próximamente)</p>
                 </a>
             </li>
-            </ul>
+        </ul>
         
     </main>
 

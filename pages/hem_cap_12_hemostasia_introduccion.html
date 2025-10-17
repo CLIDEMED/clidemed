@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 12: Fisiología de la Hemostasia y Trombosis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_base.css">
+    <link rel="stylesheet" href="../css/style_materias.css"> 
+</head>
+<body>
+    <header><h1>🔬 Plataforma de Estudio y Consulta para TLC</h1></header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="materias.html">Materias</a></li>
+            <li><a href="capsulas.html">Cápsulas</a></li>
+            <li><a href="protocolos.html">Protocolos</a></li>
+            <li><a href="entrenamiento.html">Entrenamiento</a></li>
+            <li><a href="laboratorio_virtual.html">Laboratorio Virtual</a></li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <div id="accessibility-panel" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 20px; padding: 10px; background-color: #f1f1f1; border-radius: 8px;">
+            <span style="font-size: 0.9em; font-weight: bold;">Accesibilidad:</span>
+            
+            <button id="toggle-font-style" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white;">
+                Estilo Robusto
+            </button>
+            
+            <button id="font-size-s" data-size="s" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 0.8em;">
+                A-
+            </button>
+            <button id="font-size-n" data-size="n" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1em;">
+                A
+            </button>
+            <button id="font-size-l" data-size="l" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1.2em;">
+                A+
+            </button>
+        </div>
+        <h1>Capítulo 12: Fisiología de la Hemostasia y Trombosis</h1>
+        <div class="summary">
+            <h2>Resumen del Capítulo</h2>
+            <p>La **Hemostasia** es el conjunto de procesos fisiológicos que detienen una hemorragia. Se divide en **Primaria** (formación del tapón plaquetario) y **Secundaria** (formación del coágulo de fibrina), culminando en la **Fibrinólisis** para disolver el coágulo una vez reparado el daño. La trombosis representa un fallo de la hemostasia, donde se produce un coágulo dentro de un vaso intacto.</p>
+        </div>
+        
+        <h2 class="part-header">12.1. Hemostasia Primaria: El Rol de las Plaquetas</h2>
+        <p>La hemostasia primaria se activa inmediatamente después de la lesión vascular, e involucra la interacción entre el endotelio, las plaquetas y el factor von Willebrand ($\text{FvW}$).</p>
+
+        <h3>Etapas del Tapón Plaquetario</h3>
+        <ol style="padding-left: 20px;">
+            <li>**Adhesión:** Las plaquetas se unen al colágeno subendotelial expuesto. Este proceso está mediado principalmente por el **$\text{FvW}$**, que actúa como un puente molecular entre el colágeno y el receptor plaquetario **Glicoproteína $\text{Ib}$ ($\text{GpIb}$)**.</li>
+            <li>**Activación:** Tras la adhesión, la plaqueta cambia de forma (de disco a esférica) y libera el contenido de sus gránulos (ADP, $\text{Serotonina}$, $\text{Calcio}$, $\text{Tromboxano A2}$ ($\text{TxA2}$)).</li>
+            <li>**Agregación:** El $\text{TxA2}$ y el $\text{ADP}$ liberados activan a otras plaquetas, promoviendo su unión. La molécula clave de la agregación es la **Glicoproteína $\text{IIb}/\text{IIIa}$ ($\text{GpIIb}/\text{IIIa}$)**, que se activa y se une al **Fibrinógeno** para formar puentes entre plaquetas.</li>
+        </ol>
+        <p>El resultado final es la formación de un tapón plaquetario lábil, que debe ser estabilizado por el coágulo de fibrina.</p>
+        <p><strong>[PENDIENTE: DIAGRAMA DE LA ADHESIÓN Y AGREGACIÓN PLAQUETARIA]</strong></p>
+
+        <h2 class="part-header">12.2. Hemostasia Secundaria: La Cascada de Coagulación</h2>
+        <p>La hemostasia secundaria es un proceso enzimático en cascada que genera **Trombina** (Factor $\text{IIa}$), cuya función principal es convertir el fibrinógeno soluble en fibrina insoluble, estabilizando el tapón plaquetario.</p>
+
+        <h3>Modelo de la Coagulación (Clásico vs. Celular)</h3>
+        <p>El modelo clásico se divide en vía extrínseca, intrínseca y común, lo que facilita la interpretación de las pruebas de laboratorio:</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Vía Extrínseca (Evaluada por $\text{TP}$):** Iniciada por el **Factor Tisular ($\text{FT}$)** expuesto en la lesión. El $\text{FT}$ forma un complejo con el Factor $\text{VIIa}$, activando la vía común.</li>
+            <li>**Vía Intrínseca (Evaluada por $\text{TTPA}$):** Activada por el contacto con superficies cargadas negativamente (p. ej., el colágeno o la membrana plaquetaria). Involucra los factores $\text{XII}$, $\text{XI}$, $\text{IX}$ y $\text{VIII}$.</li>
+            <li>**Vía Común:** Donde convergen ambas vías. Inicia con la activación del Factor $\text{X}$ ($\text{Xa}$), que junto al $\text{Va}$ (Complejo Protrombinasa), convierte la **Protrombina ($\text{II}$)** en **Trombina ($\text{IIa}$)**. La trombina transforma el **Fibrinógeno ($\text{I}$)** en **Fibrina ($\text{Ia}$)**.</li>
+        </ul>
+        <p>El **Factor $\text{XIIIa}$** estabiliza el coágulo de fibrina, volviéndolo resistente a la disolución.</p>
+        <p><strong>[PENDIENTE: DIAGRAMA SIMPLIFICADO DE LA CASCADA DE COAGULACIÓN Y LAS VÍAS INTRÍNSECA/EXTRÍNSECA]</strong></p>
+
+        <h2 class="part-header">12.3. Regulación Antitrombótica y Fibrinólisis</h2>
+        <p>Para evitar una trombosis excesiva (patológica), el organismo posee mecanismos de control que limitan el coágulo al sitio de la lesión y, posteriormente, lo disuelven.</p>
+
+        <h3>Control Antitrombótico</h3>
+        <p>El endotelio intacto expresa potentes anticoagulantes naturales:</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Antitrombina ($\text{AT}$):** Inhibe a la Trombina ($\text{IIa}$) y al Factor $\text{Xa}$. Su acción se potencia enormemente por la **Heparina** endógena (y farmacológica).</li>
+            <li>**Sistema Proteína $\text{C}$/$\text{S}$:** La trombina, al unirse a la **Trombomodulina** en el endotelio, activa la **Proteína $\text{C}$**. La Proteína $\text{C}$ activada ($\text{PCa}$), junto con la **Proteína $\text{S}$** (cofactor), degrada los Factores **$\text{Va}$** y **$\text{VIIIa}$**, inactivando la coagulación.</li>
+        </ul>
+
+        <h3>Sistema Fibrinolítico</h3>
+        <p>Este sistema se encarga de disolver el coágulo de fibrina de forma controlada una vez que la herida ha sanado.</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Plasminógeno y $\text{tPA}$:** El **Plasminógeno** (inactivo) es convertido en **Plasmina** (activo) por el Activador Tisular del Plasminógeno ($\text{tPA}$).</li>
+            <li>**Función de la Plasmina:** La **Plasmina** degrada la red de fibrina, liberando fragmentos conocidos como **Productos de Degradación de Fibrina ($\text{PDF}$)**, siendo el más clínicamente relevante el **Dímero D**.</li>
+            <li>**Dímero D:** Un marcador de la activación del sistema fibrinolítico y, por ende, un indicador indirecto de la formación y lisis de un coágulo de fibrina.</li>
+        </ul>
+        
+        <hr>
+        
+        <div class="chapter-nav-container">
+            <a href="/pages/hem_cap_11_transtornos_monocitos.html" class="chapter-nav-button chapter-nav-prev">
+                &larr; Cap. 11: Trastornos de Monocitos y Macrófagos
+            </a>
+            <a href="/pages/hem_cap_13_transtornos_plaquetarios.html" class="chapter-nav-button chapter-nav-next">
+                Cap. 13: Trastornos Cuantitativos Plaquetarios &rarr;
+            </a>
+        </div>
+    </main>
+<footer>
+    <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
+    <div class="legal-links">
+        <a href="../terminos_condiciones.html">Términos y Condiciones</a>
+        |
+        <a href="../aviso_privacidad.html">Aviso de Privacidad</a>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const body = document.body;
+        const styleToggleBtn = document.getElementById('toggle-font-style');
+        const sizeButtons = document.querySelectorAll('[data-size]');
+
+        function applyFontStyle(isRobust) {
+            if (isRobust) {
+                body.classList.add('font-robust');
+                styleToggleBtn.textContent = 'Estilo Normal';
+                localStorage.setItem('fontStyle', 'robust');
+            } else {
+                body.classList.remove('font-robust');
+                styleToggleBtn.textContent = 'Estilo Robusto';
+                localStorage.setItem('fontStyle', 'normal');
+            }
+        }
+
+        styleToggleBtn.addEventListener('click', () => {
+            const currentStyle = localStorage.getItem('fontStyle');
+            applyFontStyle(currentStyle !== 'robust');
+        });
+
+        function applyFontSize(size) {
+            body.classList.remove('size-s', 'size-n', 'size-l');
+            body.classList.add(`size-${size}`);
+            localStorage.setItem('fontSize', size);
+            
+            sizeButtons.forEach(btn => {
+                btn.style.backgroundColor = btn.dataset.size === size ? '#e6f0ff' : 'white';
+            });
+        }
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                applyFontSize(e.target.dataset.size);
+            });
+        });
+
+        const savedFontStyle = localStorage.getItem('fontStyle');
+        if (savedFontStyle === 'robust') {
+            applyFontStyle(true);
+        } else {
+             applyFontStyle(false);
+        }
+        
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            applyFontSize(savedFontSize);
+        } else {
+            applyFontSize('n');
+        }
+    });
+</script>
+</body>
+</html>

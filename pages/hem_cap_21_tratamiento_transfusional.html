@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 21: Tratamiento Transfusional y Hemovigilancia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_base.css">
+    <link rel="stylesheet" href="../css/style_materias.css"> 
+</head>
+<body>
+    <header><h1>🔬 Plataforma de Estudio y Consulta para TLC</h1></header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="materias.html">Materias</a></li>
+            <li><a href="capsulas.html">Cápsulas</a></li>
+            <li><a href="protocolos.html">Protocolos</a></li>
+            <li><a href="entrenamiento.html">Entrenamiento</a></li>
+            <li><a href="laboratorio_virtual.html">Laboratorio Virtual</a></li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <div id="accessibility-panel" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 20px; padding: 10px; background-color: #f1f1f1; border-radius: 8px;">
+            <span style="font-size: 0.9em; font-weight: bold;">Accesibilidad:</span>
+            
+            <button id="toggle-font-style" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white;">
+                Estilo Robusto
+            </button>
+            
+            <button id="font-size-s" data-size="s" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 0.8em;">
+                A-
+            </button>
+            <button id="font-size-n" data-size="n" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1em;">
+                A
+            </button>
+            <button id="font-size-l" data-size="l" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1.2em;">
+                A+
+            </button>
+        </div>
+        <h1>Capítulo 21: Tratamiento Transfusional y Hemovigilancia</h1>
+        <div class="summary">
+            <h2>Resumen del Capítulo</h2>
+            <p>La transfusión es una herramienta terapéutica esencial que se basa en la **compatibilidad inmunológica**, la **viabilidad** del componente y el **control** para evitar la transmisión de agentes infecciosos. Este capítulo abarca la cadena transfusional completa: desde la selección del donante hasta la vigilancia de reacciones adversas (Hemovigilancia).</p>
+        </div>
+        
+        <h2 class="part-header">21.1. La Cadena Transfusional: Donación y Procesamiento</h2>
+        <p>El proceso transfusional es una cadena estricta de responsabilidades que garantiza la seguridad del producto sanguíneo. Inicia con la donación, que debe ser un acto **voluntario y altruista**.</p>
+
+        <h3>Criterios de Donación</h3>
+        <p>La selección del donante busca proteger tanto al donante como al receptor. Los criterios básicos incluyen edad, peso y exclusión por factores de riesgo infeccioso o condiciones de salud preexistentes. Tras la extracción, la sangre total se procesa rápidamente por centrifugación diferencial para obtener los componentes.</p>
+        
+        <h2 class="part-header">21.2. Componentes Sanguíneos Principales</h2>
+        <p>Los hemocomponentes se utilizan según la deficiencia específica del paciente, siguiendo la máxima de medicina transfusional de usar la fracción necesaria, no la sangre completa. </p>
+
+        <table class="content-table">
+            <thead>
+                <tr><th>Componente</th><th>Indicación Principal</th><th>Función</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>**Concentrado de Hematíes ($\text{CH}$)**</td>
+                    <td>Anemia sintomática; Pérdidas agudas de volumen y masa eritrocitaria.</td>
+                    <td>Restaurar la capacidad de transporte de oxígeno.</td>
+                </tr>
+                <tr>
+                    <td>**Concentrado de Plaquetas ($\text{CP}$)**</td>
+                    <td>Trombocitopenia con riesgo de sangrado o sangrado activo; Trombocitopatías.</td>
+                    <td>Corregir defectos de la hemostasia primaria.</td>
+                </tr>
+                <tr>
+                    <td>**Plasma Fresco Congelado ($\text{PFC}$)**</td>
+                    <td>Déficit de múltiples factores de coagulación (ej., coagulación intravascular diseminada, enfermedad hepática grave).</td>
+                    <td>Proveer factores de coagulación lábiles (V y VIII).</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="part-header">21.3. Pruebas Pretransfusionales</h2>
+        <p>Las pruebas en el laboratorio de Banco de Sangre aseguran la compatibilidad y minimizan el riesgo de reacciones hemolíticas.</p>
+        
+        <h3>1. Tipificación $\text{ABO}$ y $\text{Rh}$</h3>
+        <p>Es la prueba fundamental. El error en la tipificación $\text{ABO}$ es la causa más frecuente de **reacción transfusional hemolítica aguda grave**.</p>
+        
+        <h3>2. Detección de Anticuerpos Irregulares ($\text{EAI}$ / *Screening*)</h3>
+        <p>Busca la presencia de aloanticuerpos de significación clínica (ej., anti-K, anti-Fy) en el suero del paciente. Si se detectan, se procede a su identificación (PANEL de $\text{IgG}$ en $\text{CMF}$ o tubo).</p>
+
+        <h3>3. Prueba Cruzada (Compatibilidad)</h3>
+        <p>Consiste en enfrentar el suero del receptor con los hematíes del donante. La **Prueba Cruzada Mayor** es la que confirma la ausencia de anticuerpos en el receptor contra los antígenos del donante. Si es negativa, se considera el componente compatible.</p>
+
+        <h2 class="part-header">21.4. Hemovigilancia</h2>
+        <p>La Hemovigilancia es el conjunto de procedimientos de vigilancia que cubren toda la cadena transfusional. Su objetivo es registrar, notificar y analizar todas las **reacciones y efectos adversos** asociados a la transfusión, con el fin de mejorar la seguridad del sistema.</p>
+
+        <h3>Estructura y Reacciones Adversas</h3>
+        <p>Existen sistemas de hemovigilancia multinivel (hospitalario, autonómico, estatal/nacional). La detección de cualquier efecto o reacción adversa grave debe ser comunicada obligatoriamente.</p>
+        <p class="callout warning">
+            **Reacción Transfusional Grave (Ejemplos):**
+            <ul style="padding-left: 20px;">
+                <li>**Hemolítica Aguda:** Fiebre, escalofríos, dolor lumbar, hemoglobunemia/uria.</li>
+                <li>**Septicemia:** Asociada a contaminación bacteriana del componente.</li>
+                <li>**Lesión Pulmonar Aguda Asociada a Transfusión ($\text{TRALI}$):** Causa de insuficiencia respiratoria no cardiogénica.</li>
+            </ul>
+        </p>
+
+        <hr>
+        
+        <div class="chapter-nav-container">
+            <a href="/pages/hem_cap_20_anexos_leucocitarios.html" class="chapter-nav-button chapter-nav-prev">
+                &larr; Cap. 20: Anexos Leucocitarios
+            </a>
+            <a href="/pages/hem_cap_22_citogenetica.html" class="chapter-nav-button chapter-nav-next">
+                Cap. 22: Citogenética en Hematología &rarr;
+            </a>
+        </div>
+    </main>
+<footer>
+    <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
+    <div class="legal-links">
+        <a href="../terminos_condiciones.html">Términos y Condiciones</a>
+        |
+        <a href="../aviso_privacidad.html">Aviso de Privacidad</a>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const body = document.body;
+        const styleToggleBtn = document.getElementById('toggle-font-style');
+        const sizeButtons = document.querySelectorAll('[data-size]');
+
+        function applyFontStyle(isRobust) {
+            if (isRobust) {
+                body.classList.add('font-robust');
+                styleToggleBtn.textContent = 'Estilo Normal';
+                localStorage.setItem('fontStyle', 'robust');
+            } else {
+                body.classList.remove('font-robust');
+                styleToggleBtn.textContent = 'Estilo Robusto';
+                localStorage.setItem('fontStyle', 'normal');
+            }
+        }
+
+        styleToggleBtn.addEventListener('click', () => {
+            const currentStyle = localStorage.getItem('fontStyle');
+            applyFontStyle(currentStyle !== 'robust');
+        });
+
+        function applyFontSize(size) {
+            body.classList.remove('size-s', 'size-n', 'size-l');
+            body.classList.add(`size-${size}`);
+            localStorage.setItem('fontSize', size);
+            
+            sizeButtons.forEach(btn => {
+                btn.style.backgroundColor = btn.dataset.size === size ? '#e6f0ff' : 'white';
+            });
+        }
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                applyFontSize(e.target.dataset.size);
+            });
+        });
+
+        const savedFontStyle = localStorage.getItem('fontStyle');
+        if (savedFontStyle === 'robust') {
+            applyFontStyle(true);
+        } else {
+             applyFontStyle(false);
+        }
+        
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            applyFontSize(savedFontSize);
+        } else {
+            applyFontSize('n');
+        }
+    });
+</script>
+</body>
+</html>

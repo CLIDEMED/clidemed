@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 18: Linfomas (Hodgkin y No Hodgkin)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_base.css">
+    <link rel="stylesheet" href="../css/style_materias.css"> 
+</head>
+<body>
+    <header><h1>🔬 Plataforma de Estudio y Consulta para TLC</h1></header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="materias.html">Materias</a></li>
+            <li><a href="capsulas.html">Cápsulas</a></li>
+            <li><a href="protocolos.html">Protocolos</a></li>
+            <li><a href="entrenamiento.html">Entrenamiento</a></li>
+            <li><a href="laboratorio_virtual.html">Laboratorio Virtual</a></li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <div id="accessibility-panel" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 20px; padding: 10px; background-color: #f1f1f1; border-radius: 8px;">
+            <span style="font-size: 0.9em; font-weight: bold;">Accesibilidad:</span>
+            
+            <button id="toggle-font-style" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white;">
+                Estilo Robusto
+            </button>
+            
+            <button id="font-size-s" data-size="s" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 0.8em;">
+                A-
+            </button>
+            <button id="font-size-n" data-size="n" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1em;">
+                A
+            </button>
+            <button id="font-size-l" data-size="l" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1.2em;">
+                A+
+            </button>
+        </div>
+        <h1>Capítulo 18: Linfomas (Hodgkin y No Hodgkin)</h1>
+        <div class="summary">
+            <h2>Resumen del Capítulo</h2>
+            <p>Los **Linfomas** son neoplasias del tejido linfoide que se presentan típicamente como masas sólidas (linfoadenopatías) o infiltración extranodal. Se clasifican fundamentalmente en **Linfoma de Hodgkin (LH)**, caracterizado por la célula de Reed-Sternberg, y **Linfomas No Hodgkin ($\text{LNH}$)**, un grupo heterogéneo basado en el linaje celular ($\text{B}$ o $\text{T}$) y su agresividad. El diagnóstico requiere biopsia y el **inmunofenotipo** es crucial para la subclasificación y el tratamiento.</p>
+        </div>
+        
+        <h2 class="part-header">18.1. Clasificación General ($\text{OMS}$)</h2>
+        <p>La clasificación actual de la $\text{OMS}$ (Organización Mundial de la Salud) se basa en la morfología, el inmunofenotipo (linaje celular), la citogenética y la genética molecular, buscando agrupar entidades con pronóstico y tratamiento similar.</p>
+
+        <h3>Tipos de Linfomas</h3>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Linfoma de Hodgkin ($\text{LH}$):** Caracterizado por células neoplásicas minoritarias (células de Reed-Sternberg) en un infiltrado inflamatorio reactivo mayoritario.</li>
+            <li>**Linfomas No Hodgkin ($\text{LNH}$):** Grupo amplio de linfomas que se subclasifican según su origen (B o T) y su velocidad de crecimiento (indolentes o agresivos).</li>
+            <li>**Neoplasias de Células Plasmáticas:** Mieloma Múltiple (Cap. 19).</li>
+        </ul>
+
+        <h2 class="part-header">18.2. Linfoma de Hodgkin ($\text{LH}$)</h2>
+        <p>Generalmente afecta a adultos jóvenes y tiene un alto índice de curación. Se caracteriza por la presencia de una célula gigante distintiva.</p>
+
+        <h3>La Célula de Reed-Sternberg ($\text{CRS}$)</h3>
+        <p>Es la célula neoplásica patognomónica del $\text{LH}$. Morfológicamente, es una célula grande con **dos núcleos simétricos (ojos de búho)** y nucléolos prominentes. Estas células son típicamente una transformación maligna de un linfocito $\text{B}$ germinal.</p>
+        <p><strong>[PENDIENTE: IMAGEN MICROSCÓPICA DE LA CÉLULA DE REED-STERNBERG (OJOS DE BÚHO)]</strong></p>
+
+        <h3>Fenotipo Inmunológico del $\text{LH}$ (Clásico)</h3>
+        <p>El $\text{LH}$ Clásico (el más común) presenta un fenotipo de inmunohistoquímica (IHQ) característico:</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Positivos para:** $\text{CD}15$ y $\text{CD}30$.</li>
+            <li>**Negativos para:** $\text{CD}45$ (marcador pan-leucocitario) y $\text{CD}20$ (marcador pan-B).</li>
+        </ul>
+
+        <h2 class="part-header">18.3. Linfomas No Hodgkin ($\text{LNH}$)</h2>
+        <p>Son mucho más frecuentes que el $\text{LH}$ y tienen una presentación más diversa, afectando más comúnmente a los varones mayores.</p>
+
+        <h3>Clasificación por Linaje y Agresividad</h3>
+        <p>El Linfoma No Hodgkin se divide por su origen celular:</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**$\text{LNH}$ de Células B (85\%):** Incluye linfomas agresivos (ej. Linfoma Difuso de Células $\text{B}$ Grandes, Linfoma de Burkitt) e indolentes (ej. Linfoma Folicular, $\text{LLC}/\text{SLL}$).</li>
+            <li>**$\text{LNH}$ de Células T/NK (15\%):** Más raros y generalmente agresivos.</li>
+        </ul>
+
+        <h3>Fenotipo y Marcadores Principales</h3>
+        <p>El laboratorio utiliza el perfil de marcadores para identificar el tipo de $\text{LNH}$:</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Pan-B:** $\text{CD}19$, $\text{CD}20$, $\text{CD}79\text{a}$ (el $\text{CD}20$ es el blanco terapéutico del Rituximab).</li>
+            <li>**Pan-T:** $\text{CD}2$, $\text{CD}3$, $\text{CD}5$.</li>
+            <li>**Marcadores de Subtipo:**
+                <ul>
+                    <li>**Linfoma Folicular:** Presencia de la translocación **$\text{t}(14;18)$** (gen $\text{BCL}2$) y $\text{CD}10^{+}$.</li>
+                    <li>**Linfoma de Burkitt:** Presencia de la translocación **$\text{t}(8;14)$** (gen $\text{MYC}$).</li>
+                </ul>
+            </li>
+        </ul>
+        <p><strong>[PENDIENTE: TABLA COMPARATIVA DE FENOTIPOS DE $\text{LNH}$ INDOLENTES VS. AGRESIVOS]</strong></p>
+
+        <h2 class="part-header">18.4. Estadiaje y Pronóstico (Clasificación de Lugano)</h2>
+        <p>El estadiaje de los linfomas (Hodgkin y No Hodgkin) se basa en la extensión de la enfermedad, utilizando imágenes (PET-CT) y biopsia.</p>
+
+        <h3>Sistema de Estadiaje de Lugano (Modificado de Ann Arbor)</h3>
+        <p>La clasificación de Lugano reemplazó al sistema de Ann Arbor y clasifica la enfermedad desde la más localizada hasta la más diseminada:</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Estadio I:** Enfermedad limitada a **una** región ganglionar o a una única localización extranodal ($\text{I}\text{E}$).</li>
+            <li>**Estadio II:** Enfermedad en **dos o más** regiones ganglionares en el **mismo lado del diafragma** (arriba o abajo).</li>
+            <li>**Estadio III:** Enfermedad en regiones ganglionares a **ambos lados del diafragma**.</li>
+            <li>**Estadio IV:** Diseminación extranodal difusa (ej. afectación de médula ósea, hígado o pulmón).</li>
+        </ul>
+        <p class="callout warning">La presencia de síntomas $\text{B}$ (fiebre inexplicable, sudores nocturnos profusos, pérdida de peso $>10\%$) se añade al estadio para indicar un peor pronóstico (ej. Estadio $\text{II}\text{B}$).</p>
+
+        <hr>
+        
+        <div class="chapter-nav-container">
+            <a href="/pages/hem_cap_17_leucemias_cronicas.html" class="chapter-nav-button chapter-nav-prev">
+                &larr; Cap. 17: Leucemias Crónicas
+            </a>
+            <a href="/pages/hem_cap_19_mieloma_multiple.html" class="chapter-nav-button chapter-nav-next">
+                Cap. 19: Mieloma Múltiple &rarr;
+            </a>
+        </div>
+    </main>
+<footer>
+    <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
+    <div class="legal-links">
+        <a href="../terminos_condiciones.html">Términos y Condiciones</a>
+        |
+        <a href="../aviso_privacidad.html">Aviso de Privacidad</a>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const body = document.body;
+        const styleToggleBtn = document.getElementById('toggle-font-style');
+        const sizeButtons = document.querySelectorAll('[data-size]');
+
+        function applyFontStyle(isRobust) {
+            if (isRobust) {
+                body.classList.add('font-robust');
+                styleToggleBtn.textContent = 'Estilo Normal';
+                localStorage.setItem('fontStyle', 'robust');
+            } else {
+                body.classList.remove('font-robust');
+                styleToggleBtn.textContent = 'Estilo Robusto';
+                localStorage.setItem('fontStyle', 'normal');
+            }
+        }
+
+        styleToggleBtn.addEventListener('click', () => {
+            const currentStyle = localStorage.getItem('fontStyle');
+            applyFontStyle(currentStyle !== 'robust');
+        });
+
+        function applyFontSize(size) {
+            body.classList.remove('size-s', 'size-n', 'size-l');
+            body.classList.add(`size-${size}`);
+            localStorage.setItem('fontSize', size);
+            
+            sizeButtons.forEach(btn => {
+                btn.style.backgroundColor = btn.dataset.size === size ? '#e6f0ff' : 'white';
+            });
+        }
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                applyFontSize(e.target.dataset.size);
+            });
+        });
+
+        const savedFontStyle = localStorage.getItem('fontStyle');
+        if (savedFontStyle === 'robust') {
+            applyFontStyle(true);
+        } else {
+             applyFontStyle(false);
+        }
+        
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            applyFontSize(savedFontSize);
+        } else {
+            applyFontSize('n');
+        }
+    });
+</script>
+</body>
+</html>

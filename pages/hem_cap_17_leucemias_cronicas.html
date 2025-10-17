@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 17: Leucemias Crónicas (LLC, LMC)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_base.css">
+    <link rel="stylesheet" href="../css/style_materias.css"> 
+</head>
+<body>
+    <header><h1>🔬 Plataforma de Estudio y Consulta para TLC</h1></header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="materias.html">Materias</a></li>
+            <li><a href="capsulas.html">Cápsulas</a></li>
+            <li><a href="protocolos.html">Protocolos</a></li>
+            <li><a href="entrenamiento.html">Entrenamiento</a></li>
+            <li><a href="laboratorio_virtual.html">Laboratorio Virtual</a></li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <div id="accessibility-panel" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 20px; padding: 10px; background-color: #f1f1f1; border-radius: 8px;">
+            <span style="font-size: 0.9em; font-weight: bold;">Accesibilidad:</span>
+            
+            <button id="toggle-font-style" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white;">
+                Estilo Robusto
+            </button>
+            
+            <button id="font-size-s" data-size="s" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 0.8em;">
+                A-
+            </button>
+            <button id="font-size-n" data-size="n" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1em;">
+                A
+            </button>
+            <button id="font-size-l" data-size="l" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1.2em;">
+                A+
+            </button>
+        </div>
+        <h1>Capítulo 17: Leucemias Crónicas (LLC, LMC)</h1>
+        <div class="summary">
+            <h2>Resumen del Capítulo</h2>
+            <p>Las **Leucemias Crónicas** son neoplasias del sistema hematopoyético caracterizadas por la proliferación de células que, aunque anormales, han alcanzado un estado de maduración terminal o avanzado. Esto las diferencia de las leucemias agudas (blastos). Las dos formas más importantes son la **Leucemia Mieloide Crónica ($\text{LMC}$)**, definida por una anomalía genética específica, y la **Leucemia Linfoide Crónica ($\text{LLC}$)**, la leucemia más común en adultos.</p>
+        </div>
+        
+        <h2 class="part-header">17.1. Leucemia Mieloide Crónica ($\text{LMC}$)</h2>
+        <p>La $\text{LMC}$ es un trastorno mieloproliferativo crónico (SMP) que afecta a la célula madre pluripotente, llevando a la proliferación excesiva y descontrolada de las células de la **línea mieloide**, especialmente neutrófilos y sus precursores.</p>
+
+        <h3>Anomalía Genética: El Cromosoma Filadelfia</h3>
+        <p>El diagnóstico de $\text{LMC}$ es sinónimo de la presencia del **Cromosoma Filadelfia ($\text{Ph}$)**.</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Defecto:** Translocación recíproca entre los cromosomas 9 y 22: **$\text{t}(9;22)$**.</li>
+            <li>**Consecuencia Molecular:** Esta translocación fusiona los genes $\text{BCR}$ (en el $\text{Cr}$ 22) y $\text{ABL}$ (en el $\text{Cr}$ 9), creando el gen de fusión **$\text{BCR-}\text{ABL}$**.</li>
+            <li>**Resultado Bioquímico:** La proteína $\text{BCR-}\text{ABL}$ es una **Tirosina Cinasa** hiperactiva que promueve la proliferación y reduce la apoptosis de las células mieloides.</li>
+        </ul>
+        <p><strong>[PENDIENTE: FIGURA DE LA TRANSFUSIÓN $\text{t}(9;22)$ Y EL CROMOSOMA FILADELFIA]</strong></p>
+
+        <h3>Fases Clínicas y Hallazgos de Laboratorio</h3>
+        <p>La $\text{LMC}$ evoluciona en fases, siendo la **Fase Crónica** la de mejor pronóstico y la más común al diagnóstico.</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Fase Crónica:** **Leucocitosis masiva** ($\text{WBC} > 100 \times 10^9/\text{L}$), con predominio de neutrófilos maduros, pero con la presencia de precursores (mielocitos y metamielocitos). **Basofilia** y **eosinofilia** son hallazgos frecuentes. La médula es hipercelular.</li>
+            <li>**Fase Acelerada y Blástica:** Transición hacia un comportamiento similar a una leucemia aguda (crisis blástica), con $\text{blastos} \geq 20\%$ en sangre o médula ósea.</li>
+            <li>**Diagnóstico:** Confirmado por la detección molecular del gen **$\text{BCR-}\text{ABL}$** mediante $\text{PCR}$ o hibridación $\text{FISH}$. La Fosfatasa Alcalina Leucocitaria ($\text{FAL}$) es típicamente **baja** o ausente.</li>
+        </ul>
+
+        <h2 class="part-header">17.2. Leucemia Linfoide Crónica ($\text{LLC}$)</h2>
+        <p>La $\text{LLC}$ es la leucemia más frecuente en el mundo occidental y afecta a personas mayores (media de edad $\sim 70$ años). Se caracteriza por la proliferación clonal de **Linfocitos $\text{B}$ maduros**.</p>
+
+        <h3>Fenotipo Inmunológico y Morfología</h3>
+        <p>Los linfocitos $\text{LLC}$ son morfológicamente maduros, pero inmunofenotípicamente anormales:</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Morfología:** Linfocitos pequeños con citoplasma escaso y núcleo redondo de cromatina condensada. Un hallazgo característico en el frotis son las **sombras de Gumprecht** (células frágiles aplastadas).</li>
+            <li>**Fenotipo Típico:** Expresión baja de $\text{Ig}$ de superficie y co-expresión anómala de antígenos: **$\text{CD}5$** (normalmente $\text{T}$) y **$\text{CD}23$** (marcador de $\text{LLC}$), junto con los marcadores $\text{B}$ como $\text{CD}19$ y $\text{CD}20$.</li>
+        </ul>
+        <p><strong>[PENDIENTE: IMAGEN DE LINFOCITOS MADUROS Y SOMBRAS DE GUMPRECHT EN FROTIS DE $\text{LLC}$]</strong></p>
+
+        <h3>Estadiaje y Complicaciones</h3>
+        <p>La $\text{LLC}$ se diagnostica por **linfocitosis absoluta** ( $> 5 \times 10^9/\text{L}$) persistente. La estadificación (Binet o Rai) se basa en la extensión de la enfermedad (linfoadenopatías, esplenomegalia) y la presencia de anemia o trombocitopenia.</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Inmunodeficiencia:** La $\text{LLC}$ produce **hipogammaglobulinemia**, lo que aumenta el riesgo de infecciones bacterianas, a pesar de la alta cantidad de linfocitos.</li>
+            <li>**Anemia Hemolítica Autoinmune ($\text{AHAI}$):** Es una complicación frecuente (10-25\% de los casos), mediada por autoanticuerpos $\text{IgG}$ (Coombs positivo).</li>
+        </ul>
+
+        <h2 class="part-header">17.3. Diagnóstico Diferencial Clave ($\text{LMC}$ vs. $\text{LLC}$)</h2>
+        <p>El laboratorio permite diferenciar rápidamente estas dos entidades:</p>
+        
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>Parámetro</th>
+                    <th>Leucemia Mieloide Crónica ($\text{LMC}$)</th>
+                    <th>Leucemia Linfoide Crónica ($\text{LLC}$)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>**Célula Proliferante**</td>
+                    <td>Neutrófilos maduros y precursores mieloides (mielocitos)</td>
+                    <td>Linfocitos $\text{B}$ pequeños y maduros</td>
+                </tr>
+                <tr>
+                    <td>**Marcador Genético**</td>
+                    <td>Cromosoma **Filadelfia** ($\text{BCR-}\text{ABL}$) **Presente**</td>
+                    <td>$\text{BCR-}\text{ABL}$ **Ausente** (anomalías cromosómicas diferentes)</td>
+                </tr>
+                <tr>
+                    <td>**$\text{FAL}$**</td>
+                    <td>Baja (disminuida o ausente)</td>
+                    <td>Normal o Alta</td>
+                </tr>
+                <tr>
+                    <td>**Inmunofenotipo Clave**</td>
+                    <td>$\text{CD}13, \ \text{CD}33$ y $\text{MPO}$</td>
+                    <td>**$\text{CD}5$ y $\text{CD}23$ Co-expresados**</td>
+                </tr>
+                <tr>
+                    <td>**Presentación Clínica**</td>
+                    <td>Esplenomegalia masiva, síntomas constitucionales</td>
+                    <td>Linfocitosis asintomática, linfoadenopatías</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+        
+        <div class="chapter-nav-container">
+            <a href="/pages/hem_cap_16_leucemias_agudas.html" class="chapter-nav-button chapter-nav-prev">
+                &larr; Cap. 16: Leucemias Agudas
+            </a>
+            <a href="/pages/hem_cap_18_linfomas.html" class="chapter-nav-button chapter-nav-next">
+                Cap. 18: Linfomas &rarr;
+            </a>
+        </div>
+    </main>
+<footer>
+    <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
+    <div class="legal-links">
+        <a href="../terminos_condiciones.html">Términos y Condiciones</a>
+        |
+        <a href="../aviso_privacidad.html">Aviso de Privacidad</a>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const body = document.body;
+        const styleToggleBtn = document.getElementById('toggle-font-style');
+        const sizeButtons = document.querySelectorAll('[data-size]');
+
+        function applyFontStyle(isRobust) {
+            if (isRobust) {
+                body.classList.add('font-robust');
+                styleToggleBtn.textContent = 'Estilo Normal';
+                localStorage.setItem('fontStyle', 'robust');
+            } else {
+                body.classList.remove('font-robust');
+                styleToggleBtn.textContent = 'Estilo Robusto';
+                localStorage.setItem('fontStyle', 'normal');
+            }
+        }
+
+        styleToggleBtn.addEventListener('click', () => {
+            const currentStyle = localStorage.getItem('fontStyle');
+            applyFontStyle(currentStyle !== 'robust');
+        });
+
+        function applyFontSize(size) {
+            body.classList.remove('size-s', 'size-n', 'size-l');
+            body.classList.add(`size-${size}`);
+            localStorage.setItem('fontSize', size);
+            
+            sizeButtons.forEach(btn => {
+                btn.style.backgroundColor = btn.dataset.size === size ? '#e6f0ff' : 'white';
+            });
+        }
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                applyFontSize(e.target.dataset.size);
+            });
+        });
+
+        const savedFontStyle = localStorage.getItem('fontStyle');
+        if (savedFontStyle === 'robust') {
+            applyFontStyle(true);
+        } else {
+             applyFontStyle(false);
+        }
+        
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            applyFontSize(savedFontSize);
+        } else {
+            applyFontSize('n');
+        }
+    });
+</script>
+</body>
+</html>

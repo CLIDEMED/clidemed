@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 15: Trombofilias (Estados de Hipercoagulabilidad)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_base.css">
+    <link rel="stylesheet" href="../css/style_materias.css"> 
+</head>
+<body>
+    <header><h1>🔬 Plataforma de Estudio y Consulta para TLC</h1></header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="materias.html">Materias</a></li>
+            <li><a href="capsulas.html">Cápsulas</a></li>
+            <li><a href="protocolos.html">Protocolos</a></li>
+            <li><a href="entrenamiento.html">Entrenamiento</a></li>
+            <li><a href="laboratorio_virtual.html">Laboratorio Virtual</a></li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <div id="accessibility-panel" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 20px; padding: 10px; background-color: #f1f1f1; border-radius: 8px;">
+            <span style="font-size: 0.9em; font-weight: bold;">Accesibilidad:</span>
+            
+            <button id="toggle-font-style" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white;">
+                Estilo Robusto
+            </button>
+            
+            <button id="font-size-s" data-size="s" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 0.8em;">
+                A-
+            </button>
+            <button id="font-size-n" data-size="n" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1em;">
+                A
+            </button>
+            <button id="font-size-l" data-size="l" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1.2em;">
+                A+
+            </button>
+        </div>
+        <h1>Capítulo 15: Trombofilias (Estados de Hipercoagulabilidad)</h1>
+        <div class="summary">
+            <h2>Resumen del Capítulo</h2>
+            <p>Las **Trombofilias** son condiciones hereditarias o adquiridas que predisponen al individuo a desarrollar trombosis venosa o arterial. Los defectos más comunes involucran el fallo de los sistemas anticoagulantes naturales (Antitrombina, Proteína $\text{C}$ y $\text{S}$) o mutaciones que hacen que los factores procoagulantes ($\text{Factor V}$) sean resistentes a la inactivación. El Síndrome Antifosfolipídico es la trombofilia adquirida más importante. El riesgo de trombosis se explica por la **Tríada de Virchow**.</p>
+        </div>
+        
+        <h2 class="part-header">15.1. Fisiopatología: La Tríada de Virchow</h2>
+        <p>La formación de un trombo (trombosis) es el resultado de la alteración de uno o más componentes de la hemostasia. La **Tríada de Virchow** describe los tres mecanismos fisiopatológicos que predisponen a la trombosis:</p>
+        <ol style="padding-left: 20px;">
+            <li>**Lesión Endotelial:** El daño en la pared vascular (ej. cirugía, hipertensión, aterosclerosis) expone el Factor Tisular ($\text{FT}$) e inicia la coagulación.</li>
+            <li>**Estasis Sanguínea (lentitud del flujo):** Permite que los factores de coagulación activados se acumulen en un área y superen la capacidad de los anticoagulantes naturales. Ocurre en inmovilización, viajes largos o insuficiencia cardíaca.</li>
+            <li>**Hipercoagulabilidad (Trombofilia):** Se refiere a las alteraciones en la composición de la sangre que favorecen la trombosis, ya sea por exceso de factores procoagulantes o déficit de anticoagulantes naturales.</li>
+        </ol>
+        <p>La **Trombofilia** se enmarca en el tercer punto y puede ser la única causa o actuar en sinergia con la estasis y la lesión endotelial.</p>
+
+        <h2 class="part-header">15.2. Trombofilias Hereditarias (Resistencia a la Inactivación)</h2>
+        <p>Estas son las causas genéticas más comunes de la trombofilia. La herencia suele ser autosómica dominante.</p>
+
+        <h3>Factor $\text{V}$ Leiden (Resistencia a la Proteína $\text{C}$ Activada - $\text{RPC}$a)</h3>
+        <p>Es la trombofilia hereditaria más común en la población caucásica.</p>
+        <ul>
+            <li>**Defecto:** Mutación puntual en el gen del **Factor $\text{V}$**, que lo hace resistente a la degradación por la **Proteína $\text{C}$ activada ($\text{PCa}$)**. Esto prolonga la vida media del Factor $\text{Va}$ activo.</li>
+            <li>**Resultado:** La coagulación permanece activa por más tiempo de lo normal, aumentando el riesgo de trombosis venosa profunda ($\text{TVP}$) y embolia pulmonar ($\text{TEP}$).</li>
+        </ul>
+
+        <h3>Mutación del Gen de la Protrombina ($\text{G}20210\text{A}$)</h3>
+        <p>Segunda trombofilia hereditaria más común.</p>
+        <ul>
+            <li>**Defecto:** Mutación en la región $3'$-UTR del gen de la **Protrombina ($\text{Factor II}$)**.</li>
+            <li>**Resultado:** Produce niveles crónicamente **elevados** de Protrombina en plasma, lo que se traduce en una mayor disponibilidad de Trombina ($\text{IIa}$) y un aumento del riesgo trombótico.</li>
+        </ul>
+
+        <h2 class="part-header">15.3. Trombofilias Hereditarias (Déficit de Anticoagulantes Naturales)</h2>
+        <p>Estos déficits son menos comunes que las mutaciones de resistencia, pero confieren un riesgo trombótico muy alto.</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Déficit de Antitrombina ($\text{AT}$):** Hereditario o adquirido (p. ej., enfermedad hepática). La $\text{AT}$ es el principal inhibidor de la trombina ($\text{IIa}$) y del Factor $\text{Xa}$. Los pacientes con déficit hereditario tienen un alto riesgo de trombosis.</li>
+            <li>**Déficit de Proteína $\text{C}$ ($\text{PC}$):** La $\text{PC}$ activada inactiva los factores $\text{Va}$ y $\text{VIIIa}$. Su déficit causa un aumento del riesgo trombótico, especialmente de **trombosis cutánea inducida por Warfarina**.</li>
+            <li>**Déficit de Proteína $\text{S}$ ($\text{PS}$):** Actúa como cofactor de la $\text{PC}$ activada. Su déficit tiene un efecto similar al déficit de $\text{PC}$.</li>
+        </ul>
+        <div class="table-marker-box">
+            <h4>[MARCADOR DE TABLA]</h4>
+            <p><strong>Referencia: TABLA COMPARATIVA DE LABORATORIO (AT, PC, PS, RPCa) PARA EL ESTUDIO DE TROMBOFILIAS</strong></p>
+            <p>Valores y pruebas que confirman los déficits de anticoagulantes naturales y la resistencia del Factor $\text{V}$.</p>
+        </div>
+
+        <h2 class="part-header">15.4. Trombofilias Adquiridas: Síndrome Antifosfolipídico ($\text{SAF}$)</h2>
+        <p>El $\text{SAF}$ es el estado de hipercoagulabilidad adquirido más significativo y clínicamente relevante.</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Defecto:** Presencia de **autoanticuerpos** dirigidos contra proteínas ligadas a fosfolípidos de la membrana celular (ej., $\text{anti-}\beta_{2}-\text{glicoproteína I}$ y **Anticoagulante Lúpico**).</li>
+            <li>**Clínica:** Se asocia con **trombosis recurrente** (venosa y arterial) y **complicaciones obstétricas** (abortos de repetición).</li>
+            <li>**Laboratorio ($\text{Anticoagulante Lúpico}$):** Paradójicamente, el $\text{AL}$ prolonga el **$\text{TTPa}$** <em>in vitro</em>, porque interfiere con los reactivos de la prueba. Sin embargo, <em>in vivo</em>, el $\text{AL}$ es pro-trombótico.</li>
+        </ul>
+        
+        <h2 class="part-header">15.5. Fisiopatología de la Trombosis Venosa (TVP y TEP)</h2>
+        <p>La **Trombosis Venosa Profunda ($\text{TVP}$)** y su principal complicación, la **Embolia Pulmonar ($\text{TEP}$)**, son el resultado más común de un estado trombofílico.</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Mecanismo:** La estasis venosa y la hipercoagulabilidad conducen a la formación de un trombo rico en fibrina y glóbulos rojos, predominantemente en las venas profundas de las extremidades inferiores.</li>
+            <li>**Diagnóstico de Laboratorio:** El **Dímero D** es una prueba de alto valor predictivo negativo ($\text{VPN}$). Un resultado negativo descarta la $\text{TVP}$ o $\text{TEP}$ en pacientes con baja probabilidad clínica.</li>
+        </ul>
+        
+        <hr>
+        
+        <div class="chapter-nav-container">
+            <a href="/pages/hem_cap_14_transtornos_coagulacion.html" class="chapter-nav-button chapter-nav-prev">
+                &larr; Cap. 14: Trastornos de la Coagulación
+            </a>
+            <a href="/pages/hem_cap_16_leucemias_agudas.html" class="chapter-nav-button chapter-nav-next">
+                Cap. 16: Leucemias Agudas &rarr;
+            </a>
+        </div>
+    </main>
+<footer>
+    <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
+    <div class="legal-links">
+        <a href="../terminos_condiciones.html">Términos y Condiciones</a>
+        |
+        <a href="../aviso_privacidad.html">Aviso de Privacidad</a>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const body = document.body;
+        const styleToggleBtn = document.getElementById('toggle-font-style');
+        const sizeButtons = document.querySelectorAll('[data-size]');
+
+        function applyFontStyle(isRobust) {
+            if (isRobust) {
+                body.classList.add('font-robust');
+                styleToggleBtn.textContent = 'Estilo Normal';
+                localStorage.setItem('fontStyle', 'robust');
+            } else {
+                body.classList.remove('font-robust');
+                styleToggleBtn.textContent = 'Estilo Robusto';
+                localStorage.setItem('fontStyle', 'normal');
+            }
+        }
+
+        styleToggleBtn.addEventListener('click', () => {
+            const currentStyle = localStorage.getItem('fontStyle');
+            applyFontStyle(currentStyle !== 'robust');
+        });
+
+        function applyFontSize(size) {
+            body.classList.remove('size-s', 'size-n', 'size-l');
+            body.classList.add(`size-${size}`);
+            localStorage.setItem('fontSize', size);
+            
+            sizeButtons.forEach(btn => {
+                btn.style.backgroundColor = btn.dataset.size === size ? '#e6f0ff' : 'white';
+            });
+        }
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                applyFontSize(e.target.dataset.size);
+            });
+        });
+
+        const savedFontStyle = localStorage.getItem('fontStyle');
+        if (savedFontStyle === 'robust') {
+            applyFontStyle(true);
+        } else {
+             applyFontStyle(false);
+        }
+        
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            applyFontSize(savedFontSize);
+        } else {
+            applyFontSize('n');
+        }
+    });
+</script>
+</body>
+</html>

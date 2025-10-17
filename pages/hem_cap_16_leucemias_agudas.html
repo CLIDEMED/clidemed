@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 16: Leucemias Agudas (LAL y LAM)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_base.css">
+    <link rel="stylesheet" href="../css/style_materias.css"> 
+</head>
+<body>
+    <header><h1>🔬 Plataforma de Estudio y Consulta para TLC</h1></header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="materias.html">Materias</a></li>
+            <li><a href="capsulas.html">Cápsulas</a></li>
+            <li><a href="protocolos.html">Protocolos</a></li>
+            <li><a href="entrenamiento.html">Entrenamiento</a></li>
+            <li><a href="laboratorio_virtual.html">Laboratorio Virtual</a></li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <div id="accessibility-panel" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 20px; padding: 10px; background-color: #f1f1f1; border-radius: 8px;">
+            <span style="font-size: 0.9em; font-weight: bold;">Accesibilidad:</span>
+            
+            <button id="toggle-font-style" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white;">
+                Estilo Robusto
+            </button>
+            
+            <button id="font-size-s" data-size="s" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 0.8em;">
+                A-
+            </button>
+            <button id="font-size-n" data-size="n" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1em;">
+                A
+            </button>
+            <button id="font-size-l" data-size="l" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1.2em;">
+                A+
+            </button>
+        </div>
+        <h1>Capítulo 16: Leucemias Agudas (LAL y LAM)</h1>
+        <div class="summary">
+            <h2>Resumen del Capítulo</h2>
+            <p>Las **Leucemias Agudas** son neoplasias hematológicas caracterizadas por la proliferación descontrolada de células inmaduras (**blastos**) en la médula ósea y sangre periférica. Esta proliferación anómala suprime la producción normal de otras líneas celulares (**falla medular**). Se clasifican en **Linfoblásticas ($\text{LAL}$)** y **Mieloides ($\text{LAM}$)**, siendo la **Citometría de Flujo** el pilar para determinar el linaje y establecer el diagnóstico y pronóstico.</p>
+        </div>
+        
+        <h2 class="part-header">16.1. Fisiopatología y Diagnóstico General</h2>
+        <p>Las leucemias agudas se originan por una falla en la maduración y diferenciación de los precursores hematopoyéticos. Los blastos se acumulan, invadiendo la médula ósea, la sangre y, potencialmente, otros órganos (hígado, bazo, sistema nervioso central).</p>
+
+        <h3>Consecuencias de la Falla Medular</h3>
+        <p>La clínica y el diagnóstico inicial se basan en la citopenia causada por el desplazamiento de la hematopoyesis normal:</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Anemia:** Debida a la eritropoyesis deficiente (palidez, astenia).</li>
+            <li>**Neutropenia:** Predisposición a infecciones bacterianas o fúngicas graves.</li>
+            <li>**Trombocitopenia:** Mayor riesgo de hemorragia.</li>
+        </ul>
+        
+        <h3>Criterio Diagnóstico</h3>
+        <p>El diagnóstico de Leucemia Aguda se establece con un porcentaje de **blastos** $\geq 20\%$ en la médula ósea o en la sangre periférica, según la clasificación de la **Organización Mundial de la Salud ($\text{OMS}$)**.</p>
+        <p class="callout warning">La presencia de blastos en sangre periférica no es obligatoria, pero la invasión medular sí lo es.</p>
+
+        <h2 class="part-header">16.2. Leucemia Mieloide Aguda ($\text{LAM}$)</h2>
+        <p>La $\text{LAM}$ es una neoplasia de precursores mieloides, siendo más común en adultos.</p>
+
+        <h3>Clasificación FAB (Francesa-Americana-Británica) - Morfológica</h3>
+        <p>Aunque la $\text{OMS}$ es el estándar actual, la clasificación $\text{FAB}$ sigue siendo útil para la descripción morfológica, clasificando la $\text{LAM}$ de $\text{M}0$ a $\text{M}7$ según la diferenciación mieloide y monocítica.</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**$\text{M}0 - \text{M}1$ (Indiferenciada/Mínima Maduración):** Los blastos no presentan signos claros de diferenciación mieloide.</li>
+            <li>**$\text{M}2 - \text{M}3$ (Con Maduración/Promielocítica):**
+                <ul>
+                    <li>**$\text{M}3$ (Promielocítica):** Caracterizada por la abundancia de promielocitos anómalos y la presencia de **Cuerpos de Auer** (agregados de $\text{MPO}$) y la translocación **$\text{t}(15;17)$**. Es la más asociada con **$\text{CID}$**.</li>
+                </ul>
+            </li>
+            <li>**$\text{M}4 - \text{M}5$ (Mielomonocítica/Monoblástica):** Predominio de monocitos o precursores.</li>
+            <li>**$\text{M}6$ (Eritroleucemia):** Proliferación de precursores eritroides.</li>
+            <li>**$\text{M}7$ (Megacarioblástica):** Proliferación de precursores de plaquetas.</li>
+        </ul>
+        **[PENDIENTE: IMAGEN DEL FROTIS CON CUERPOS DE AUER Y PROMIELOCITOS ANORMALES ($\text{LAM-M}3$)]**
+
+        <h3>Fenotipo Inmunológico de $\text{LAM}$</h3>
+        <p>El diagnóstico de linaje se confirma por la expresión de marcadores:</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Marcadores Pan-Mieloides:** **$\text{Mieloperoxidasa}$ ($\text{MPO}$)** (el más específico, citoplasmático), **$\text{CD}13$, $\text{CD}33$ y $\text{CD}117$ ($\text{c-kit}$)**.</li>
+            <li>**Marcadores Monocíticos:** $\text{CD}14$ y $\text{CD}64$ (más frecuentes en $\text{M}4$ y $\text{M}5$).</li>
+        </ul>
+        <p><strong>[PENDIENTE: TABLA COMPARATIVA DE MARCADORES DE $\text{LAM}$ Y $\text{LAL}$ (SIMPLIFICADA)]</strong></p>
+
+        <h2 class="part-header">16.3. Leucemia Linfoblástica Aguda ($\text{LAL}$)</h2>
+        <p>La $\text{LAL}$ es la leucemia más frecuente en **niños** y es una neoplasia de precursores linfoides (linfoblastos).</p>
+
+        <h3>Clasificación por Linaje ($\text{OMS}$)</h3>
+        <p>La $\text{LAL}$ se subclasifica según el linaje (B o T) y el estadio de maduración, determinado por Citometría de Flujo.</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**$\text{LAL}$ B:** Representa el 75-80\% de las $\text{LAL}$. El marcador más temprano y esencial es el **$\text{CD}19$** (Pan-B). La $\text{LAL}$ B se divide en:
+                <ul>
+                    <li>**Pro-B:** $\text{CD}19^{+}$, $\text{CD}79\text{a}^{+}$, $\text{TdT}^{+}$, $\text{CD}10^{-}$.</li>
+                    <li>**Común (LAL-c):** $\text{CD}10^{+}$, es la forma más frecuente.</li>
+                    <li>**Pre-B:** Expresan inmunoglobulina ($\text{Ig}$) intracitoplasmática.</li>
+                </ul>
+            </li>
+            <li>**$\text{LAL}$ T:** Representa el 15-20\% de las $\text{LAL}$. Generalmente asociada a una masa mediastínica y afecta a varones adolescentes. El marcador clave es el **$\text{CD}3$** (expresado de forma citoplasmática o en membrana). Expresan $\text{CD}2$, $\text{CD}5$ y $\text{CD}7$.</li>
+        </ul>
+
+        <h3>Fenotipo Inmunológico de $\text{LAL}$</h3>
+        <p>Los marcadores utilizados para el diagnóstico son:</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Marcadores Comunes ($\text{LAL}$ y $\text{LAM}$):** **$\text{TdT}$** (enzima nuclear presente en blastos inmaduros, excepto en algunos tipos de $\text{LAM}$), **$\text{CD}34$** (marcador de células inmaduras/stem cells).</li>
+            <li>**Marcadores Linfoides T:** $\text{CD}2$, $\text{CD}3$ (cito/superficie), $\text{CD}7$.</li>
+            <li>**Marcadores Linfoides B:** $\text{CD}19$, $\text{CD}20$, $\text{CD}22$, $\text{CD}79\text{a}$.</li>
+        </ul>
+        <p><strong>[PENDIENTE: FIGURA ESQUEMÁTICA DE LA MADURACIÓN LINFOIDE Y LA UBICACIÓN DE LOS ANTÍGENOS ($\text{LAL}$)]</strong></p>
+
+        <h2 class="part-header">16.4. Pronóstico y Tratamiento</h2>
+        <p>El pronóstico de las leucemias agudas depende en gran medida de las **alteraciones citogenéticas y moleculares** (ej. presencia de $\text{t}(9;22)$ en $\text{LAL}$ o $\text{LAM}$).</p>
+        
+        <h3>Manejo de Emergencia y Remisión</h3>
+        <p>El tratamiento se divide en fase de inducción (para lograr la remisión completa, menos del 5\% de blastos) y fase post-remisión (consolidación y mantenimiento).</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Leucemia Promielocítica ($\text{M}3$):** Trata con **Ácido Transretinoico ($\text{ATRA}$)**, ya que obliga a los promielocitos a madurar, curando la $\text{CID}$.</li>
+            <li>**Leucemia Filadelfia Positiva ($\text{t}(9;22)$):** Se trata con **Inhibidores de Tirosina Cinasa** (ej. Imatinib).</li>
+            <li>**Trasplante de Progenitores:** Es la terapia curativa de elección para pacientes de alto riesgo.</li>
+        </ul>
+
+        <hr>
+        
+        <div class="chapter-nav-container">
+            <a href="/pages/hem_cap_15_trombofilias.html" class="chapter-nav-button chapter-nav-prev">
+                &larr; Cap. 15: Trombofilias
+            </a>
+            <a href="/pages/hem_cap_17_leucemias_cronicas.html" class="chapter-nav-button chapter-nav-next">
+                Cap. 17: Leucemias Crónicas &rarr;
+            </a>
+        </div>
+    </main>
+<footer>
+    <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
+    <div class="legal-links">
+        <a href="../terminos_condiciones.html">Términos y Condiciones</a>
+        |
+        <a href="../aviso_privacidad.html">Aviso de Privacidad</a>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const body = document.body;
+        const styleToggleBtn = document.getElementById('toggle-font-style');
+        const sizeButtons = document.querySelectorAll('[data-size]');
+
+        function applyFontStyle(isRobust) {
+            if (isRobust) {
+                body.classList.add('font-robust');
+                styleToggleBtn.textContent = 'Estilo Normal';
+                localStorage.setItem('fontStyle', 'robust');
+            } else {
+                body.classList.remove('font-robust');
+                styleToggleBtn.textContent = 'Estilo Robusto';
+                localStorage.setItem('fontStyle', 'normal');
+            }
+        }
+
+        styleToggleBtn.addEventListener('click', () => {
+            const currentStyle = localStorage.getItem('fontStyle');
+            applyFontStyle(currentStyle !== 'robust');
+        });
+
+        function applyFontSize(size) {
+            body.classList.remove('size-s', 'size-n', 'size-l');
+            body.classList.add(`size-${size}`);
+            localStorage.setItem('fontSize', size);
+            
+            sizeButtons.forEach(btn => {
+                btn.style.backgroundColor = btn.dataset.size === size ? '#e6f0ff' : 'white';
+            });
+        }
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                applyFontSize(e.target.dataset.size);
+            });
+        });
+
+        const savedFontStyle = localStorage.getItem('fontStyle');
+        if (savedFontStyle === 'robust') {
+            applyFontStyle(true);
+        } else {
+             applyFontStyle(false);
+        }
+        
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            applyFontSize(savedFontSize);
+        } else {
+            applyFontSize('n');
+        }
+    });
+</script>
+</body>
+</html>

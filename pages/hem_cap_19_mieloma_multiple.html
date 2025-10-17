@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 19: Mieloma Múltiple y Otras Gammapatías Monoclonales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_base.css">
+    <link rel="stylesheet" href="../css/style_materias.css"> 
+</head>
+<body>
+    <header><h1>🔬 Plataforma de Estudio y Consulta para TLC</h1></header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="materias.html">Materias</a></li>
+            <li><a href="capsulas.html">Cápsulas</a></li>
+            <li><a href="protocolos.html">Protocolos</a></li>
+            <li><a href="entrenamiento.html">Entrenamiento</a></li>
+            <li><a href="laboratorio_virtual.html">Laboratorio Virtual</a></li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <div id="accessibility-panel" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 20px; padding: 10px; background-color: #f1f1f1; border-radius: 8px;">
+            <span style="font-size: 0.9em; font-weight: bold;">Accesibilidad:</span>
+            
+            <button id="toggle-font-style" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white;">
+                Estilo Robusto
+            </button>
+            
+            <button id="font-size-s" data-size="s" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 0.8em;">
+                A-
+            </button>
+            <button id="font-size-n" data-size="n" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1em;">
+                A
+            </button>
+            <button id="font-size-l" data-size="l" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1.2em;">
+                A+
+            </button>
+        </div>
+        <h1>Capítulo 19: Mieloma Múltiple y Otras Gammapatías Monoclonales</h1>
+        <div class="summary">
+            <h2>Resumen del Capítulo</h2>
+            <p>El **Mieloma Múltiple ($\text{MM}$)** es una neoplasia de células plasmáticas terminalmente diferenciadas que se acumulan en la médula ósea. La proliferación de estas células produce una cantidad excesiva de una única inmunoglobulina monoclonal (proteína $\text{M}$) o una cadena ligera. El $\text{MM}$ se presenta con el síndrome $\text{CRAB}$ (Hipercalcemia, Falla Renal, Anemia y Lesiones Óseas). El diagnóstico y el monitoreo dependen esencialmente del laboratorio (Electroforesis e Inmunofijación).</p>
+        </div>
+        
+        <h2 class="part-header">19.1. Patogenia del Mieloma Múltiple</h2>
+        <p>El $\text{MM}$ es la forma más común de neoplasia de células plasmáticas. Afecta principalmente a personas mayores, con una mediana de edad al diagnóstico de 65-70 años.</p>
+
+        <h3>El Linaje de la Célula Plasmática</h3>
+        <p>La **Célula Plasmática** es la célula $\text{B}$ madura final. Su función es producir y secretar anticuerpos ($\text{Ig}$). En el $\text{MM}$, una célula plasmática anómala prolifera de forma incontrolada en la médula ósea.</p>
+        
+        <h3>Proteína $\text{M}$ (Paraproteína)</h3>
+        <p>El sello distintivo del $\text{MM}$ es la secreción de un anticuerpo monoclonal, llamado **Proteína $\text{M}$** o **Paraproteína**. La mayoría de los $\text{MM}$ secretan $\text{IgG}$ o $\text{IgA}$.</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Componentes de $\text{Ig}$:** Cada $\text{Ig}$ está formada por dos cadenas pesadas (ej., $\text{G}, \ \text{A}, \ \text{M}$) y dos cadenas ligeras ($\kappa$ o $\lambda$).</li>
+            <li>**Cadenas Ligeras Libres ($\text{Bence-Jones}$):** Alrededor del 20% de los $\text{MM}$ solo secretan cadenas ligeras libres ($\kappa$ o $\lambda$), conocidas como proteínas de $\text{Bence-Jones}$, que se eliminan por la orina y son nefrotóxicas.</li>
+        </ul>
+
+        <h2 class="part-header">19.2. Manifestaciones Clínicas: El Síndrome $\text{CRAB}$</h2>
+        <p>El diagnóstico de $\text{MM}$ se basa en la identificación de la proliferación clonal y la presencia de daño orgánico relacionado con la enfermedad. Este daño se resume en el acrónimo $\text{CRAB}$.</p>
+        
+        <h3>Criterios de Daño Orgánico ($\text{CRAB}$)</h3>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**$\text{C}$ (Calcium):** **Hipercalcemia** ($\text{Ca}^{2+}$ elevado, $\text{Ca}^{2+} > 11 \ \text{mg}/\text{dL}$). Causada por la actividad osteoclástica estimulada por las células del mieloma.</li>
+            <li>**$\text{R}$ (Renal failure):** **Insuficiencia Renal** (Creatinina $> 2 \ \text{mg}/\text{dL}$). Causa principal: precipitación de las cadenas ligeras ($\text{Bence-Jones}$) en los túbulos renales (riñón de mieloma).</li>
+            <li>**$\text{A}$ (Anemia):** **Anemia Normocítica Normocrómica** (Hb $< 10 \ \text{g}/\text{dL}$). Causada por la invasión y el desplazamiento de la hematopoyesis normal en la médula ósea.</li>
+            <li>**$\text{B}$ (Bone lesions):** **Lesiones Óseas** (Bone). Lesiones líticas (osteolíticas) en radiografías o resonancia magnética.</li>
+        </ul>
+        <p>El dolor óseo es el síntoma más común debido a estas lesiones, a menudo en columna y pelvis.</p>
+
+        <h2 class="part-header">19.3. Rol del Laboratorio en el Diagnóstico</h2>
+        <p>El laboratorio es esencial para la detección y la cuantificación de la Proteína $\text{M}$, la evaluación de la médula ósea y la detección del daño orgánico.</p>
+
+        <h3>Análisis de Proteínas en Suero y Orina</h3>
+        <p>La secuencia diagnóstica clave para las gammapatías:</p>
+        <ol style="padding-left: 20px;">
+            <li>**Electroforesis de Proteínas en Suero ($\text{EPS}$):** Se utiliza para separar las proteínas séricas según su carga eléctrica. En el $\text{MM}$, se observa un pico estrecho y alto en la zona gamma ($\text{banda M}$), lo que sugiere la presencia de una proteína monoclonal.</li>
+            <li>**Inmunofijación ($\text{IFE}$):** Es la prueba de oro para **confirmar la monoclonalidad** e identificar el tipo de cadena pesada ($\text{G}, \ \text{A}, \ \text{M}$) y ligera ($\kappa$ o $\lambda$) de la Proteína $\text{M}$.</li>
+            <li>**Cuantificación de Cadenas Ligeras Libres ($\text{CLL}$):** Mide las concentraciones de cadenas $\kappa$ y $\lambda$ no unidas a cadenas pesadas. La relación **$\kappa/\lambda$ anormal** es un indicador sensible de clonalidad.</li>
+        </ol>
+        <p><strong>[PENDIENTE: FIGURA DE UN TRAZADO DE ELECTROFORESIS CON EL PICO MONOCLONAL EN LA ZONA GAMMA]</strong></p>
+
+        <h3>Hallazgos Hematológicos</h3>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Frotis:** Presencia de **Rouleaux** (pilas de monedas) debido a la alta concentración de proteína monoclonal, que altera la carga superficial del eritrocito.</li>
+            <li>**Médula Ósea:** Se realiza aspirado y biopsia para confirmar la **expansión clonal de células plasmáticas** ($\geq 10\%$ de células plasmáticas monoclonales). El inmunofenotipo con $\text{CD}138$ es crucial.</li>
+        </ul>
+
+        <h2 class="part-header">19.4. Gammapatía Monoclonal de Significado Incierto ($\text{MGUS}$)</h2>
+        <p>La $\text{MGUS}$ es la gammapatía monoclonal más común y es considerada una condición **precursora** del $\text{MM}$ y otras discrasias de células plasmáticas.</p>
+
+        <h3>Criterios de $\text{MGUS}$ (Precursor Benigno)</h3>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Células Plasmáticas Medulares:** $< 10\%$.</li>
+            <li>**Proteína $\text{M}$ en Suero:** $< 3 \ \text{g}/\text{dL}$.</li>
+            <li>**Ausencia de Daño Orgánico ($\text{CRAB}$):** El paciente es asintomático.</li>
+        </ul>
+        <p class="callout tip">La $\text{MGUS}$ requiere solo seguimiento, ya que el riesgo de progresión a $\text{MM}$ es solo del 1% anual, pero su presencia es fundamental para alertar al laboratorio sobre la necesidad de monitoreo.</p>
+
+        <hr>
+        
+        <div class="chapter-nav-container">
+            <a href="/pages/hem_cap_18_linfomas.html" class="chapter-nav-button chapter-nav-prev">
+                &larr; Cap. 18: Linfomas
+            </a>
+            <a href="/pages/hem_cap_20_anexos_leucocitarios.html" class="chapter-nav-button chapter-nav-next">
+                Cap. 20: Anexos Leucocitarios &rarr;
+            </a>
+        </div>
+    </main>
+<footer>
+    <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
+    <div class="legal-links">
+        <a href="../terminos_condiciones.html">Términos y Condiciones</a>
+        |
+        <a href="../aviso_privacidad.html">Aviso de Privacidad</a>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const body = document.body;
+        const styleToggleBtn = document.getElementById('toggle-font-style');
+        const sizeButtons = document.querySelectorAll('[data-size]');
+
+        function applyFontStyle(isRobust) {
+            if (isRobust) {
+                body.classList.add('font-robust');
+                styleToggleBtn.textContent = 'Estilo Normal';
+                localStorage.setItem('fontStyle', 'robust');
+            } else {
+                body.classList.remove('font-robust');
+                styleToggleBtn.textContent = 'Estilo Robusto';
+                localStorage.setItem('fontStyle', 'normal');
+            }
+        }
+
+        styleToggleBtn.addEventListener('click', () => {
+            const currentStyle = localStorage.getItem('fontStyle');
+            applyFontStyle(currentStyle !== 'robust');
+        });
+
+        function applyFontSize(size) {
+            body.classList.remove('size-s', 'size-n', 'size-l');
+            body.classList.add(`size-${size}`);
+            localStorage.setItem('fontSize', size);
+            
+            sizeButtons.forEach(btn => {
+                btn.style.backgroundColor = btn.dataset.size === size ? '#e6f0ff' : 'white';
+            });
+        }
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                applyFontSize(e.target.dataset.size);
+            });
+        });
+
+        const savedFontStyle = localStorage.getItem('fontStyle');
+        if (savedFontStyle === 'robust') {
+            applyFontStyle(true);
+        } else {
+             applyFontStyle(false);
+        }
+        
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            applyFontSize(savedFontSize);
+        } else {
+            applyFontSize('n');
+        }
+    });
+</script>
+</body>
+</html>

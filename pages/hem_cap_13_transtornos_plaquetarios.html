@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 13: Trastornos Plaquetarios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_base.css">
+    <link rel="stylesheet" href="../css/style_materias.css"> 
+</head>
+<body>
+    <header><h1>🔬 Plataforma de Estudio y Consulta para TLC</h1></header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="materias.html">Materias</a></li>
+            <li><a href="capsulas.html">Cápsulas</a></li>
+            <li><a href="protocolos.html">Protocolos</a></li>
+            <li><a href="entrenamiento.html">Entrenamiento</a></li>
+            <li><a href="laboratorio_virtual.html">Laboratorio Virtual</a></li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <div id="accessibility-panel" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 20px; padding: 10px; background-color: #f1f1f1; border-radius: 8px;">
+            <span style="font-size: 0.9em; font-weight: bold;">Accesibilidad:</span>
+            
+            <button id="toggle-font-style" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white;">
+                Estilo Robusto
+            </button>
+            
+            <button id="font-size-s" data-size="s" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 0.8em;">
+                A-
+            </button>
+            <button id="font-size-n" data-size="n" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1em;">
+                A
+            </button>
+            <button id="font-size-l" data-size="l" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1.2em;">
+                A+
+            </button>
+        </div>
+        <h1>Capítulo 13: Trastornos Cuantitativos y Cualitativos Plaquetarios</h1>
+        <div class="summary">
+            <h2>Resumen del Capítulo</h2>
+            <p>Los trastornos de la **Hemostasia Primaria** se manifiestan clínicamente como síndromes hemorrágicos cutaneomucosos (petequias, equimosis, epistaxis). Se clasifican en **cuantitativos** (Trombocitopenia y Trombocitosis) o **cualitativos** (Alteraciones de la función plaquetaria). Las trombocitopenias graves ($\text{Plaquetas} < 20 \times 10^9/\text{L}$) conllevan un riesgo alto de sangrado espontáneo.</p>
+        </div>
+        
+        <h2 class="part-header">13.1. Trombocitopenia (Plaquetas Bajas)</h2>
+        <p>Se define como el recuento plaquetario inferior a $150 \times 10^9/\text{L}$. La causa más común de trombocitopenia en la práctica es la **destrucción inmunitaria**.</p>
+
+        <h3>Clasificación Etiológica de la Trombocitopenia</h3>
+        <p>Se clasifican según el mecanismo fisiopatológico:</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Producción Deficiente (Central):** Fallo en la médula ósea. Causas: Anemia aplásica, leucemia aguda (infiltración), fármacos (quimioterapia), o infecciones virales (VIH, Parvovirus $\text{B}19$).</li>
+            <li>**Destrucción Periférica (Acortamiento de Vida Media):** El mecanismo más frecuente.
+                <ul>
+                    <li>**Inmune:** Púrpura Trombocitopénica Inmune ($\text{PTI}$), trombocitopenia inducida por heparina ($\text{TIH}$).</li>
+                    <li>**No Inmune/Mecánica:** Púrpura Trombótica Trombocitopénica ($\text{PTT}$), Coagulación Intravascular Diseminada ($\text{CID}$).</li>
+                </ul>
+            </li>
+            <li>**Secuestro:** Hiperesplenismo (secuestro en el bazo) o hemodilución.</li>
+        </ul>
+        <p><strong>[PENDIENTE: DIAGRAMA DE FLUJO PARA EL DIAGNÓSTICO DE TROMBOCITOPENIA (PRODUCCIÓN vs. DESTRUCCIÓN)]</strong></p>
+
+        <h3>Púrpura Trombocitopénica Inmune (PTI)</h3>
+        <p>Es una enfermedad **autoinmune** adquirida caracterizada por la destrucción acelerada de plaquetas en el **bazo** y la médula ósea. Es un diagnóstico de exclusión.</p>
+        <ul>
+            <li>**Mecanismo:** Autoanticuerpos de clase $\text{IgG}$ se unen a las glicoproteínas de la membrana plaquetaria ($\text{GpIIb}/\text{IIIa}$ o $\text{GpIb}$), marcándolas para la destrucción macrofágica esplénica.</li>
+            <li>**Hallazgos:** Trombocitopenia aislada con médula ósea **normal o hipercelular** (aumento de megacariocitos, ya que la médula intenta compensar la destrucción).</li>
+            <li>**Clínica:** Hemorragias mucocutáneas (petequias y epistaxis). El riesgo de hemorragia grave se relaciona inversamente con el recuento.</li>
+        </ul>
+
+        <h3>Púrpura Trombótica Trombocitopénica (PTT)</h3>
+        <p>Una emergencia hematológica caracterizada por una **anemia hemolítica microangiopática** y **trombocitopenia de consumo**.</p>
+        <ul>
+            <li>**Mecanismo:** Déficit severo de la metaloproteasa **ADAMTS13**, la enzima que rompe los grandes multímeros del Factor $\text{vW}$. Sin $\text{ADAMTS}13$, los multímeros gigantes del $\text{FvW}$ se acumulan y agregan plaquetas espontáneamente, formando trombos en la microvasculatura.</li>
+            <li>**Pentada Clásica (aunque incompleta):** Trombocitopenia, Anemia Hemolítica Microangiopática (con esquistocitos), Síntomas Neurológicos, Fiebre y Fallo Renal.</li>
+        </ul>
+        <p class="callout warning">La **PTT** es una **trombocitopenia por consumo**. Los trombos de fibrina y plaquetas causan la fragmentación mecánica de los glóbulos rojos (esquistocitos).</p>
+
+        <h2 class="part-header">13.2. Trombocitosis (Plaquetas Altas)</h2>
+        <p>Se define como el recuento plaquetario superior a $450 \times 10^9/\text{L}$.</p>
+
+        <h3>Trombocitosis Reactiva (Secundaria)</h3>
+        <p>Es la causa más común y suele ser **asintomática**. Ocurre como respuesta a un estímulo inflamatorio o de pérdida de sangre.</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Causas:** Anemia ferropénica, infecciones agudas/crónicas, cirugía (post-esplenectomía) o enfermedades inflamatorias (p. ej., artritis).</li>
+            <li>**Mecanismo:** Mediada por citoquinas (ej. $\text{IL-}6$) que estimulan la $\text{Trombopoyetina}$.</li>
+        </ul>
+
+        <h3>Trombocitosis Clonal (Primaria)</h3>
+        <p>Asociada a neoplasias mieloides. La **Trombocitemia Esencial ($\text{TE}$)** es la más representativa. Se debe a una proliferación autónoma de megacariocitos y se asocia a un riesgo incrementado de trombosis y hemorragia.</p>
+        
+        <h2 class="part-header">13.3. Trastornos Cualitativos de las Plaquetas</h2>
+        <p>En estos trastornos, el recuento plaquetario es normal, pero la función de las plaquetas está comprometida, resultando en sangrado mucocutáneo anormal (Tiempo de Hemorragia prolongado).</p>
+
+        <h3>Trastornos Hereditarios (Primarios)</h3>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Trombastenia de Glanzmann:** Déficit en el receptor de **Agregación** ($\text{GpIIb}/\text{IIIa}$). Las plaquetas se adhieren, pero son incapaces de agregarse entre sí para formar el tapón.</li>
+            <li>**Síndrome de Bernard-Soulier:** Déficit en el receptor de **Adhesión** ($\text{GpIb}$) y plaquetas gigantes ($\text{macroplaquetas}$). La plaqueta no puede adherirse al $\text{FvW}$.</li>
+            <li>**Enfermedad de Von Willebrand (EVW):** Es el trastorno hereditario de la coagulación más frecuente. El defecto está en la **proteína FvW** (no en la plaqueta), afectando la adhesión plaquetaria y la función del Factor $\text{VIII}$ (doble defecto, primario y secundario).</li>
+        </ul>
+
+        <h3>Trastornos Adquiridos (Secundarios)</h3>
+        <p>Son mucho más frecuentes y clínicamente relevantes que los hereditarios:</p>
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li>**Fármacos:** El **Ácido Acetilsalicílico ($\text{AAS}$ / Aspirina)** es el fármaco antiplaquetario más común; inhibe irreversiblemente la ciclooxigenasa (COX), bloqueando la síntesis de $\text{TxA2}$ (agregante plaquetario).</li>
+            <li>**Uremia/Insuficiencia Renal:** Las toxinas urémicas interfieren con la función plaquetaria.</li>
+        </ul>
+        <p><strong>[PENDIENTE: TABLA COMPARATIVA DE LABORATORIO ENTRE GLANZMANN, BERNARD-SOULIER Y ENFERMEDAD DE VON WILLEBRAND]</strong></p>
+
+        <hr>
+        
+        <div class="chapter-nav-container">
+            <a href="/pages/hem_cap_12_hemostasia_introduccion.html" class="chapter-nav-button chapter-nav-prev">
+                &larr; Cap. 12: Fisiología de la Hemostasia
+            </a>
+            <a href="/pages/hem_cap_14_transtornos_coagulacion.html" class="chapter-nav-button chapter-nav-next">
+                Cap. 14: Trastornos de la Coagulación &rarr;
+            </a>
+        </div>
+    </main>
+<footer>
+    <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
+    <div class="legal-links">
+        <a href="../terminos_condiciones.html">Términos y Condiciones</a>
+        |
+        <a href="../aviso_privacidad.html">Aviso de Privacidad</a>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const body = document.body;
+        const styleToggleBtn = document.getElementById('toggle-font-style');
+        const sizeButtons = document.querySelectorAll('[data-size]');
+
+        function applyFontStyle(isRobust) {
+            if (isRobust) {
+                body.classList.add('font-robust');
+                styleToggleBtn.textContent = 'Estilo Normal';
+                localStorage.setItem('fontStyle', 'robust');
+            } else {
+                body.classList.remove('font-robust');
+                styleToggleBtn.textContent = 'Estilo Robusto';
+                localStorage.setItem('fontStyle', 'normal');
+            }
+        }
+
+        styleToggleBtn.addEventListener('click', () => {
+            const currentStyle = localStorage.getItem('fontStyle');
+            applyFontStyle(currentStyle !== 'robust');
+        });
+
+        function applyFontSize(size) {
+            body.classList.remove('size-s', 'size-n', 'size-l');
+            body.classList.add(`size-${size}`);
+            localStorage.setItem('fontSize', size);
+            
+            sizeButtons.forEach(btn => {
+                btn.style.backgroundColor = btn.dataset.size === size ? '#e6f0ff' : 'white';
+            });
+        }
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                applyFontSize(e.target.dataset.size);
+            });
+        });
+
+        const savedFontStyle = localStorage.getItem('fontStyle');
+        if (savedFontStyle === 'robust') {
+            applyFontStyle(true);
+        } else {
+             applyFontStyle(false);
+        }
+        
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            applyFontSize(savedFontSize);
+        } else {
+            applyFontSize('n');
+        }
+    });
+</script>
+</body>
+</html>

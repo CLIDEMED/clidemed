@@ -1,50 +1,73 @@
-/* --- Variables de Colores (Mismas que style_index.css para consistencia) --- */
+/* ======================================================= */
+/* --- VARIABLES DE COLORES Y FUENTES --- */
+/* ======================================================= */
 :root {
-    --clidemd-blue: #1A3450; /* Azul Principal: tono serio para títulos y texto */
-    --clidemd-teal: #2A567D; /* Azul Secundario: tono medio para Header/Footer/Nav */
-    --clidemd-green: #008762; /* Verde de Acento: Más oscuro y profesional para botones */
-    --text-dark: #212529;
-    --text-light: white;
-    --bg-light: #f8f9fa;
-    --border-color: #ddd;
-    /* Variables Antiguas ajustadas al nuevo color */
-    --old-blue: var(--clidemd-blue); 
-    --old-dark: var(--clidemd-teal);
-    --old-accent: var(--clidemd-green); 
-    --clidemd-red-accent: #FF6347; /* Añadida aquí para consistencia */
+    --clidemd-blue: #1A3450; /* Azul Principal: Títulos, texto principal */
+    --clidemd-teal: #2A567D; /* Azul Secundario: Header, Footer, Nav Bar */
+    --clidemd-green: #008762; /* Verde de Acento: Botones, enlaces activos, líneas de separación */
+    
+    --text-dark: #212529; /* Negro para texto general */
+    --text-light: white;   /* Blanco para contraste */
+    --bg-light: #f8f9fa;   /* Fondo general de las páginas */
+    --border-color: #ddd;  /* Color de bordes y líneas sutiles */
+    --clidemd-red-accent: #FF6347; /* Rojo de acento para Hematología/Warnings */
 }
 
-/* --- ESTILOS GENERALES Y LAYOUT --- */
+/* ======================================================= */
+/* --- ESTILOS GENERALES Y ACCESIBILIDAD (A11Y) --- */
+/* ======================================================= */
 body {
-    /* Tipografía Unificada a Inter (o fallback) */
+    /* Tipografía Unificada (Debe estar importada en HTML con Google Fonts) */
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
     margin: 0;
     background-color: var(--bg-light);
     color: var(--text-dark);
     line-height: 1.6;
-    /* Ajuste de peso de fuente base para mejor legibilidad */
-    font-weight: 450; /* Un poco más fuerte que el regular (400) */
+    /* Base de legibilidad mejorada (450 para Inter es un buen punto intermedio) */
+    font-weight: 450; 
+    font-size: 100%; /* Tamaño base (size-n) para el resto del contenido */
+    transition: font-size 0.2s; /* Suaviza el cambio de tamaño */
 }
 
-/* --- CLASES DE ACCESIBILIDAD (NUEVO) --- */
-/* Estilos para el modo de Alto Contraste/Robusto */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilo para los títulos de sección dentro del contenido (H2, H3, H4) */
+main h1, main h2, main h3 {
+    color: var(--clidemd-blue);
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+/* --- CLASES DE ACCESIBILIDAD (Contraste y Tamaño) --- */
+
+/* 1. Modo Robusto/Alto Contraste */
 body.font-robust p, 
 body.font-robust li,
 body.font-robust .module-info p,
-body.font-robust .subject-info p {
-    font-weight: 600 !important; /* Texto más fuerte para mejor contraste */
-    color: #000000 !important; /* Tinta pura para máximo contraste */
+body.font-robust .subject-info p,
+body.font-robust .summary p { /* Añadida regla específica para p y summary p */
+    font-weight: 600 !important; 
+    color: #000000 !important; /* Tinta pura */
 }
-/* Estilos de Tamaño de Fuente (SMALL, NORMAL, LARGE) */
+
+/* 2. Tamaños de Fuente */
 body.size-s {
-    font-size: 0.9em;
+    font-size: 90%; /* 0.9em para el body */
 }
 body.size-l {
-    font-size: 1.15em;
+    font-size: 115%; /* 1.15em para el body */
 }
-/* El tamaño normal (size-n) es el predeterminado del body */
+/* body.size-n usa el 100% base */
 
-/* --- ENCABEZADO (HEADER) --- */
+
+/* ======================================================= */
+/* --- ESTRUCTURA PRINCIPAL --- */
+/* ======================================================= */
 header {
     background-color: var(--clidemd-teal);
     color: var(--text-light);
@@ -55,7 +78,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2.2em; /* Reducido a 2.2em para consistencia con index.html (sitios internos) */
+    font-size: 2.2em; /* Consistente para páginas internas */
 }
 
 /* --- BARRA DE NAVEGACIÓN (NAV) --- */
@@ -96,7 +119,26 @@ main {
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
-/* --- ESTILOS DE TABLAS PARA CONTENIDO TÉCNICO (NUEVO) --- */
+/* Estilo para la caja de resumen al inicio de los capítulos */
+.summary {
+    background-color: #f0f8ff; /* Azul muy claro para destacar */
+    border-left: 5px solid var(--clidemd-blue);
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+.summary h2 {
+    color: var(--clidemd-blue);
+    margin-top: 0;
+    font-size: 1.4em;
+}
+
+
+/* ======================================================= */
+/* --- ESTILOS DE CONTENIDO Y MARCADORES --- */
+/* ======================================================= */
+
+/* Estilos de Tablas para contenido técnico */
 .content-table {
     width: 100%;
     border-collapse: collapse;
@@ -109,7 +151,7 @@ main {
     text-align: left;
 }
 .content-table th {
-    background-color: #e9ecef; /* Gris claro profesional */
+    background-color: #e9ecef; 
     font-weight: 700;
     color: var(--clidemd-blue);
 }
@@ -117,8 +159,96 @@ main {
     background-color: #f8f9fa;
 }
 
+/* Marcadores de contenido (Pendiente: Figura, Tabla) */
+.figure-marker-box, .table-marker-box {
+    border: 1px dashed var(--clidemd-red-accent);
+    padding: 10px;
+    margin: 15px 0;
+    background-color: #fffafa; /* Fondo muy claro para marcadores */
+    border-radius: 5px;
+}
+.figure-marker-box h4, .table-marker-box h4 {
+    color: var(--clidemd-red-accent);
+    margin-top: 0;
+    font-size: 1em;
+}
 
+/* Cajas de Aviso (Callouts) */
+.callout {
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-size: 0.95em;
+}
+.callout.warning {
+    border-left: 5px solid #ff9800; /* Naranja para advertencia */
+    background-color: #fff3e0;
+}
+.callout.note {
+    border-left: 5px solid #2196f3; /* Azul para nota */
+    background-color: #e3f2fd;
+}
+.callout.tip {
+    border-left: 5px solid var(--clidemd-green); /* Verde para Tip */
+    background-color: #e8f5e9;
+}
+
+/* --- NAVEGACIÓN ENTRE CAPÍTULOS --- */
+.chapter-nav-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+}
+
+.chapter-nav-button {
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1em;
+    text-align: center; /* Centrar texto dentro del botón */
+}
+
+/* Estilo para el botón Siguiente */
+.chapter-nav-next {
+    background-color: var(--clidemd-green);
+    color: var(--text-light);
+}
+
+.chapter-nav-next:hover {
+    background-color: #007755; 
+    transform: translateY(-2px);
+}
+
+/* Estilo para el botón Anterior */
+.chapter-nav-prev {
+    background-color: #f1f1f1;
+    color: var(--clidemd-blue);
+    border: 1px solid var(--border-color);
+}
+
+.chapter-nav-prev:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+}
+
+/* Estilo para botones deshabilitados */
+.chapter-nav-button.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+
+/* ======================================================= */
 /* --- PIE DE PÁGINA (FOOTER) --- */
+/* ======================================================= */
 footer {
     text-align: center;
     padding: 25px;
@@ -126,7 +256,6 @@ footer {
     color: var(--text-light);
     margin-top: 40px;
 }
-/* Estilos para los enlaces legales que añadimos en el footer */
 footer a {
     color: var(--text-light);
     text-decoration: underline;
