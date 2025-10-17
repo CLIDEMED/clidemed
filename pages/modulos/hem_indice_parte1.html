@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hematología: Parte I - Serie Roja y Anemias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style_base.css">
+    <link rel="stylesheet" href="../../css/style_materias.css"> 
+    <style>
+        .module-index-container { max-width: 900px; margin: 30px auto; padding: 20px; }
+        .chapter-list { list-style: none; padding: 0; }
+        /* Estilos de las tarjetas de capítulo simples */
+        .chapter-list-item { 
+            background-color: #f9f9f9; 
+            border: 1px solid #e0e0e0; 
+            border-radius: 8px; 
+            margin-bottom: 12px; 
+            transition: background-color 0.15s, box-shadow 0.15s; 
+        }
+        .chapter-list-item:hover { 
+            background-color: #e6f0ff; /* Azul claro al pasar el ratón */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+        }
+        .chapter-list-item a { 
+            text-decoration: none; 
+            color: inherit; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            padding: 15px 20px; 
+        }
+        .chapter-title { font-size: 1.1em; color: var(--clidemd-blue); margin: 0; font-weight: 600; }
+        .chapter-number { 
+            font-size: 1.2em; 
+            color: var(--clidemd-green); 
+            font-weight: 800; 
+            min-width: 40px; 
+            text-align: right; 
+        }
+    </style>
+</head>
+<body>
+    <header><h1>🔬 Parte I: Serie Roja y Anemias</h1></header>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Inicio</a></li>
+            <li><a href="../materias.html">Materias</a></li>
+            <li><a href="../capsulas.html">Cápsulas</a></li>
+            <li><a href="../protocolos.html">Protocolos</a></li>
+            <li><a href="../entrenamiento.html">Entrenamiento</a></li>
+            <li><a href="../laboratorio_virtual.html">Laboratorio Virtual</a></li>
+        </ul>
+    </nav>
+
+    <main class="container module-index-container">
+        <div id="accessibility-panel" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 20px; padding: 10px; background-color: #f1f1f1; border-radius: 8px;">
+            <span style="font-size: 0.9em; font-weight: bold;">Accesibilidad:</span>
+            
+            <button id="toggle-font-style" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white;">
+                Estilo Robusto
+            </button>
+            <button id="font-size-s" data-size="s" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 0.8em;">A-</button>
+            <button id="font-size-n" data-size="n" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1em;">A</button>
+            <button id="font-size-l" data-size="l" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1.2em;">A+</button>
+        </div>
+        <h2>Capítulos Detallados (Serie Roja)</h2>
+        <p>Haz clic en el capítulo para acceder al contenido. Se recomienda seguir la secuencia para un mejor aprendizaje.</p>
+
+        <ul class="chapter-list">
+            <li class="chapter-list-item">
+                <a href="../hem_introduccion.html">
+                    <span class="chapter-number">I</span>
+                    <span class="chapter-title">Introducción al Módulo de Hematología</span>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_01_hematopoyesis.html">
+                    <span class="chapter-number">1</span>
+                    <span class="chapter-title">Hematopoyesis. Hematíes: Estructura y Función</span>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_02_anemia_concepto.html">
+                    <span class="chapter-number">2</span>
+                    <span class="chapter-title">Anemia: Concepto, Clínica y Clasificación</span>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_03_anemias_micro.html">
+                    <span class="chapter-number">3</span>
+                    <span class="chapter-title">Anemias Microcíticas: Déficit de Hierro y AEC</span>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_04_anemia_megaloblastica.html">
+                    <span class="chapter-number">4</span>
+                    <span class="chapter-title">Anemia Megaloblástica y Macrocitosis</span>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_05_hemolisis_intrinseca.html">
+                    <span class="chapter-number">5</span>
+                    <span class="chapter-title">Anemias Hemolíticas Intrínsecas</span>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_06_hemoglobinopatias.html">
+                    <span class="chapter-number">6</span>
+                    <span class="chapter-title">Talasemias y Hemoglobinopatías</span>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_07_hemolisis_extrínseca.html">
+                    <span class="chapter-number">7</span>
+                    <span class="chapter-title">Anemias Hemolíticas Extracorpusculares (AHAI)</span>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_08_grupos_sanguineos.html">
+                    <span class="chapter-number">8</span>
+                    <span class="chapter-title">Grupos Sanguíneos y Medicina Transfusional</span>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="chapter-nav-container" style="justify-content: center;">
+            <a href="../modulo_hematologia.html" class="chapter-nav-button chapter-nav-prev">
+                &larr; Volver al Índice Principal de Hematología
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
+        <div class="legal-links">
+            <a href="../../pages/terminos_condiciones.html">Términos y Condiciones</a>
+            |
+            <a href="../../pages/aviso_privacidad.html">Aviso de Privacidad</a>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.body;
+            const styleToggleBtn = document.getElementById('toggle-font-style');
+            const sizeButtons = document.querySelectorAll('[data-size]');
+
+            function applyFontStyle(isRobust) {
+                if (isRobust) {
+                    body.classList.add('font-robust');
+                    styleToggleBtn.textContent = 'Estilo Normal';
+                    localStorage.setItem('fontStyle', 'robust');
+                } else {
+                    body.classList.remove('font-robust');
+                    styleToggleBtn.textContent = 'Estilo Robusto';
+                    localStorage.setItem('fontStyle', 'normal');
+                }
+            }
+
+            styleToggleBtn.addEventListener('click', () => {
+                const currentStyle = localStorage.getItem('fontStyle');
+                applyFontStyle(currentStyle !== 'robust');
+            });
+
+            function applyFontSize(size) {
+                body.classList.remove('size-s', 'size-n', 'size-l');
+                body.classList.add(`size-${size}`);
+                localStorage.setItem('fontSize', size);
+                
+                sizeButtons.forEach(btn => {
+                    btn.style.backgroundColor = btn.dataset.size === size ? '#e6f0ff' : 'white';
+                });
+            }
+
+            sizeButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    applyFontSize(e.target.dataset.size);
+                });
+            });
+
+            const savedFontStyle = localStorage.getItem('fontStyle');
+            if (savedFontStyle === 'robust') {
+                applyFontStyle(true);
+            } else {
+                applyFontStyle(false);
+            }
+            
+            const savedFontSize = localStorage.getItem('fontSize');
+            if (savedFontSize) {
+                applyFontSize(savedFontSize);
+            } else {
+                applyFontSize('n');
+            }
+        });
+    </script>
+</body>
+</html>

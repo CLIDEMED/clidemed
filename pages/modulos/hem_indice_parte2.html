@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hematología: Parte II - Serie Blanca, Hemostasia y Oncohematología</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style_base.css">
+    <link rel="stylesheet" href="../../css/style_materias.css"> 
+    <style>
+        .module-index-container { max-width: 900px; margin: 30px auto; padding: 20px; }
+        .chapter-list { list-style: none; padding: 0; }
+        .chapter-list-item { 
+            background-color: #f9f9f9; 
+            border: 1px solid #e0e0e0; 
+            border-radius: 8px; 
+            margin-bottom: 12px; 
+            transition: background-color 0.15s, box-shadow 0.15s; 
+        }
+        .chapter-list-item:hover { 
+            background-color: #e6f0ff; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+        }
+        .chapter-list-item a { 
+            text-decoration: none; 
+            color: inherit; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            padding: 15px 20px; 
+        }
+        .chapter-title { font-size: 1.1em; color: var(--clidemd-blue); margin: 0; font-weight: 600; }
+        .chapter-number { 
+            font-size: 1.2em; 
+            color: var(--clidemd-green); 
+            font-weight: 800; 
+            min-width: 40px; 
+            text-align: right; 
+        }
+    </style>
+</head>
+<body>
+    <header><h1>🔬 Parte II: Leucocitos, Hemostasia y Oncohematología</h1></header>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Inicio</a></li>
+            <li><a href="../materias.html">Materias</a></li>
+            <li><a href="../capsulas.html">Cápsulas</a></li>
+            <li><a href="../protocolos.html">Protocolos</a></li>
+            <li><a href="../entrenamiento.html">Entrenamiento</a></li>
+            <li><a href="../laboratorio_virtual.html">Laboratorio Virtual</a></li>
+        </ul>
+    </nav>
+
+    <main class="container module-index-container">
+        <div id="accessibility-panel" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 20px; padding: 10px; background-color: #f1f1f1; border-radius: 8px;">
+            <span style="font-size: 0.9em; font-weight: bold;">Accesibilidad:</span>
+            
+            <button id="toggle-font-style" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white;">
+                Estilo Robusto
+            </button>
+            <button id="font-size-s" data-size="s" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 0.8em;">A-</button>
+            <button id="font-size-n" data-size="n" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1em;">A</button>
+            <button id="font-size-l" data-size="l" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; background-color: white; font-size: 1.2em;">A+</button>
+        </div>
+        <h2>Capítulos Detallados (Serie Blanca, Hemostasia y Neoplasias)</h2>
+
+        <ul class="chapter-list">
+            <li class="chapter-list-item">
+                <a href="hem_cap_09_serie_blanca_fisiologia.html">
+                    <span class="chapter-number">9</span>
+                    <span class="chapter-title">Fisiología y Morfología de la Serie Blanca</span>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_10_transtornos_neutrofilos.html">
+                    <span class="chapter-number">10</span>
+                    <span class="chapter-title">Trastornos Cuantitativos y Cualitativos de Neutrófilos</span>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_11_transtornos_monocitos.html">
+                    <span class="chapter-number">11</span>
+                    <span class="chapter-title">Trastornos de Monocitos y Macrófagos (Histiocitosis)</span>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_12_hemostasia_introduccion.html">
+                    <span class="chapter-number">12</span>
+                    <span class="chapter-title">Fisiología de la Hemostasia y Trombosis</span>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_13_transtornos_plaquetarios.html">
+                    <span class="chapter-number">13</span>
+                    <span class="chapter-title">Trastornos Cuantitativos y Cualitativos Plaquetarios</span>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_14_transtornos_coagulacion.html">
+                    <span class="chapter-number">14</span>
+                    <span class="chapter-title">Trastornos Congénitos y Adquiridos de la Coagulación</span>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_15_trombofilias.html">
+                    <span class="chapter-number">15</span>
+                    <span class="chapter-title">Trombofilias (Estados de Hipercoagulabilidad)</span>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_16_leucemias_agudas.html">
+                    <span class="chapter-number">16</span>
+                    <span class="chapter-title">Leucemias Agudas (LAL y LAM)</span>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_17_leucemias_cronicas.html">
+                    <span class="chapter-number">17</span>
+                    <span class="chapter-title">Leucemias Crónicas (LLC, LMC)</span>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_18_linfomas.html">
+                    <span class="chapter-number">18</span>
+                    <span class="chapter-title">Linfomas (Hodgkin y No Hodgkin)</span>
+                </a>
+            </li>
+            <li class="chapter-list-item">
+                <a href="hem_cap_19_mieloma_multiple.html">
+                    <span class="chapter-number">19</span>
+                    <span class="chapter-title">Mieloma Múltiple y Gammapatías Monoclonales</span>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="chapter-nav-container" style="justify-content: center;">
+            <a href="../modulo_hematologia.html" class="chapter-nav-button chapter-nav-prev">
+                &larr; Volver al Índice Principal de Hematología
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Labros Canul Sarao. Todos los derechos reservados.</p>
+        <div class="legal-links">
+            <a href="../../pages/terminos_condiciones.html">Términos y Condiciones</a>
+            |
+            <a href="../../pages/aviso_privacidad.html">Aviso de Privacidad</a>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.body;
+            const styleToggleBtn = document.getElementById('toggle-font-style');
+            const sizeButtons = document.querySelectorAll('[data-size]');
+
+            function applyFontStyle(isRobust) {
+                if (isRobust) {
+                    body.classList.add('font-robust');
+                    styleToggleBtn.textContent = 'Estilo Normal';
+                    localStorage.setItem('fontStyle', 'robust');
+                } else {
+                    body.classList.remove('font-robust');
+                    styleToggleBtn.textContent = 'Estilo Robusto';
+                    localStorage.setItem('fontStyle', 'normal');
+                }
+            }
+
+            styleToggleBtn.addEventListener('click', () => {
+                const currentStyle = localStorage.getItem('fontStyle');
+                applyFontStyle(currentStyle !== 'robust');
+            });
+
+            function applyFontSize(size) {
+                body.classList.remove('size-s', 'size-n', 'size-l');
+                body.classList.add(`size-${size}`);
+                localStorage.setItem('fontSize', size);
+                
+                sizeButtons.forEach(btn => {
+                    btn.style.backgroundColor = btn.dataset.size === size ? '#e6f0ff' : 'white';
+                });
+            }
+
+            sizeButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    applyFontSize(e.target.dataset.size);
+                });
+            });
+
+            const savedFontStyle = localStorage.getItem('fontStyle');
+            if (savedFontStyle === 'robust') {
+                applyFontStyle(true);
+            } else {
+                applyFontStyle(false);
+            }
+            
+            const savedFontSize = localStorage.getItem('fontSize');
+            if (savedFontSize) {
+                applyFontSize(savedFontSize);
+            } else {
+                applyFontSize('n');
+            }
+        });
+    </script>
+</body>
+</html>
